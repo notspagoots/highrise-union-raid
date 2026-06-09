@@ -57,6 +57,20 @@
         border-radius: 8px;
         background: #1b1b1b;
     }
+
+    .team-img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 1px solid #444;
+    }
+
+    .team-img:hover {
+        transform: scale(1.1);
+        border-color: #ffcc00;
+    }
+
   </style>
 </head>
 
@@ -99,6 +113,13 @@ fetch('csvjson.json')
   .then(res => res.json())
   .then(data => {
     rawData = data;
+
+    return fetch('nikke.json');
+    })
+    .then(res => res.json())
+    .then(unitData => {
+        units = unitData;
+
     populatePlayers();
     render();
   });
@@ -220,20 +241,15 @@ if (currentSort.column) {
 
     if (bestRow) {
 
-    const teamString = [
-        bestRow.slot1,
-        bestRow.slot2,
-        bestRow.slot3,
-        bestRow.slot4,
-        bestRow.slot5
-    ].filter(Boolean).join(", ");
-
     bestSummary = `
         <div>
         <div><strong>Damage:</strong> ${Number(bestRow.totalDamage).toLocaleString()}</div>
         <div><strong>Raid:</strong> ${formatRaid(bestRow.raidNumber)} | ${bestRow.bossName}</div>
-        <div><strong>Team:</strong> ${teamString}</div>
+        <div style="display:flex; align-items:center; gap:6px;">
+            <strong>Team:</strong>
+            ${renderTeam(bestRow)}
         </div>
+
     `;
     }
 
@@ -262,21 +278,17 @@ if (currentSort.column) {
         </tr>
     `;
 
-    filtered.forEach(r => {
+    filtered.forEach(row => {
 
         table += `
         <tr>
-            <td>${formatRaid(r.raidNumber)}</td>
-            <td>${r.bossName}</td>
-            <td>${r.bossLevel}</td>
-            <td>${Number(r.totalDamage).toLocaleString()}</td>
-            <td>${Number(r.damagePerSynchro).toLocaleString()}</td>
+            <td>${formatRaid(row.raidNumber)}</td>
+            <td>${row.bossName}</td>
+            <td>${row.bossLevel}</td>
+            <td>${Number(row.totalDamage).toLocaleString()}</td>
+            <td>${Number(row.damagePerSynchro).toLocaleString()}</td>
             <td>
-            ${r.slot1 || ''} /
-            ${r.slot2 || ''} /
-            ${r.slot3 || ''} /
-            ${r.slot4 || ''} /
-            ${r.slot5 || ''}
+               ${renderTeam(row)}
             </td>
         </tr>
         `;
@@ -308,6 +320,30 @@ function getSortArrow(column) {
     return currentSort.direction === 'asc' ? ' ↑' : ' ↓';
 }
 
+function renderTeam(row) {
+    const slots = [
+        row.slot1,
+        row.slot2,
+        row.slot3,
+        row.slot4,
+        row.slot5
+    ];
+
+    return slots.map(name => {
+        const unit = getUnit(name);
+
+        if (!unit) return "";
+
+        return `
+        <img src="${unit.nikkeImage}" class="team-img" title="${unit.nikkeName}">
+        `;
+    }).join("");
+}
+
+
+function getUnit(name) {
+    return units.find(u => u.nikkeName === name);
+}
 
 </script>
 
