@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highrise - Raid Details</title>
+
+  <style>
+    body {
+        font-family: Arial;
+        background: #121212;
+        color: #eee;
+    }
+
+    h1, h2 {
+        color: #ffcc00;
+    }
+
+    nav {
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #ffcc00;
+        margin-right: 10px;
+        text-decoration: none;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        padding: 8px;
+        border-bottom: 1px solid #333;
+        border-right: 1px solid #333;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    #controls {
+        margin: 15px 0;
+    }
+
+    #bossContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        margin-bottom: 15px;
+    }
+
+    .boss-group {
+        background: #1b1b1b;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #333;
+        text-align: center;
+    }
+
+    .boss-group-title {
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffcc00;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .boss-button-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .boss-button {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #555;
+        background: #2b2b2b;
+        color: #eee;
+        cursor: pointer;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .boss-button.active {
+        background: #ffcc00;
+        color: black;
+        font-weight: bold;
+    }
+
+    #levelContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    #levelContainer .boss-button {
+        width: auto;
+        min-width: 80px;
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 6px 10px;
+        margin-right: 8px;
+        border: 1px solid #555;
+        background: #2b2b2b;
+        color: #eee;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    button:hover {
+        background: #3a3a3a;
+    }
+
+    .filter-header {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+
+    .filter-header h3 {
+        margin: 0;
+        color: #ffcc00;
+    }
+
+    .filter-actions button {
+        margin-left: 6px;
+        padding: 5px 10px;
+        border: 1px solid #555;
+        background: #2b2b2b;
+        color: #eee;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    .filter-actions button:hover {
+        background: #3a3a3a;
+    }
+
+    .filter-actions {
+        display: flex;
+        gap: 6px;
+    }
+
+    #playerSearch {
+        padding: 5px 8px;
+        margin-left: 5px;
+        border-radius: 4px;
+        border: 1px solid #555;
+        background: #1b1b1b;
+        color: #eee;
+    }
+
+    .team-img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+    
+    .team-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid #444;
+    }
+
+    .team-img:hover {
+        transform: scale(1.1);
+        border-color: #ffcc00;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Overview</a>|
+    <a href="raid.html">Union Raid</a>|
+    <a href="player.html">Players</a>|
+    <a href="boss.html">Bosses</a>
+</nav>
+
+<h1>Union Raid Detailed View</h1>
+
+<div id="controls">
+
+    <label>Raid:
+        <select id="raidSelect"></select>
+    </label>
+
+    <label style="margin-left:20px;">
+        <input type="checkbox" id="includeNormal">
+        Include Normal Mode
+    </label>
+
+    <div class="filter-header">
+    <h3>Boss Name</h3>
+        <div class="filter-actions">
+            <button id="selectAllBosses">Select All</button>
+            <button id="clearBosses">Clear</button>
+        </div>
+    </div>
+
+    <div id="bossContainer"></div>
+
+    <div class="filter-header">
+    <h3>Boss Level</h3>
+        <div class="filter-actions">
+            <button id="selectAllLevels">Select All</button>
+            <button id="clearLevels">Clear</button>
+        </div>
+    </div>
+
+    <div id="levelContainer"></div>
+
+<h2>Attempts</h2>
+<label style="margin-left:20px;">
+  Search:
+  <input type="text" id="playerSearch" placeholder="Player, boss, team...">
+</label>
+<table id="table"></table>
+
+
+
+<script>
+
+let selectedBosses = new Set();
+let selectedLevels = new Set();
+let rawData = [];
+let currentSort = {
+  column: null,
+  direction: 'desc'
+};
+
+
+// Fetcher
+
+fetch('csvjson.json')
+    .then(res => res.json())
+    .then(data => {
+        rawData = data;
+
+    return fetch('nikke.json');
+    })
+    .then(res => res.json())
+    .then(unitData => {
+        units = unitData;
+
+    populateRaidDropdown();
+    populateBossButtons();
+    populateLevelButtons();
+    render();
+  });
+
+
+
+// Listeners
+
+    document.getElementById("raidSelect").addEventListener("change", () => {
+    populateBossButtons();
+    populateLevelButtons();
+    render();
+    });
+
+    document.getElementById("includeNormal").addEventListener("change", () => {
+    populateBossButtons();
+    populateLevelButtons();
+    render();
+    });
+
+    // adds filter control logic to select all bosses
+    document.getElementById("selectAllBosses").addEventListener("click", () => {
+
+    const buttons = document.querySelectorAll("#bossContainer .boss-button");
+
+    selectedBosses.clear();
+
+    buttons.forEach(btn => {
+        const name = btn.textContent;
+        selectedBosses.add(name);
+        btn.classList.add("active");
+    });
+
+    populateLevelButtons();
+    render();
+    });
+
+
+    // adds filter control logic to clear any selected bosses
+    document.getElementById("clearBosses").addEventListener("click", () => {
+
+    selectedBosses.clear();
+
+    document.querySelectorAll("#bossContainer .boss-button").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    populateLevelButtons();
+    render();
+    });
+
+
+    // adds filter control logic to select all boss levels
+    document.getElementById("selectAllLevels").addEventListener("click", () => {
+
+    const buttons = document.querySelectorAll("#levelContainer .boss-button");
+
+    selectedLevels.clear();
+
+    buttons.forEach(btn => {
+        const level = Number(btn.textContent.replace("Lv ", ""));
+        selectedLevels.add(level);
+        btn.classList.add("active");
+    });
+
+    render();
+    });
+
+    // adds filter control logic to clear any selected boss levels
+    document.getElementById("clearLevels").addEventListener("click", () => {
+
+    selectedLevels.clear();
+
+    document.querySelectorAll("#levelContainer .boss-button").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    render();
+    });
+
+    // adds filter control for search box
+    document.getElementById("playerSearch").addEventListener("input", render);
+
+
+// Renderer
+
+function render() {
+
+    
+    const searchValue = document
+        .getElementById("playerSearch")
+        .value
+        .toLowerCase();
+    const selectedLevelsActive = selectedLevels.size > 0;
+    const selectedRaid = document.getElementById("raidSelect").value;
+    const includeNormal = document.getElementById("includeNormal").checked;
+
+    const selectedBossesActive = selectedBosses.size > 0;
+
+    const filtered = rawData.filter(row => {
+
+        const raidMatch =
+        selectedRaid === "all" ||
+        row.raidNumber == selectedRaid;
+
+        const modeMatch =
+        row.raidMode === "Hard" ||
+        (includeNormal && row.raidMode === "Normal");
+
+        const bossMatch =
+        !selectedBossesActive || 
+        selectedBosses.has(row.bossName);
+        
+        const levelMatch =
+        !selectedLevelsActive ||
+        selectedLevels.has(row.bossLevel);
+
+
+        const searchMatch =
+        searchValue === "" ||
+        [
+            row.playerName,
+            row.bossName,
+            row.bossElementWeakness,
+            row.slot1,
+            row.slot2,
+            row.slot3,
+            row.slot4,
+            row.slot5
+        ].some(value =>
+            value &&
+            value.toString().toLowerCase().includes(searchValue)
+        );
+
+        return raidMatch && modeMatch && bossMatch && levelMatch && searchMatch;
+    });
+
+    if (currentSort.column) {
+
+    filtered.sort((a, b) => {
+
+        let valA = a[currentSort.column];
+        let valB = b[currentSort.column];
+
+        // Normalize values
+
+        // Numbers
+        if (!isNaN(valA) && !isNaN(valB)) {
+        valA = Number(valA);
+        valB = Number(valB);
+        }
+        // Strings
+        else {
+        valA = (valA || '').toString().toLowerCase();
+        valB = (valB || '').toString().toLowerCase();
+        }
+
+        if (valA < valB) return currentSort.direction === 'asc' ? -1 : 1;
+        if (valA > valB) return currentSort.direction === 'asc' ? 1 : -1;
+        return 0;
+    });
+    }
+
+
+
+    function getSortArrow(column) {
+    if (currentSort.column !== column) return '';
+    return currentSort.direction === 'asc' ? ' ↑' : ' ↓';
+    }
+
+    let table = `
+    <tr>
+        <th onclick="sortTable('raidNumber')">Raid${getSortArrow('raidNumber')}</th>
+        <th onclick="sortTable('playerName')">Player${getSortArrow('playerName')}</th>
+        <th onclick="sortTable('synchroLevel')">Synchro${getSortArrow('synchroLevel')}</th>
+        <th onclick="sortTable('totalDamage')">Damage${getSortArrow('totalDamage')}</th>
+        <th onclick="sortTable('damagePerSynchro')">DPSL${getSortArrow('damagePerSynchro')}</th>
+        <th>Team</th>
+        <th onclick="sortTable('bossName')">Boss${getSortArrow('bossName')}</th>
+        <th onclick="sortTable('bossLevel')">Boss Level${getSortArrow('bossLevel')}</th>
+    </tr>
+    `;
+
+
+  filtered.forEach(row => {
+    const dmg = Number(row.totalDamage) || 0;
+    const dps = Number(row.damagePerSynchro) || 0;
+
+    table += `
+      <tr>
+        <td>${formatRaid(row.raidNumber)}</td>
+        <td>${row.playerName}</td>
+        <td>${row.synchroLevel || '-'}</td>
+        <td>${dmg.toLocaleString()}</td>
+        <td>${dps.toLocaleString()}</td>
+        <td style="display:flex; gap:12px; align-items:center;">
+          ${renderTeam(row)}
+        </td>
+        <td>${row.bossName}</td>
+        <td>${row.bossLevel || '-'}</td>
+      </tr>
+    `;
+  });
+
+  document.getElementById("table").innerHTML = table;
+
+}
+
+
+// Functions
+
+function populateRaidDropdown() {
+
+    const select = document.getElementById("raidSelect");
+
+    const raids = [...new Set(rawData.map(x => x.raidNumber))]
+        .sort()
+        .reverse();
+
+    let options = `<option value="all">All Raids</option>`;
+
+    raids.forEach(r => {
+        options += `<option value="${r}">${r}</option>`;
+    });
+
+    select.innerHTML = options;
+}
+
+
+function populateBossButtons() {
+
+    const container = document.getElementById("bossContainer");
+    const selectedRaid = document.getElementById("raidSelect").value;
+
+    container.innerHTML = "";
+
+    const includeNormal = document.getElementById("includeNormal").checked;
+
+    // Filter relevant rows first
+    const relevantRows = rawData.filter(row => {
+
+        const raidMatch =
+        selectedRaid === "all" ||
+        row.raidNumber == selectedRaid;
+
+        const modeMatch =
+        row.raidMode === "Hard" ||
+        (includeNormal && row.raidMode === "Normal");
+
+        
+
+        return raidMatch && modeMatch;
+    });
+
+    // Group bosses by weakness
+    const groups = {};
+
+    relevantRows.forEach(row => {
+        const weakness = row.bossElementWeakness || "Unknown";
+        const boss = row.bossName;
+
+        if (!groups[weakness]) {
+        groups[weakness] = new Set();
+        }
+
+        groups[weakness].add(boss);
+    });
+
+    // Clean selectedBosses (remove invalid ones)
+    const validBosses = new Set(relevantRows.map(r => r.bossName));
+
+    selectedBosses.forEach(b => {
+        if (!validBosses.has(b)) {
+        selectedBosses.delete(b);
+        }
+    });
+
+    // Build UI
+    Object.keys(groups).sort().forEach(weakness => {
+
+        const groupDiv = document.createElement("div");
+        groupDiv.className = "boss-group";
+
+        const title = document.createElement("div");
+        title.className = "boss-group-title";
+        title.textContent = `${weakness} Weak`;
+
+        groupDiv.appendChild(title);
+
+        const grid = document.createElement("div");
+        grid.className = "boss-button-grid";
+
+        Array.from(groups[weakness]).sort().forEach(boss => {
+
+        const btn = document.createElement("button");
+        btn.className = "boss-button";
+        btn.textContent = boss;
+
+        if (selectedBosses.has(boss)) {
+            btn.classList.add("active");
+        }
+
+        btn.addEventListener("click", () => {
+
+            if (selectedBosses.has(boss)) {
+            selectedBosses.delete(boss);
+            btn.classList.remove("active");
+            } else {
+            selectedBosses.add(boss);
+            btn.classList.add("active");
+            }
+
+            populateLevelButtons();  // ✅ keep levels in sync
+            render();
+        });
+
+        grid.appendChild(btn);
+        });
+
+        groupDiv.appendChild(grid);
+        container.appendChild(groupDiv);
+    });
+    }
+
+
+
+function populateLevelButtons() {
+
+    const container = document.getElementById("levelContainer");
+    const selectedRaid = document.getElementById("raidSelect").value;
+    const includeNormal = document.getElementById("includeNormal").checked;
+
+    container.innerHTML = "";
+
+    // Start with rows matching raid + mode
+    let candidateRows = rawData.filter(row => {
+        const raidMatch =
+        selectedRaid === "all" ||
+        row.raidNumber == selectedRaid;
+
+        const modeMatch =
+        row.raidMode === "Hard" ||
+        (includeNormal && row.raidMode === "Normal");
+
+        return raidMatch && modeMatch;
+    });
+
+    // If bosses are selected, narrow levels to those bosses only
+    if (selectedBosses.size > 0) {
+        candidateRows = candidateRows.filter(row =>
+        selectedBosses.has(row.bossName)
+        );
+    }
+
+    const availableLevels = [...new Set(
+        candidateRows
+        .map(row => row.bossLevel)
+        .filter(level => level !== undefined && level !== null && level !== "")
+    )].sort((a, b) => Number(a) - Number(b));
+
+    // Remove any selected levels that are no longer valid
+    selectedLevels.forEach(level => {
+        if (!availableLevels.includes(level)) {
+        selectedLevels.delete(level);
+        }
+    });
+
+    availableLevels.forEach(level => {
+        const btn = document.createElement("button");
+        btn.className = "boss-button";
+        btn.textContent = `Lv ${level}`;
+
+        if (selectedLevels.has(level)) {
+        btn.classList.add("active");
+        }
+
+        btn.addEventListener("click", () => {
+        if (selectedLevels.has(level)) {
+            selectedLevels.delete(level);
+            btn.classList.remove("active");
+        } else {
+            selectedLevels.add(level);
+            btn.classList.add("active");
+        }
+
+        render();
+        });
+
+        container.appendChild(btn);
+    });
+}
+
+function sortTable(column) {
+
+    if (currentSort.column === column) {
+        // Toggle direction
+        currentSort.direction =
+        currentSort.direction === 'asc' ? 'desc' : 'asc';
+    } else {
+        currentSort.column = column;
+        currentSort.direction = 'desc';
+    }
+
+    render();
+}
+
+function formatRaid(raidNumber) {
+    
+    if (!raidNumber) return '-';
+    const str = raidNumber.toString();
+
+    if (str.length !== 4) return str; // fallback if unexpected format
+    const year = str.slice(0, 2);
+    const month = str.slice(2, 4);
+
+    return `${year}-${month}`;
+}
+
+function getUnit(name) {
+    return units.find(u => u.nikkeName === name);
+}
+
+function renderTeam(row) {
+    const slots = [
+        row.slot1,
+        row.slot2,
+        row.slot3,
+        row.slot4,
+        row.slot5
+    ];
+
+    return slots.map(name => {
+        if (!name) return "";
+
+        const unit = getUnit(name);
+
+        if (!unit) return name; // fallback to text if missing
+
+        return `
+            <img src="${unit.nikkeImage}" class="team-img" alt="${name}" title="${name}" onerror="this.style.display='none'">
+        `;
+    }).join("");
+    }
+
+</script>
+
+</body>
+</html>

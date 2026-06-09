@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highrise - Player Overview</title>
+
+  <style>
+    body {
+        font-family: Arial;
+        background: #121212;
+        color: #eee;
+    }
+
+    h1, h2 {
+        color: #ffcc00;
+    }
+
+    nav {
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #ffcc00;
+        margin-right: 10px;
+        text-decoration: none;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    th, td {
+        padding: 8px;
+        border-bottom: 1px solid #333;
+        border-right: 1px solid #333;
+        white-space: nowrap;
+    }
+
+    th {
+        cursor: pointer;
+    }
+
+    th:hover {
+        background: #1f1f1f;
+    }
+
+    select {
+        padding: 5px;
+        margin-left: 10px;
+    }
+
+    .card {
+        margin-top: 15px;
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background: #1b1b1b;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Overview</a>|
+    <a href="raid.html">Union Raid</a>|
+    <a href="player.html">Players</a>|
+    <a href="boss.html">Bosses</a>
+</nav>
+
+<h1>Player Overview</h1>
+
+<label>Select Player:
+  <select id="playerSelect"></select>
+</label>
+
+<label style="margin-left:20px;">
+  <input type="checkbox" id="includeNormal">
+  Include Normal Mode
+</label>
+
+<div id="summary" class="card"></div>
+
+<h2>Attempts</h2>
+<table id="table"></table>
+
+<script>
+
+document.getElementById("includeNormal").addEventListener("change", render);
+let rawData = [];
+let currentSort = {
+  column: null,
+  direction: 'desc'
+};
+
+
+fetch('csvjson.json')
+  .then(res => res.json())
+  .then(data => {
+    rawData = data;
+    populatePlayers();
+    render();
+  });
+
+document.getElementById("playerSelect")
+  .addEventListener("change", render);
+
+function populatePlayers() {
+
+    const players = [...new Set(
+        rawData.map(x => x.playerName)
+    )].sort();
+
+    const select = document.getElementById("playerSelect");
+
+    let options = "";
+
+    players.forEach((p, index) => {
+        options += `<option value="${p}" ${index === 0 ? "selected" : ""}>
+                    ${p}
+                    </option>`;
+    });
+
+    select.innerHTML = options;
+}
+
+
+function render() {
+
+    const player = document.getElementById("playerSelect").value;
+
+    // ✅ STEP 1: FILTER
+
+    const includeNormal = document.getElementById("includeNormal").checked;
+    const filtered = rawData.filter(r => {
+    const playerMatch = r.playerName === player;
+    const modeMatch =
+        r.raidMode === "Hard" ||
+        (includeNormal && r.raidMode === "Normal");
+
+    return playerMatch && modeMatch;
+    });
+
+    if (!player || filtered.length === 0) {
+        document.getElementById("summary").innerHTML = "<p>No data available</p>";
+        document.getElementById("table").innerHTML = "";
+        return;
+    }
+
+    // console.log("Selected player:", player);
+    // console.log("Filtered rows:", filtered.length);
+
+    // ✅ STEP 2: SORT
+if (currentSort.column) {
+  filtered.sort((a, b) => {
+
+    let valA = a[currentSort.column];
+    let valB = b[currentSort.column];
+
+    // ✅ Explicit numeric fields
+    const numericFields = [
+      'raidNumber',
+      'bossLevel',
+      'totalDamage',
+      'damagePerSynchro'
+    ];
+
+    if (numericFields.includes(currentSort.column)) {
+      valA = Number(valA) || 0;
+      valB = Number(valB) || 0;
+    } else {
+      valA = (valA || '').toString().toLowerCase();
+      valB = (valB || '').toString().toLowerCase();
+    }
+
+    if (valA < valB) return currentSort.direction === 'asc' ? -1 : 1;
+    if (valA > valB) return currentSort.direction === 'asc' ? 1 : -1;
+    return 0;
+  });
+} else {
+  // Default sort (unchanged)
+  filtered.sort((a, b) => {
+    if (a.raidNumber !== b.raidNumber) {
+      return Number(b.raidNumber) - Number(a.raidNumber);
+    }
+    if (a.bossLevel !== b.bossLevel) {
+      return Number(b.bossLevel) - Number(a.bossLevel);
+    }
+    return 0;
+  });
+}
+
+    let totalDamage = 0;
+    let best = 0;
+    let bestRow = null;
+    let totalDPS = 0;
+
+    filtered.forEach(r => {
+        const dmg = Number(r.totalDamage) || 0;
+        const dps = Number(r.damagePerSynchro) || 0;
+
+        totalDamage += dmg;
+
+        if (dmg > best) {
+        best = dmg;
+        bestRow = r;
+        }
+
+        totalDPS += dps;
+    });
+
+    const avgDamage = Math.round(totalDamage / filtered.length);
+    const avgDPS = Math.round(totalDPS / filtered.length);
+
+    const uniqueRaids = new Set(filtered.map(r => r.raidNumber));
+    const raidParticipation = uniqueRaids.size;
+
+    let bestSummary = "-";
+
+    if (bestRow) {
+
+    const teamString = [
+        bestRow.slot1,
+        bestRow.slot2,
+        bestRow.slot3,
+        bestRow.slot4,
+        bestRow.slot5
+    ].filter(Boolean).join(", ");
+
+    bestSummary = `
+        <div>
+        <div><strong>Damage:</strong> ${Number(bestRow.totalDamage).toLocaleString()}</div>
+        <div><strong>Raid:</strong> ${formatRaid(bestRow.raidNumber)} | ${bestRow.bossName}</div>
+        <div><strong>Team:</strong> ${teamString}</div>
+        </div>
+    `;
+    }
+
+
+    // ✅ SUMMARY
+    document.getElementById("summary").innerHTML = `
+        <p><strong>Player:</strong> ${player}</p>
+        <p>Total Damage: ${totalDamage.toLocaleString()}</p>
+        <p>Raid Participation: ${raidParticipation}</p>
+        <p>Total Attacks: ${filtered.length}</p>
+        <p>Average Damage: ${avgDamage.toLocaleString()}</p>
+        <p>Average DPSL: ${avgDPS.toLocaleString()}</p>
+        <p>Best Attempt: ${bestSummary}</p>
+    `;
+
+    // ✅ ✅ ✅ STEP 7: BUILD TABLE
+
+    let table = `
+        <tr>
+            <th onclick="sortTable('raidNumber')">Raid${getSortArrow('raidNumber')}</th>
+            <th onclick="sortTable('bossName')">Boss${getSortArrow('bossName')}</th>
+            <th onclick="sortTable('bossLevel')">Level${getSortArrow('bossLevel')}</th>
+            <th onclick="sortTable('totalDamage')">Damage${getSortArrow('totalDamage')}</th>
+            <th onclick="sortTable('damagePerSynchro')">DPSL${getSortArrow('damagePerSynchro')}</th>
+            <th>Team</th>
+        </tr>
+    `;
+
+    filtered.forEach(r => {
+
+        table += `
+        <tr>
+            <td>${formatRaid(r.raidNumber)}</td>
+            <td>${r.bossName}</td>
+            <td>${r.bossLevel}</td>
+            <td>${Number(r.totalDamage).toLocaleString()}</td>
+            <td>${Number(r.damagePerSynchro).toLocaleString()}</td>
+            <td>
+            ${r.slot1 || ''} /
+            ${r.slot2 || ''} /
+            ${r.slot3 || ''} /
+            ${r.slot4 || ''} /
+            ${r.slot5 || ''}
+            </td>
+        </tr>
+        `;
+    });
+
+    document.getElementById("table").innerHTML = table;
+}
+
+function formatRaid(raidNumber) {
+  if (!raidNumber) return '-';
+  const str = raidNumber.toString();
+  return `${str.slice(0,2)}-${str.slice(2,4)}`;
+}
+
+function sortTable(column) {
+    if (currentSort.column === column) {
+        currentSort.direction =
+        currentSort.direction === 'asc' ? 'desc' : 'asc';
+    } else {
+        currentSort.column = column;
+        currentSort.direction = 'desc';
+    }
+
+    render();
+}
+
+function getSortArrow(column) {
+    if (currentSort.column !== column) return '';
+    return currentSort.direction === 'asc' ? ' ↑' : ' ↓';
+}
+
+
+</script>
+
+</body>
+</html>

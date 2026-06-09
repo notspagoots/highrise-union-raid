@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highrise Union Raid Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      background:#121212;
+      color:#eee;
+    }
+
+    h1, h2 {
+      color:#ffcc00;
+    }
+
+    nav {
+      margin-bottom:20px;
+    }
+
+    a {
+      color:#ffcc00;
+      margin-right:10px;
+      text-decoration:none;
+    }
+
+    table { 
+      width:100%;
+      border-collapse:collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 8px;
+      border-bottom: 1px solid #333;
+      border-right: 1px solid #333;
+    }
+
+    #filters {
+      margin:10px 0
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Overview</a>|
+    <a href="raid.html">Union Raid</a>|
+    <a href="player.html">Players</a>|
+    <a href="boss.html">Bosses</a>
+</nav>
+
+<h1>Union Overview</h1>
+
+<div id="filters">
+  <label>
+    <input type="checkbox" id="includeNormal">
+    Include Normal Mode
+  </label>
+</div>
+
+<div id="overview"></div>
+
+<h2>Leaderboard</h2>
+<table id="leaderboard"></table>
+
+<h2>Damage by Player</h2>
+<canvas id="damageChart"></canvas>
+
+<script>
+
+let rawData = [];
+
+fetch('csvjson.json')
+  .then(res => res.json())
+  .then(data => {
+    rawData = data;
+    render();
+  });
+
+document.getElementById("includeNormal").addEventListener("change", render);
+
+function render() {
+
+  const includeNormal = document.getElementById("includeNormal").checked;
+
+  const filtered = rawData.filter(r =>
+    r.raidMode === "Hard" ||
+    (includeNormal && r.raidMode === "Normal")
+  );
+
+  const players = {};
+  let totalDamage = 0;
+  let totalAttempts = filtered.length;
+  let totalKills = 0;
+
+  filtered.forEach(r => {
+
+    const name = r.playerName;
+    const dmg = Number(r.totalDamage) || 0;
+
+    totalDamage += dmg;
+    if (r.isKill) totalKills++;
+
+    if (!players[name]) {
+      players[name] = { damage:0, attempts:0, best:0 };
+    }
+
+    players[name].damage += dmg;
+    players[name].attempts++;
+    if (dmg > players[name].best) players[name].best = dmg;
+  });
+
+  const avg = totalAttempts ? Math.round(totalDamage / totalAttempts) : 0;
+
+  document.getElementById("overview").innerHTML = `
+    <p>Total Damage: ${totalDamage.toLocaleString()}</p>
+    <p>Total Attempts: ${totalAttempts}</p>
+    <p>Total Kills: ${totalKills}</p>
+    <p>Avg Damage: ${avg.toLocaleString()}</p>
+  `;
+
+  const sorted = Object.entries(players).sort((a,b)=>b[1].damage-a[1].damage);
+
+  let table = `
+    <tr>
+      <th>Player Name</th>
+      <th>Lifetime Damage</th>
+      <th>Average Damage</th>
+      <th>Best Attack</th>
+      <th>Total Attacks</th>
+      <th>Contribution %</th>
+    </tr>
+  `;
+
+  sorted.forEach(([name, p]) => {
+    const avg = Math.round(p.damage / p.attempts);
+    const pct = ((p.damage / totalDamage)*100).toFixed(1);
+
+    table += `
+      <tr>
+        <td>${name}</td>
+        <td>${p.damage.toLocaleString()}</td>
+        <td>${avg.toLocaleString()}</td>
+        <td>${p.best.toLocaleString()}</td>
+        <td>${p.attempts}</td>
+        <td>${pct}%</td>
+      </tr>
+    `;
+  });
+
+  document.getElementById("leaderboard").innerHTML = table;
+
+  const labels = sorted.map(p=>p[0]);
+  const values = sorted.map(p=>p[1].damage);
+
+  if (window.chart && typeof window.chart.destroy === 'function') {
+    window.chart.destroy();
+  }
+
+  window.chart = new Chart(document.getElementById("damageChart"), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{ label:'Damage', data:values }]
+    }
+  });
+}
+
+</script>
+
+</body>
+</html>

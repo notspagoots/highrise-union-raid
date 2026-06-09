@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boss Overview</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #121212;
+      color: #eee;
+    }
+
+    h1, h2 {
+      color: #ffcc00;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #ffcc00;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+
+    select, label {
+      margin-right: 15px;
+    }
+
+    .card {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background: #1b1b1b;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      padding: 4px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Overview</a>|
+    <a href="raid.html">Union Raid</a>|
+    <a href="player.html">Players</a>|
+    <a href="boss.html">Bosses</a>
+</nav>
+
+<h1>Boss Overview</h1>
+
+<label>Select Boss:
+  <select id="bossSelect"></select>
+</label>
+
+<label>
+  <input type="checkbox" id="includeNormal">
+  Include Normal Mode
+</label>
+
+<div id="summary" class="card"></div>
+
+<h2>Top Units</h2>
+<ul id="topUnits"></ul>
+
+<script>
+
+let rawData = [];
+
+// ✅ TEMP UNIT ROLES (you can expand later)
+const unitRoles = {
+  "Liter": "I",
+  "Volume": "I",
+  "Centi": "II",
+  "Rupee": "II",
+  "Scarlet": "III",
+  "Alice": "III",
+  "Modernia": "III"
+};
+
+fetch('csvjson.json')
+  .then(res => res.json())
+  .then(data => {
+    rawData = data;
+    populateBosses();
+    render();
+  });
+
+// ✅ Event listeners
+document.getElementById("bossSelect").addEventListener("change", render);
+document.getElementById("includeNormal").addEventListener("change", render);
+
+// ✅ Populate dropdown
+function populateBosses() {
+  const bosses = [...new Set(rawData.map(r => r.bossName))].sort();
+
+  const select = document.getElementById("bossSelect");
+
+  let options = "";
+
+  bosses.forEach((b, i) => {
+    options += `<option value="${b}" ${i === 0 ? "selected" : ""}>${b}</option>`;
+  });
+
+  select.innerHTML = options;
+}
+
+// ✅ Main render
+function render() {
+
+    const selectedBoss = document.getElementById("bossSelect").value;
+    const includeNormal = document.getElementById("includeNormal").checked;
+
+    const filtered = rawData.filter(r => {
+        const bossMatch = r.bossName === selectedBoss;
+        const modeMatch =
+        r.raidMode === "Hard" ||
+        (includeNormal && r.raidMode === "Normal");
+        return bossMatch && modeMatch;
+    });
+    
+    const raids = [...new Set(filtered.map(r => r.raidNumber))]
+        .sort((a, b) => Number(b) - Number(a)) // newest first
+        .map(r => formatRaid(r));
+    const bossInfo = filtered[0] || {};
+    const bossElement = bossInfo.bossElement || "-";
+    const bossWeakness = bossInfo.bossElementWeakness || "-";
+
+  if (filtered.length === 0) {
+    document.getElementById("summary").innerHTML = "<p>No data available</p>";
+    document.getElementById("topUnits").innerHTML = "";
+    return;
+  }
+
+  // ✅ BASIC SUMMARY
+  document.getElementById("summary").innerHTML = `
+    <p><strong>Boss Name:</strong> ${selectedBoss}</p>
+    <p><strong>Element:</strong> ${bossElement}</p>
+    <p><strong>Weakness:</strong> ${bossWeakness}</p>
+    <p><strong>Raid Appearance(s):</strong> ${raids.join(", ")}</p>
+    <p><strong>Total Attacks:</strong> ${filtered.length}</p>
+    `;
+
+
+  // ✅ UNIT USAGE COUNTER
+  const usage = {};
+
+  filtered.forEach(r => {
+    const slots = [r.slot1, r.slot2, r.slot3, r.slot4, r.slot5];
+
+    slots.forEach(unit => {
+      if (!unit) return;
+
+      if (!usage[unit]) usage[unit] = 0;
+      usage[unit]++;
+    });
+  });
+
+  // ✅ TOP 5 UNITS
+  const sorted = Object.entries(usage)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5);
+
+  const totalTeams = filtered.length;
+
+  let listHTML = "";
+
+  sorted.forEach(([unit, count]) => {
+
+    const rate = ((count / totalTeams) * 100).toFixed(1);
+
+    listHTML += `<li>${unit} — ${rate}%</li>`;
+  });
+
+  document.getElementById("topUnits").innerHTML = listHTML;
+}
+
+
+function formatRaid(raidNumber) {
+    if (!raidNumber) return '-';
+
+    const str = raidNumber.toString();
+
+    if (str.length !== 4) return str; // fallback if weird data
+
+    const year = str.slice(0, 2);
+    const month = str.slice(2, 4);
+
+    return `${year}-${month}`;
+}
+
+
+</script>
+
+</body>
+</html>
