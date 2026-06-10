@@ -76,18 +76,8 @@
 
 let rawData = [];
 
-// ✅ TEMP UNIT ROLES (you can expand later)
-const unitRoles = {
-  "Liter": "I",
-  "Volume": "I",
-  "Centi": "II",
-  "Rupee": "II",
-  "Scarlet": "III",
-  "Alice": "III",
-  "Modernia": "III"
-};
 
-fetch('csvjson.json')
+fetch('raid_data.json')
   .then(res => res.json())
   .then(data => {
     rawData = data;
