@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highrise Union Leaderboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      background:#121212;
+      color:#eee;
+    }
+
+    h1, h2 {
+      color:#ffcc00;
+    }
+
+    nav {
+      margin-bottom:20px;
+    }
+
+    a {
+      color:#ffcc00;
+      margin-right:10px;
+      text-decoration:none;
+    }
+
+    table { 
+      width:100%;
+      border-collapse:collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 8px;
+      border-bottom: 1px solid #333;
+      border-right: 1px solid #333;
+    }
+
+    td .role-icon {
+      display: inline-block;
+    }
+
+    #filters {
+      margin:10px 0
+    }
+
+    .role-icon {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+      vertical-align: middle;
+      opacity: 0.9;
+    }
+
+    .player-cell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .player-name {
+      text-align: left;
+    }
+
+    .role-icon {
+      width: 14px;
+      height: 14px;
+      margin-left: 8px;
+      flex-shrink: 0;
+    }
+
+    .center-col {
+      text-align: center;
+      vertical-align: center;
+    }
+
+    th {
+      cursor: pointer;
+    }
+
+    th:hover {
+      background: #1f1f1f;
+    }
+
+    th.center-col,
+    td.center-col {
+      text-align: center;
+    }
+
+    .leaderboard-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .leaderboard-header h2 {
+      margin: 0;
+    }
+
+    .leaderboard-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+
+    .leaderboard-disclaimer {
+    font-size: 13px;
+    color: #aaa;
+    font-style: italic;
+    opacity: 0.9;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Overview</a>|
+    <a href="raid.html">Union Raid</a>|
+    <a href="player.html">Players</a>|
+    <a href="boss.html">Bosses</a>|
+    <a href="leaderboard.html">Leaderboard</a>
+</nav>
+
+<h1>Union Leaderboard</h1>
+
+<div id="filters">
+  <label>
+    <input type="checkbox" id="includeNormal">
+    Include Normal Mode
+  </label>
+</div>
+
+<div id="overview"></div>
+
+
+<div class="leaderboard-header">
+  <div class="leaderboard-title">
+    <h2>Leaderboard</h2>
+    <span class="leaderboard-disclaimer">
+      Based on raid data starting from March 2025
+    </span>
+  </div>
+
+  <label class="checkbox">
+    <input type="checkbox" id="showActiveOnly">
+    <span>Show Active Members Only</span>
+  </label>
+</div>
+
+
+<table id="leaderboard"></table>
+
+<script>
+
+let rawData = [];
+let currentSort = {
+  column: "damage",
+  direction: "desc"
+};
+
+
+fetch('raid_data.json')
+  .then(res => res.json())
+  .then(data => {
+    rawData = data;
+    return fetch('roster.json'); 
+  })
+  .then(res => res.json())
+  .then(rosterData => {
+    roster = rosterData;
+    render();
+  });
+
+document.getElementById("includeNormal").addEventListener("change", render);
+document.getElementById("showActiveOnly").addEventListener("change", render);
+
+function sortTable(column) {
+  if (currentSort.column === column) {
+    currentSort.direction = currentSort.direction === "asc" ? "desc" : "asc";
+  } else {
+  currentSort.column = column;
+  currentSort.direction = "desc";
+  }
+  render();
+}
+
+function getSortArrow(column) {
+  if (currentSort.column !== column) return "";
+  return currentSort.direction === "asc" ? " ↑" : " ↓";
+}
+
+function render() {
+
+  const includeNormal = document.getElementById("includeNormal").checked;
+
+  const filtered = rawData.filter(r =>
+    r.raidMode === "Hard" ||
+    (includeNormal && r.raidMode === "Normal")
+  );
+
+  const players = {};
+  let totalDamage = 0;
+  let totalAttempts = filtered.length;
+  let totalKills = 0;
+
+
+  filtered.forEach(r => {
+    const name = r.playerName;
+    const dmg = Number(r.totalDamage) || 0;
+
+    totalDamage += dmg;
+    if (r.isKill === "TRUE") totalKills++;
+
+    if (!players[name]) {
+      players[name] = {
+        damage: 0,
+        attempts: 0,
+        best: 0,
+        raids: new Set()
+      };
+    }
+
+    players[name].damage += dmg;
+    players[name].attempts++;
+    players[name].raids.add(r.raidNumber);
+    if (dmg > players[name].best) players[name].best = dmg;
+  });
+  
+  roster.forEach(player => {
+    const name = player.playerName;
+
+    if (!players[name]) {
+      players[name] = {
+        damage: 0,
+        attempts: 0,
+        best: 0,
+        raids: new Set()
+      };
+    }
+  });
+
+  const showActiveOnly = document.getElementById("showActiveOnly").checked;
+  const avg = totalAttempts ? Math.round(totalDamage / totalAttempts) : 0;
+
+  document.getElementById("overview").innerHTML = `
+    <p>Total Damage: ${totalDamage.toLocaleString()}</p>
+    <p>Total Attempts: ${totalAttempts}</p>
+    <p>Total Kills: ${totalKills}</p>
+  `;
+
+  const sorted = Object.entries(players)
+    .filter(([name]) => {
+      if (!showActiveOnly) return true;
+
+      const player = getPlayer(name);
+      return isActiveRosterPlayer(player);
+    })
+    .sort((a, b) => {
+      const [nameA, pA] = a;
+      const [nameB, pB] = b;
+
+      const avgA = pA.attempts ? Math.round(pA.damage / pA.attempts) : 0;
+      const avgB = pB.attempts ? Math.round(pB.damage / pB.attempts) : 0;
+
+      const raidPartA = pA.raids.size;
+      const raidPartB = pB.raids.size;
+
+      let valA;
+      let valB;
+
+      switch (currentSort.column) {
+        case "playerName":
+          valA = nameA.toLowerCase();
+          valB = nameB.toLowerCase();
+          break;
+        case "damage":
+          valA = pA.damage;
+          valB = pB.damage;
+          break;
+        case "avgDamage":
+          valA = avgA;
+          valB = avgB;
+          break;
+        case "best":
+          valA = pA.best;
+          valB = pB.best;
+          break;
+        case "raidParticipation":
+          valA = raidPartA;
+          valB = raidPartB;
+          break;
+        case "attempts":
+          valA = pA.attempts;
+          valB = pB.attempts;
+          break;
+        default:
+          valA = pA.damage;
+          valB = pB.damage;
+      }
+
+      if (valA < valB) return currentSort.direction === "asc" ? -1 : 1;
+      if (valA > valB) return currentSort.direction === "asc" ? 1 : -1;
+      return 0;
+    });
+
+  let table = `
+    <tr>
+      <th onclick="sortTable('playerName')">Player Name${getSortArrow('playerName')}</th>
+      <th onclick="sortTable('damage')">Lifetime Damage${getSortArrow('damage')}</th>
+      <th onclick="sortTable('avgDamage')">Average Damage${getSortArrow('avgDamage')}</th>
+      <th onclick="sortTable('best')">Best Attack${getSortArrow('best')}</th>
+      <th onclick="sortTable('raidParticipation')" class="center-col">Raid Participation${getSortArrow('raidParticipation')}</th>
+      <th onclick="sortTable('attempts')" class="center-col">Total Attacks${getSortArrow('attempts')}</th>
+    </tr>
+  `;
+
+  sorted.forEach(([name, p]) => {
+    const avg = p.attempts ? Math.round(p.damage / p.attempts) : 0;
+    const raidParticipation = p.raids.size;
+
+    table += `
+      <tr>
+        <td>
+          <div class="player-cell">
+            <span class="player-name">${name}</span>
+            ${getRoleIcon(name)}
+          </div>
+        </td>
+        <td>${p.damage.toLocaleString()}</td>
+        <td>${avg.toLocaleString()}</td>
+        <td>${p.best.toLocaleString()}</td>
+        <td class="center-col">${raidParticipation}</td>
+        <td class="center-col">${p.attempts}</td>
+      </tr>
+    `;
+  });
+
+  document.getElementById("leaderboard").innerHTML = table;
+
+}
+
+function getPlayer(name) {
+    return roster.find(p => p.playerName === name);
+}
+
+function getRoleIcon(playerName) {
+    const player = getPlayer(playerName);
+    if (!player) return "";
+
+    if (player.roleCaptain === "TRUE") {
+      return `<img src="images/badges/badge_leader.svg" class="role-icon" alt="Leader" title="Leader">`;
+    }
+
+    if (player.roleOfficer === "TRUE") {
+      return `<img src="images/badges/badge_officer.svg" class="role-icon" alt="Officer" title="Officer">`;
+    }
+
+    if (player.roleActive === "TRUE") {
+      return `<img src="images/badges/badge_active.svg" class="role-icon" alt="Active Member" title="Active">`;
+    }
+
+    return "";
+}
+
+function isActiveRosterPlayer(player) {
+  if (!player) return false;
+  return (
+    player.roleActive === "TRUE" ||
+    player.roleOfficer === "TRUE" ||
+    player.roleCaptain === "TRUE"
+  );
+}
+
+function formatRaid(raidNumber) {
+  if (!raidNumber) return '-';
+  const str = raidNumber.toString();
+  if (str.length !== 4) return str;
+  return `${str.slice(0, 2)}-${str.slice(2, 4)}`;
+}
+
+</script>
+
+</body>
+</html>

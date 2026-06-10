@@ -37,8 +37,197 @@
       border-right: 1px solid #333;
     }
 
+    td .role-icon {
+      display: inline-block;
+    }
+
     #filters {
       margin:10px 0
+    }
+
+    .role-icon {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+      vertical-align: middle;
+      opacity: 0.9;
+    }
+
+    .player-cell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .player-name {
+      text-align: left;
+    }
+
+    .role-icon {
+      width: 14px;
+      height: 14px;
+      margin-left: 8px;
+      flex-shrink: 0;
+    }
+
+    .center-col {
+      text-align: center;
+      vertical-align: center;
+    }
+
+    th {
+      cursor: pointer;
+    }
+
+    th:hover {
+      background: #1f1f1f;
+    }
+
+    th.center-col,
+    td.center-col {
+      text-align: center;
+    }
+
+    .chart-wrap {
+      width: 840px;
+      height: 840px;
+      margin: 50px;
+      flex-shrink: 0;
+    }
+
+    .recent-raid-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-top: 10px;
+    }
+
+    .recent-raid-table-wrap {
+      min-width: 260px;
+      max-width: 320px;
+      flex-shrink: 0;
+    }
+
+    .recent-raid-table-wrap table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .recent-raid-table-wrap th,
+    .recent-raid-table-wrap td {
+      padding: 6px 8px;
+      border-bottom: 1px solid #333;
+      border-right: 1px solid #333;
+    }
+
+    .recent-raid-table-wrap th:last-child,
+    .recent-raid-table-wrap td:last-child {
+      border-right: none;
+    }
+
+    .recent-raid-table-wrap .num-col {
+      text-align: right;
+    }
+
+    .recent-raid-table-wrap tr:hover {
+      background-color: rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+    }
+
+    .recent-raid-row:hover {
+      background-color: rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+    }
+
+    .recent-raid-detail-row td {
+      background: #181818;
+      padding: 10px;
+    }
+    
+    .recent-raid-table-wrap table {
+      table-layout: fixed;
+    }
+
+    .recent-raid-table-wrap td:first-child {
+      width: 55%;     /* player name column */
+    }
+
+    .recent-raid-table-wrap td:last-child {
+      width: 45%;
+    }
+
+    .attack-detail-box {
+      overflow: hidden;
+    }
+
+    .attack-detail-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .attack-detail-title {
+      font-weight: bold;
+      color: #ffcc00;
+      margin-bottom: 4px;
+    }
+
+    .attack-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .attack-team-icons {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      flex: 1;
+    }
+
+    .attack-team-icons img {
+      width: 28px;
+      height: 28px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid #444;
+    }
+
+    .attack-damage {
+      text-align: right;
+      min-width: 110px;
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+    }
+    
+    .attack-boss {
+      font-size: 18px;
+      color: #bbb;
+      margin-bottom: 4px;
+    }
+
+    .attack-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .expand-container {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .recent-raid-detail-row .expand-container {
+      max-height: 200px;   /* enough to fit 3 attacks */
+    }
+
+    .table-hint {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 6px;
+      font-style: italic;
     }
 
   </style>
@@ -50,126 +239,388 @@
     <a href="index.html">Overview</a>|
     <a href="raid.html">Union Raid</a>|
     <a href="player.html">Players</a>|
-    <a href="boss.html">Bosses</a>
+    <a href="boss.html">Bosses</a>|
+    <a href="leaderboard.html">Leaderboard</a>
 </nav>
 
 <h1>Union Overview</h1>
 
-<div id="filters">
-  <label>
-    <input type="checkbox" id="includeNormal">
-    Include Normal Mode
-  </label>
-</div>
-
 <div id="overview"></div>
 
-<h2>Leaderboard</h2>
-<table id="leaderboard"></table>
+<h2 id="recentRaidTitle">Most Recent Raid Damage</h2>
 
-<h2>Damage by Player</h2>
-<canvas id="damageChart"></canvas>
+<div class="recent-raid-layout">
+  <div class="chart-wrap">
+    <canvas id="damageChart"></canvas>
+  </div>
+
+  <div class="recent-raid-table-wrap">
+    <div class="table-hint">
+      Click to show details
+    </div>
+
+    <table id="recentRaidTable"></table>
+
+  </div>
+
+</div>
+
 
 <script>
 
 let rawData = [];
+let currentSort = {
+  column: "damage",
+  direction: "desc"
+};
+let recentRaidLabels = [];
+let recentRaidValues = [];
+let units = [];
+let expandedRecentPlayer = null;
+let recentRaidAttackRows = [];
+let pieEntries = [];
 
 fetch('raid_data.json')
   .then(res => res.json())
   .then(data => {
     rawData = data;
+    return fetch('roster.json'); 
+  })
+  .then(res => res.json())
+  .then(rosterData => {
+    roster = rosterData;
+    return fetch('nikke.json');
+  })
+  .then(res => res.json())
+  .then(unitData => {
+    units = unitData;
     render();
   });
+  
 
-document.getElementById("includeNormal").addEventListener("change", render);
+function sortTable(column) {
+  if (currentSort.column === column) {
+    currentSort.direction = currentSort.direction === "asc" ? "desc" : "asc";
+  } else {
+  currentSort.column = column;
+  currentSort.direction = "desc";
+  }
+  render();
+}
+
+function getSortArrow(column) {
+  if (currentSort.column !== column) return "";
+  return currentSort.direction === "asc" ? " ↑" : " ↓";
+}
 
 function render() {
 
-  const includeNormal = document.getElementById("includeNormal").checked;
-
-  const filtered = rawData.filter(r =>
-    r.raidMode === "Hard" ||
-    (includeNormal && r.raidMode === "Normal")
-  );
+  const filtered = rawData.filter(r => r.raidMode === "Hard");
 
   const players = {};
   let totalDamage = 0;
   let totalAttempts = filtered.length;
   let totalKills = 0;
 
-  filtered.forEach(r => {
 
+  filtered.forEach(r => {
     const name = r.playerName;
     const dmg = Number(r.totalDamage) || 0;
 
-    totalDamage += dmg;
-    if (r.isKill) totalKills++;
-
     if (!players[name]) {
-      players[name] = { damage:0, attempts:0, best:0 };
+      players[name] = {
+        damage: 0,
+        attempts: 0,
+        best: 0,
+        raids: new Set()
+      };
     }
 
     players[name].damage += dmg;
     players[name].attempts++;
+    players[name].raids.add(r.raidNumber);
     if (dmg > players[name].best) players[name].best = dmg;
+  });
+  
+  roster.forEach(player => {
+    const name = player.playerName;
+
+    if (!players[name]) {
+      players[name] = {
+        damage: 0,
+        attempts: 0,
+        best: 0,
+        raids: new Set()
+      };
+    }
   });
 
   const avg = totalAttempts ? Math.round(totalDamage / totalAttempts) : 0;
 
-  document.getElementById("overview").innerHTML = `
-    <p>Total Damage: ${totalDamage.toLocaleString()}</p>
-    <p>Total Attempts: ${totalAttempts}</p>
-    <p>Total Kills: ${totalKills}</p>
-    <p>Avg Damage: ${avg.toLocaleString()}</p>
-  `;
+   // most recent raid pie graph
 
-  const sorted = Object.entries(players).sort((a,b)=>b[1].damage-a[1].damage);
+  const hardOnly = rawData.filter(r => r.raidMode === "Hard");
 
-  let table = `
-    <tr>
-      <th>Player Name</th>
-      <th>Lifetime Damage</th>
-      <th>Average Damage</th>
-      <th>Best Attack</th>
-      <th>Total Attacks</th>
-      <th>Contribution %</th>
-    </tr>
-  `;
+  const mostRecentRaid = [...new Set(hardOnly.map(r => r.raidNumber))]
+    .sort((a, b) => Number(b) - Number(a))[0];
 
-  sorted.forEach(([name, p]) => {
-    const avg = Math.round(p.damage / p.attempts);
-    const pct = ((p.damage / totalDamage)*100).toFixed(1);
+  const mostRecentRaidRows = hardOnly.filter(r => r.raidNumber == mostRecentRaid);
+  recentRaidAttackRows = mostRecentRaidRows;
 
-    table += `
-      <tr>
-        <td>${name}</td>
-        <td>${p.damage.toLocaleString()}</td>
-        <td>${avg.toLocaleString()}</td>
-        <td>${p.best.toLocaleString()}</td>
-        <td>${p.attempts}</td>
-        <td>${pct}%</td>
-      </tr>
-    `;
+  const recentRaidPlayers = {};
+
+  mostRecentRaidRows.forEach(r => {
+    const name = r.playerName;
+    const dmg = Number(r.totalDamage) || 0;
+
+    if (!recentRaidPlayers[name]) {
+      recentRaidPlayers[name] = 0;
+    }
+
+    recentRaidPlayers[name] += dmg;
   });
 
-  document.getElementById("leaderboard").innerHTML = table;
 
-  const labels = sorted.map(p=>p[0]);
-  const values = sorted.map(p=>p[1].damage);
+  pieEntries = Object.entries(recentRaidPlayers)
+    .sort((a, b) => b[1] - a[1]);
 
-  if (window.chart && typeof window.chart.destroy === 'function') {
+
+  recentRaidLabels = pieEntries.map(([name]) => name);
+  recentRaidValues = pieEntries.map(([, damage]) => damage);
+
+  document.getElementById("recentRaidTitle").textContent =
+    `Most Recent Raid Damage Spread (${formatRaid(mostRecentRaid)})`;
+
+  renderRecentTableOnly();
+
+  // rebuild chart
+  if (window.chart && typeof window.chart.destroy === "function") {
     window.chart.destroy();
   }
 
   window.chart = new Chart(document.getElementById("damageChart"), {
-    type: 'bar',
+    type: "pie",
     data: {
-      labels,
-      datasets: [{ label:'Damage', data:values }]
+      labels: recentRaidLabels,
+      datasets: [{
+        label: `Most Recent Raid (${formatRaid(mostRecentRaid)})`,
+        data: recentRaidValues,
+        backgroundColor: [
+          "#ff6384",
+          "#36a2eb",
+          "#ffce56",
+          "#4bc0c0",
+          "#9966ff",
+          "#ff9f40",
+          "#66bb6a",
+          "#ef5350",
+          "#ab47bc",
+          "#29b6f6",
+          "#ffa726",
+          "#5c6bc0"
+        ]
+      }]
+    },
+    options: {
+      elements: {
+        arc: {
+          hoverOffset: 24
+        }
+      },
+      layout: {
+        padding: 20
+      },
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const name = context.label || "";
+              const value = Number(context.raw) || 0;
+              return `${name}: ${value.toLocaleString()}`;
+            }
+          }
+        },
+        legend: {
+          display: false,
+          position: "left",
+          labels: {
+            color: "#eee",
+            boxWidth: 12,
+            padding: 10
+          }
+        }
+      }
     }
   });
 }
 
+function getPlayer(name) {
+    return roster.find(p => p.playerName === name);
+}
+
+function getRoleIcon(playerName) {
+    const player = getPlayer(playerName);
+    if (!player) return "";
+
+    if (player.roleCaptain === "TRUE") {
+      return `<img src="images/badges/badge_leader.svg" class="role-icon" alt="Leader" title="Leader">`;
+    }
+
+    if (player.roleOfficer === "TRUE") {
+      return `<img src="images/badges/badge_officer.svg" class="role-icon" alt="Officer" title="Officer">`;
+    }
+
+    if (player.roleActive === "TRUE") {
+      return `<img src="images/badges/badge_active.svg" class="role-icon" alt="Active Member" title="Active">`;
+    }
+
+    return "";
+}
+
+function isActiveRosterPlayer(player) {
+  if (!player) return false;
+  return (
+    player.roleActive === "TRUE" ||
+    player.roleOfficer === "TRUE" ||
+    player.roleCaptain === "TRUE"
+  );
+}
+
+function formatRaid(raidNumber) {
+  if (!raidNumber) return '-';
+  const str = raidNumber.toString();
+  if (str.length !== 4) return str;
+  return `${str.slice(0, 2)}-${str.slice(2, 4)}`;
+}
+
+function highlightPieSlice(index) {
+  if (!window.chart) return;
+
+  window.chart.setActiveElements([
+    {
+      datasetIndex: 0,
+      index: index
+    }
+  ]);
+
+  window.chart.tooltip.setActiveElements(
+    [{ datasetIndex: 0, index: index }],
+    { x: 0, y: 0 }
+  );
+
+  window.chart.update();
+}
+
+function clearPieHighlight() {
+  if (!window.chart) return;
+
+  window.chart.setActiveElements([]);
+  window.chart.tooltip.setActiveElements([], { x: 0, y: 0 });
+  window.chart.update();
+}
+
+function toggleRecentPlayerDetails(playerName) {
+  expandedRecentPlayer =
+    expandedRecentPlayer === playerName ? null : playerName;
+
+  renderRecentTableOnly();
+}
+function getUnit(name) {
+  return units.find(u => u.nikkeName === name);
+}
+
+function renderMiniTeam(row) {
+  const slots = [
+    row.slot1,
+    row.slot2,
+    row.slot3,
+    row.slot4,
+    row.slot5
+  ];
+
+  return `
+    <div class="attack-team-icons">
+      ${slots.map(name => {
+        if (!name) return "";
+
+        const unit = getUnit(name);
+        if (!unit) return `<span>${name}</span>`;
+
+        return `<img src="${unit.nikkeImage}" alt="${name}" title="${name}">`;
+      }).join("")}
+    </div>
+  `;
+}
+
+function renderRecentPlayerDetails(playerName, attacks) {
+  return `
+    <div class="attack-detail-box">
+      ${attacks.map(attack => `
+        <div class="attack-block">
+          
+          <div class="attack-boss">
+            ${attack.bossName}
+          </div>
+
+          <div class="attack-line">
+            ${renderMiniTeam(attack)}
+
+            <div class="attack-damage">
+              ${(Number(attack.totalDamage) || 0).toLocaleString()}
+            </div>
+          </div>
+
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderRecentTableOnly() {
+    // build the recent raid table
+
+  let recentTable = `
+    <tr>
+      <th>Player Name</th>
+      <th class="num-col">Total Damage</th>
+    </tr>
+  `;
+
+pieEntries.forEach(([name, damage], index) => {
+  recentTable += `
+    <tr
+      class="recent-raid-row"
+      data-player="${encodeURIComponent(name)}"
+      onmouseenter="highlightPieSlice(${index})"
+      onmouseleave="clearPieHighlight()"
+      onclick="toggleRecentPlayerDetails(decodeURIComponent(this.dataset.player))"
+    >
+      <td>${name}</td>
+      <td class="num-col">${Number(damage).toLocaleString()}</td>
+    </tr>
+  `;
+
+  if (expandedRecentPlayer === name) {
+    const attacks = recentRaidAttackRows
+      .filter(r => r.playerName === name)
+      .sort((a, b) => Number(a.bossLevel) - Number(b.bossLevel));
+
+    recentTable += `
+      <tr class="recent-raid-detail-row">
+        <td colspan="2">
+          <div class="expand-container">
+            ${renderRecentPlayerDetails(name, attacks)}
+          </div>
+        </td>
+      </tr>
+    `;
+  }
+});
+
+  document.getElementById("recentRaidTable").innerHTML = recentTable;
+}
 </script>
 
 </body>

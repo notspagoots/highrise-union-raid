@@ -30,6 +30,15 @@
         margin-top: 15px;
     }
 
+
+    #table th {
+        font-size: 20px;
+    }
+    #table td {
+        font-size: 18px;
+    }
+
+
     th, td {
         padding: 3px;
         border-bottom: 4px solid #333;
@@ -355,7 +364,7 @@
 
 <div class="control-row">
 
-    <label>Raid:
+    <label style="margin-left:20px">Raid:
         <select id="raidSelect"></select>
     </label>
 
@@ -397,9 +406,7 @@
         </div>
     </div>
 
-    <div id="levelContainer"></div>
-
-<h2>Attempts</h2>
+<!-- <h2>Attempts</h2>  -->
 <label style="margin-left:20px;">
   Search:
   <input type="text" id="playerSearch" placeholder="Player, boss, team...">
@@ -721,14 +728,17 @@ function populateBossButtons() {
         groups[weakness].add(boss);
     });
 
-    // Clean selectedBosses (remove invalid ones)
-    const validBosses = new Set(relevantRows.map(r => r.bossName));
+
+    const validBosses = new Set(
+        relevantRows.map(r => `${r.bossName}|${r.bossElementWeakness}`)
+    );
 
     selectedBosses.forEach(b => {
         if (!validBosses.has(b)) {
-        selectedBosses.delete(b);
+            selectedBosses.delete(b);
         }
     });
+
 
     // Build UI
     Object.keys(groups).sort().forEach(weakness => {
@@ -751,7 +761,9 @@ function populateBossButtons() {
         btn.className = "boss-button";
         btn.textContent = boss;
 
-        if (selectedBosses.has(boss)) {
+        const key = `${boss}|${weakness}`;
+
+        if (selectedBosses.has(key)) {
             btn.classList.add("active");
         }
 
@@ -804,9 +816,10 @@ function populateLevelButtons() {
 
     // If bosses are selected, narrow levels to those bosses only
     if (selectedBosses.size > 0) {
-        candidateRows = candidateRows.filter(row =>
-        selectedBosses.has(row.bossName)
-        );
+        candidateRows = candidateRows.filter(row => {
+        const key = `${row.bossName}|${row.bossElementWeakness}`;
+        return selectedBosses.has(key);
+        });
     }
 
     const availableLevels = [...new Set(
