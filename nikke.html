@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nikke Units</title>
+  <title>Nikkepedia</title>
 
   <style>
     body {
@@ -14,6 +14,12 @@
 
     h1 {
         color: #ffcc00;
+    }
+
+    a {
+        color: #ffcc00;
+        margin-right: 10px;
+        text-decoration: none;
     }
 
     /* ===== FILTER BUTTONS ===== */
@@ -64,26 +70,32 @@
     }
 
     .unit-card {
+        height: 130px;
         background: #1a1a1a;
         padding: 6px;
         border-radius: 6px;
         text-align: center;
         border: 1px solid #2a2a2a;
         cursor: pointer;
+        justify-content: space-between;
     }
 
     .unit-card:hover {
         border-color: #ffcc00;
+        transform: translateY(-2px);
     }
 
     .unit-card img {
         width: 80px;
+        height: 80px;
+        object-fit: contain;
         border-radius: 4px;
         margin-bottom: 4px;
     }
 
     .unit-name {
-        font-size: 12px;
+        font-size: 14px;
+        height: 28px;
     }
 
     .element-button {
@@ -129,31 +141,28 @@
         background: #2a2a2a;
     }
 
-    .unit-card:hover {
-        transform: translateY(-2px);
-    }
-    /* SSR (gold tint) */
+     /* SSR (gold tint) */
     .rarity-ssr {
     background: linear-gradient(
-        315deg,
+        300deg,
         #1a1a1a 20%,
-        rgba(212, 175, 55, 0.25)
+        rgba(212, 175, 55, 0.712)
         );
     }
     /* SR (purple tint) */
     .rarity-sr {
     background: linear-gradient(
-        315deg,
+        300deg,
         #1a1a1a 20%,
-        rgba(155, 89, 182, 0.25)
+        rgba(156, 89, 182, 0.719)
         );
     }
     /* R (blue tint) */
     .rarity-r {
         background: linear-gradient(
-        315deg,
+        300deg,
         #1a1a1a 20%,
-        rgba(52, 152, 219, 0.25)
+        rgba(52, 152, 219, 0.781)
         );
     }
 
@@ -198,16 +207,93 @@
         object-fit: contain;
     }
 
+    .search-box {
+        margin-bottom: 15px;
+    }
+
+    .search-box input {
+        width: 250px;
+        padding: 8px 10px;
+
+        background: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 6px;
+
+        color: #eee;
+        font-size: 14px;
+    }
+
+    .search-box input:focus {
+        outline: none;
+        border-color: #ffcc00;
+    }
+
+    .filter-card {
+        border: 1px solid #333;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        background: #181818;
+        overflow: hidden;
+    }
+
+    .filter-header {
+        padding: 10px;
+        background: #202020;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-weight: bold;
+        color: #ffcc00;
+    }
+
+    .filter-content {
+        padding: 10px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    
+    #filterToggleIcon {
+        transition: transform 0.3s ease;
+        display: inline-block;
+    }
+
 
   </style>
 </head>
 
 <body>
 
-<h1>Nikke Units</h1>
+<nav>
+    <a href="index.html">Overview</a>|
+    <a href="raid.html">Union Raid</a>|
+    <a href="player.html">Players</a>|
+    <a href="boss.html">Bosses</a>|
+    <a href="leaderboard.html">Leaderboard</a>|
+    <a href="nikke.html">Nikkepedia</a>
+</nav>
+
+<h1>Nikkepedia</h1>
 
 <!-- FILTERS -->
-<div id="filters"></div>
+<div class="filter-card">
+
+  <div class="filter-header" onclick="toggleFilters()">
+    <span>Filters</span>
+    <span id="filterToggleIcon">▲</span>
+  </div>
+
+  <div id="filters" class="filter-content"></div>
+
+</div>
+
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search">
+</div>
+
 
 <!-- UNIT LIST -->
 <div id="unitGrid" class="unit-grid"></div>
@@ -224,6 +310,23 @@ let activeFilters = {
     nikkeManufacturer: []
 };
 let currentSort = 'name';
+let searchQuery = '';
+let filtersOpen = false;
+
+function toggleFilters() {
+    filtersOpen = !filtersOpen;
+
+    const content = document.getElementById("filters");
+    const icon = document.getElementById("filterToggleIcon");
+
+    if (filtersOpen) {
+        content.style.display = "block";
+        icon.style.transform = "rotate(180deg)";
+    } else {
+        content.style.display = "none";
+        icon.style.transform = "rotate(0deg)";
+    }
+}
 
 const weaponMap = {
     "Assault Rifle": "ar",
@@ -242,6 +345,7 @@ const manufacturerOrder = [
     "Abnormal"
 ];
 
+const rarityOrder = ["SSR", "SR", "R"];
 
 // ===== LOAD DATA =====
 fetch('nikke.json')
@@ -253,16 +357,24 @@ fetch('nikke.json')
         renderUnits();
     });
 
+document.getElementById("searchInput").addEventListener("input", (e) => {
+    searchQuery = e.target.value.trim().toLowerCase();
+    renderUnits();
+});
+
+document.getElementById("filters").style.display = "none";
+document.getElementById("filterToggleIcon").style.transform = "rotate(0deg)";
+
 // ===== BUILD FILTER BUTTONS =====
 function buildFilters() {
 
-  const filterDefinitions = {
-    nikkeElement: getUnique('nikkeElement'),
-    nikkeBurst: getUnique('nikkeBurst'),
-    nikkeRarity: getUnique('nikkeRarity'),
-    nikkeWeapon: getUnique('nikkeWeapon'),
-    nikkeManufacturer: getUnique('nikkeManufacturer')
-  };
+    const filterDefinitions = {
+        nikkeManufacturer: getUnique('nikkeManufacturer'),
+        nikkeBurst: getUnique('nikkeBurst'),
+        nikkeElement: getUnique('nikkeElement'),
+        nikkeWeapon: getUnique('nikkeWeapon'),
+        nikkeRarity: getUnique('nikkeRarity')
+    };
 
   let html = '';
 
@@ -286,6 +398,10 @@ let values = filterDefinitions[group];
 
 if (group === "nikkeManufacturer") {
   values = manufacturerOrder.filter(m => values.includes(m));
+}
+
+if (group === "nikkeRarity") {
+  values = rarityOrder.filter(r => values.includes(r));
 }
 
 values.forEach(value => {
@@ -433,18 +549,28 @@ function updateFilterUI() {
 // ===== FILTER + RENDER UNITS =====
 function renderUnits() {
 
-const filtered = units.filter(unit => {
-    return Object.keys(activeFilters).every(group => {
-      if (!activeFilters[group]) return true;
-      return (
+
+    const filtered = units.filter(unit => {
+
+    const matchesFilters = Object.keys(activeFilters).every(group => {
+        return (
         activeFilters[group].length === 0 ||
         activeFilters[group].includes(String(unit[group]))
         );
     });
-  })
 
+    const matchesSearch =
+        !searchQuery ||
+        unit.nikkeName.toLowerCase().includes(searchQuery) ||
+        String(unit.nikkeElement).toLowerCase().includes(searchQuery) ||
+        String(unit.nikkeManufacturer).toLowerCase().includes(searchQuery) ||
+        String(unit.nikkeWeapon).toLowerCase().includes(searchQuery);
+
+    return matchesFilters && matchesSearch;
+
+    })
     .sort((a, b) => {
-
+``
     const rarityOrder = ["SSR", "SR", "R"];
 
     const rarityDiff =
