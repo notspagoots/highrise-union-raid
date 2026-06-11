@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nikke Units</title>
+
+  <style>
+    body {
+        font-family: Arial;
+        background: #121212;
+        color: #eee;
+        padding: 20px;
+    }
+
+    h1 {
+        color: #ffcc00;
+    }
+
+    /* ===== FILTER BUTTONS ===== */
+    .filters {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        background: #1a1a1a;
+        border: 1px solid #333;
+        color: #ccc;
+        padding: 6px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 13px;
+    }
+
+    .filter-button.active {
+        background: #ffcc00;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* ===== UNIT GRID ===== */
+    .unit-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 12px;
+    }
+
+    .unit-card {
+        background: #1a1a1a;
+        padding: 6px;
+        border-radius: 6px;
+        text-align: center;
+        border: 1px solid #2a2a2a;
+        cursor: pointer;
+    }
+
+    .unit-card:hover {
+        border-color: #ffcc00;
+    }
+
+    .unit-card img {
+        width: 80px;
+        border-radius: 4px;
+        margin-bottom: 4px;
+    }
+
+    .unit-name {
+        font-size: 12px;
+    }
+
+    .element-button {
+        padding: 8px;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .element-button img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .element-button.active {
+        border-color: #ffcc00;
+        background: #2a2a2a;
+    }
+
+    
+    .rarity-button {
+        width: 60px;
+        height: 36px;
+        padding: 4px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rarity-button img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .rarity-button.active {
+        border-color: #ffcc00;
+        background: #2a2a2a;
+    }
+
+    .weapon-button {
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weapon-button img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+
+    .weapon-button.active {
+        border-color: #ffcc00;
+        background: #2a2a2a;
+    }
+
+    .unit-card:hover {
+        transform: translateY(-2px);
+    }
+    /* SSR (gold tint) */
+    .rarity-ssr {
+    background: linear-gradient(
+        315deg,
+        #1a1a1a 20%,
+        rgba(212, 175, 55, 0.25)
+        );
+    }
+    /* SR (purple tint) */
+    .rarity-sr {
+    background: linear-gradient(
+        315deg,
+        #1a1a1a 20%,
+        rgba(155, 89, 182, 0.25)
+        );
+    }
+    /* R (blue tint) */
+    .rarity-r {
+    background: linear-gradient(
+        315deg,
+        #1a1a1a 20%,
+        rgba(52, 152, 219, 0.25)
+        );
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>Nikke Units</h1>
+
+<!-- FILTERS -->
+<div id="filters"></div>
+
+<!-- UNIT LIST -->
+<div id="unitGrid" class="unit-grid"></div>
+
+<script>
+
+// ===== GLOBAL STATE =====
+let units = [];
+let activeFilters = {
+    nikkeElement: [],
+    nikkeBurst: [],
+    nikkeRarity: [],
+    nikkeWeapon: [],
+    nikkeManufacturer: []
+};
+let currentSort = 'name';
+
+const weaponMap = {
+    "Assault Rifle": "ar",
+    "Minigun": "mg",
+    "SMG": "smg",
+    "Sniper Rifle": "sr",
+    "Shotgun": "sg",
+    "Rocket Launcher": "rl"
+};
+
+
+// ===== LOAD DATA =====
+fetch('nikke.json')
+    .then(res => res.json())
+    .then(data => {
+        units = data;
+
+        buildFilters();
+        renderUnits();
+    });
+
+// ===== BUILD FILTER BUTTONS =====
+function buildFilters() {
+
+  const filterDefinitions = {
+    nikkeElement: getUnique('nikkeElement'),
+    nikkeBurst: getUnique('nikkeBurst'),
+    nikkeRarity: getUnique('nikkeRarity'),
+    nikkeWeapon: getUnique('nikkeWeapon'),
+    nikkeManufacturer: getUnique('nikkeManufacturer')
+  };
+
+  let html = '';
+
+  Object.keys(filterDefinitions).forEach(group => {
+    html += `<div class="filter-group">`;
+
+    const labelMap = {
+        nikkeElement: "Element",
+        nikkeBurst: "Burst",
+        nikkeRarity: "Rarity",
+        nikkeWeapon: "Weapon",
+        nikkeManufacturer: "Manufacturer"
+        };
+
+    html += `<strong style="margin-right:10px">${labelMap[group]}:</strong>`;
+
+
+    
+filterDefinitions[group].forEach(value => {
+
+  if (group === "nikkeElement") {
+
+    html += `
+      <button class="filter-button element-button"
+        onclick="toggleFilter('${group}', '${value}')"
+        id="filter-${group}-${value}">
+        
+        <img src="images/elements/ele_${value}.png">
+
+      </button>
+    `;
+
+  } else if (group === "nikkeRarity") {
+
+    html += `
+      <button class="filter-button rarity-button"
+        onclick="toggleFilter('${group}', '${value}')"
+        id="filter-${group}-${value}">
+        
+        <img src="images/rarity/${value.toLowerCase()}.png">
+
+      </button>
+    `;
+
+    } 
+else if (group === "nikkeWeapon") {
+
+    const normalized = value.trim().toLowerCase();
+
+    const weaponMapNormalized = {
+        "assault rifle": "ar",
+        "minigun": "mg",
+        "smg": "smg",
+        "sniper rifle": "sr",
+        "shotgun": "sg",
+        "rocket launcher": "rl"
+    };
+
+    const fileKey = weaponMapNormalized[normalized];
+
+    html += `
+        <button class="filter-button weapon-button"
+        onclick="toggleFilter('${group}', '${value}')"
+        id="filter-${group}-${value}">
+        
+        <img src="images/weapon/weapon_${fileKey}.png"
+            alt="${value}" title="${value}">
+        </button>
+    `;
+    } else {
+
+    html += `
+      <button class="filter-button"
+        onclick="toggleFilter('${group}', '${value}')"
+        id="filter-${group}-${value}">
+        ${value}
+      </button>
+    `;
+  }
+
+});
+
+
+    html += `</div><br>`;
+  });
+
+  document.getElementById("filters").innerHTML = html;
+}
+
+// ===== GET UNIQUE VALUES =====
+function getUnique(field) {
+  return [...new Set(
+    units
+      .map(u => String(u[field]))
+      .filter(v => v)
+  )].sort();
+}
+
+// ===== TOGGLE FILTER =====
+function toggleFilter(group, value) {
+    value = String(value);
+    const list = activeFilters[group];
+      const index = list.indexOf(value);
+    if (index >= 0) {
+        list.splice(index, 1);
+    } else {
+        list.push(String(value));
+    }
+    updateFilterUI();
+    renderUnits();
+}
+
+
+// ===== UPDATE BUTTON STYLE =====
+function updateFilterUI() {
+
+  Object.keys(activeFilters).forEach(group => {
+    const values = getUnique(group);
+
+    values.forEach(value => {
+      const btn = document.getElementById(`filter-${group}-${value}`);
+
+      if (btn) {
+        if (activeFilters[group].includes(String(value))) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      }
+    });
+  });
+}
+
+// ===== FILTER + RENDER UNITS =====
+function renderUnits() {
+
+const filtered = units.filter(unit => {
+    return Object.keys(activeFilters).every(group => {
+      if (!activeFilters[group]) return true;
+      return (
+        activeFilters[group].length === 0 ||
+        activeFilters[group].includes(String(unit[group]))
+        );
+    });
+  })
+
+    .sort((a, b) => {
+
+    const rarityOrder = ["SSR", "SR", "R"];
+
+    const rarityDiff =
+        rarityOrder.indexOf(String(a.nikkeRarity)) -
+        rarityOrder.indexOf(String(b.nikkeRarity));
+
+    if (rarityDiff !== 0) return rarityDiff;
+
+    // fallback: alphabetical
+    return String(a.nikkeName).localeCompare(String(b.nikkeName));
+    });
+
+    let html = '';
+
+    filtered.forEach(unit => {
+
+    const rarityClass = `rarity-${String(unit.nikkeRarity).toLowerCase()}`;
+
+        html += `
+            <div class="unit-card ${rarityClass}"
+            onclick="openUnit('${unit.nikkeName}')">
+
+            <img src="${unit.nikkeImage}">
+            <div class="unit-name">${unit.nikkeName}</div>
+
+            </div>
+        `;
+    });
+
+
+  document.getElementById("unitGrid").innerHTML = html;
+}
+
+// ===== OPEN UNIT PAGE =====
+function openUnit(name) {
+  window.location.href = `unit.html?name=${encodeURIComponent(name)}`;
+}
+
+// ===== SET SORT =====
+function setSort(type) {
+  currentSort = type;
+  renderUnits();
+}
+
+</script>
+
+</body>
+</html>
