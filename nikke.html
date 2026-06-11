@@ -33,13 +33,21 @@
     }
 
     .filter-button {
+        width: 48px; 
+        height: 48px;
+        padding: 4px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
         background: #1a1a1a;
         border: 1px solid #333;
-        color: #ccc;
-        padding: 6px 10px;
+        border-radius: 6px;
         cursor: pointer;
-        border-radius: 4px;
-        font-size: 13px;
+    }
+
+    .filter-button:hover {
+        border-color: #555;
+        background: #222;
     }
 
     .filter-button.active {
@@ -87,12 +95,6 @@
         align-items: center;
     }
 
-    .element-button img {
-        width: 24px;
-        height: 24px;
-    }
-
-
     .element-button.active {
         border-color: #ffcc00;
         background: #2a2a2a;
@@ -108,12 +110,6 @@
         align-items: center;
     }
 
-    .rarity-button img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-    }
-
     .rarity-button.active {
         border-color: #ffcc00;
         background: #2a2a2a;
@@ -126,12 +122,6 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-    }
-
-    .weapon-button img {
-        width: 24px;
-        height: 24px;
-        object-fit: contain;
     }
 
     .weapon-button.active {
@@ -160,12 +150,54 @@
     }
     /* R (blue tint) */
     .rarity-r {
-    background: linear-gradient(
+        background: linear-gradient(
         315deg,
         #1a1a1a 20%,
         rgba(52, 152, 219, 0.25)
         );
     }
+
+    .rarity-button img {
+        max-width: 36px;
+        max-height: 22px;
+    }
+
+    .burst-button {
+        max-width: 40px;
+        max-height: 40px;
+        padding: 4px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burst-button.active {
+        border-color: #ffcc00;
+        background: #2a2a2a;
+    }
+
+    .filter-button img {
+        max-width: 28px;
+        max-height: 28px;
+        object-fit: contain;
+    }
+
+    .manufacturer-button {
+        width: 60px;
+        height: 40px;
+        padding: 4px;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .manufacturer-button img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
 
   </style>
 </head>
@@ -201,6 +233,14 @@ const weaponMap = {
     "Shotgun": "sg",
     "Rocket Launcher": "rl"
 };
+
+const manufacturerOrder = [
+    "Elysion",
+    "Missilis",
+    "Tetra",
+    "Pilgrim",
+    "Abnormal"
+];
 
 
 // ===== LOAD DATA =====
@@ -241,7 +281,15 @@ function buildFilters() {
 
 
     
-filterDefinitions[group].forEach(value => {
+
+let values = filterDefinitions[group];
+
+if (group === "nikkeManufacturer") {
+  values = manufacturerOrder.filter(m => values.includes(m));
+}
+
+values.forEach(value => {
+
 
   if (group === "nikkeElement") {
 
@@ -292,16 +340,42 @@ else if (group === "nikkeWeapon") {
             alt="${value}" title="${value}">
         </button>
     `;
-    } else {
+    } else if (group === "nikkeBurst") {
 
-    html += `
-      <button class="filter-button"
-        onclick="toggleFilter('${group}', '${value}')"
-        id="filter-${group}-${value}">
-        ${value}
-      </button>
-    `;
-  }
+        html += `
+            <button class="filter-button burst-button"
+            onclick="toggleFilter('${group}', '${value}')"
+            id="filter-${group}-${value}">
+
+            <img src="images/burst/burst_${value}.png" alt="${value}" title="${value}">
+
+            </button>
+        `;
+
+        } else if (group === "nikkeManufacturer") {
+
+        const normalized = value.trim().toLowerCase().replace(/\s+/g, '');
+
+        html += `
+            <button class="filter-button manufacturer-button"
+            onclick="toggleFilter('${group}', '${value}')"
+            id="filter-${group}-${value}">
+
+            <img src="images/manufacturer/${normalized}_icon.png" alt="${value}" title="${value}">
+
+            </button>
+        `;
+
+        } else {
+
+            html += `
+            <button class="filter-button"
+                onclick="toggleFilter('${group}', '${value}')"
+                id="filter-${group}-${value}">
+                ${value}
+            </button>
+            `;
+        }
 
 });
 
