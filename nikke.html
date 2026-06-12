@@ -249,11 +249,18 @@
     }
 
     .filter-content {
-        padding: 10px;
+        max-height: 0;
+        padding: 0 10px;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
+    .filter-content.open {
+        max-height: 500px;
+        opacity: 1;
+        padding: 10px;
+    }
     
     #filterToggleIcon {
         transition: transform 0.3s ease;
@@ -320,12 +327,29 @@ function toggleFilters() {
     const icon = document.getElementById("filterToggleIcon");
 
     if (filtersOpen) {
-        content.style.display = "block";
+        content.classList.add("open");
         icon.style.transform = "rotate(180deg)";
     } else {
-        content.style.display = "none";
+        content.classList.remove("open");
         icon.style.transform = "rotate(0deg)";
     }
+}
+
+
+function toggleFilter(group, value) {
+        value = String(value);
+
+        const list = activeFilters[group];
+        const index = list.indexOf(value);
+
+        if (index >= 0) {
+            list.splice(index, 1);
+        } else {
+            list.push(value);
+        }
+
+        updateFilterUI();
+        renderUnits();
 }
 
 const weaponMap = {
@@ -362,7 +386,6 @@ document.getElementById("searchInput").addEventListener("input", (e) => {
     renderUnits();
 });
 
-document.getElementById("filters").style.display = "none";
 document.getElementById("filterToggleIcon").style.transform = "rotate(0deg)";
 
 // ===== BUILD FILTER BUTTONS =====
@@ -511,21 +534,6 @@ function getUnique(field) {
   )].sort();
 }
 
-// ===== TOGGLE FILTER =====
-function toggleFilter(group, value) {
-    value = String(value);
-    const list = activeFilters[group];
-      const index = list.indexOf(value);
-    if (index >= 0) {
-        list.splice(index, 1);
-    } else {
-        list.push(String(value));
-    }
-    updateFilterUI();
-    renderUnits();
-}
-
-
 // ===== UPDATE BUTTON STYLE =====
 function updateFilterUI() {
 
@@ -570,18 +578,18 @@ function renderUnits() {
 
     })
     .sort((a, b) => {
-``
-    const rarityOrder = ["SSR", "SR", "R"];
+            
+        const rarityOrder = ["SSR", "SR", "R"];
 
-    const rarityDiff =
-        rarityOrder.indexOf(String(a.nikkeRarity)) -
-        rarityOrder.indexOf(String(b.nikkeRarity));
+        const rarityDiff =
+            rarityOrder.indexOf(String(a.nikkeRarity)) -
+            rarityOrder.indexOf(String(b.nikkeRarity));
 
-    if (rarityDiff !== 0) return rarityDiff;
+        if (rarityDiff !== 0) return rarityDiff;
 
-    // fallback: alphabetical
-    return String(a.nikkeName).localeCompare(String(b.nikkeName));
-    });
+        // fallback: alphabetical
+        return String(a.nikkeName).localeCompare(String(b.nikkeName));
+        });
 
     let html = '';
 
