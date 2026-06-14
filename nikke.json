@@ -8,7 +8,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Snow_WhiteS.png"
+    "nikkeImage": "images/icons/Snow_WhiteS.png",
+    "nikkePortrait": "images/portraits/snow_white_portrait.png"
   },
   {
     "nikkeID": "002",
@@ -19,7 +20,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/NeonS.png"
+    "nikkeImage": "images/icons/NeonS.png",
+    "nikkePortrait": "images/portraits/neon_portrait.png"
   },
   {
     "nikkeID": "003",
@@ -30,7 +32,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/RapiS.png"
+    "nikkeImage": "images/icons/RapiS.png",
+    "nikkePortrait": "images/portraits/rapi_portrait.png"
   },
   {
     "nikkeID": "004",
@@ -41,7 +44,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/EmmaS.png"
+    "nikkeImage": "images/icons/EmmaS.png",
+    "nikkePortrait": "images/portraits/emma_portrait.png"
   },
   {
     "nikkeID": "005",
@@ -52,7 +56,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/SignalS.png"
+    "nikkeImage": "images/icons/SignalS.png",
+    "nikkePortrait": "images/portraits/signal_portrait.png"
   },
   {
     "nikkeID": "006",
@@ -63,7 +68,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/MirandaS.png"
+    "nikkeImage": "images/icons/MirandaS.png",
+    "nikkePortrait": "images/portraits/miranda_portrait.png"
   },
   {
     "nikkeID": "007",
@@ -74,7 +80,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/DieselS.png"
+    "nikkeImage": "images/icons/DieselS.png",
+    "nikkePortrait": "images/portraits/diesel_portrait.png"
   },
   {
     "nikkeID": "008",
@@ -85,7 +92,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/EunhwaS.png"
+    "nikkeImage": "images/icons/EunhwaS.png",
+    "nikkePortrait": "images/portraits/eunhwa_portrait.png"
   },
   {
     "nikkeID": "009",
@@ -96,18 +104,20 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/GuillotineS.png"
+    "nikkeImage": "images/icons/GuillotineS.png",
+    "nikkePortrait": "images/portraits/guillotine_portrait.png"
   },
   {
     "nikkeID": "010",
     "nikkeName": "Delta",
-    "nikkeRarity": "SSR",
+    "nikkeRarity": "SR",
     "nikkeElement": "Wind",
     "nikkeType": "Defender",
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/DeltaS.png"
+    "nikkeImage": "images/icons/DeltaS.png",
+    "nikkePortrait": "images/portraits/delta_portrait.png"
   },
   {
     "nikkeID": "011",
@@ -118,7 +128,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/MicaS.png"
+    "nikkeImage": "images/icons/MicaS.png",
+    "nikkePortrait": "images/portraits/mica_portrait.png"
   },
   {
     "nikkeID": "012",
@@ -129,7 +140,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/BelortaS.png"
+    "nikkeImage": "images/icons/BelortaS.png",
+    "nikkePortrait": "images/portraits/belorta_portrait.png"
   },
   {
     "nikkeID": "013",
@@ -140,7 +152,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Soldier_EGS.png"
+    "nikkeImage": "images/icons/Soldier_EGS.png",
+    "nikkePortrait": "images/portraits/soldier_eg_portrait.png"
   },
   {
     "nikkeID": "014",
@@ -151,7 +164,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/Soldier_FAS.png"
+    "nikkeImage": "images/icons/Soldier_FAS.png",
+    "nikkePortrait": "images/portraits/soldier_fa_portrait.png"
   },
   {
     "nikkeID": "015",
@@ -162,7 +176,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/Soldier_OWS.png"
+    "nikkeImage": "images/icons/Soldier_OWS.png",
+    "nikkePortrait": "images/portraits/soldier_ow_portrait.png"
   },
   {
     "nikkeID": "016",
@@ -173,7 +188,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/ScarletS.png"
+    "nikkeImage": "images/icons/ScarletS.png",
+    "nikkePortrait": "images/portraits/scarlet_portrait.png"
   },
   {
     "nikkeID": "017",
@@ -184,7 +200,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/NoahS.png"
+    "nikkeImage": "images/icons/NoahS.png",
+    "nikkePortrait": "images/portraits/noah_portrait.png"
   },
   {
     "nikkeID": "018",
@@ -195,7 +212,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/AliceS.png"
+    "nikkeImage": "images/icons/AliceS.png",
+    "nikkePortrait": "images/portraits/alice_portrait.png"
   },
   {
     "nikkeID": "019",
@@ -206,7 +224,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/ExiaS.png"
+    "nikkeImage": "images/icons/ExiaS.png",
+    "nikkePortrait": "images/portraits/exia_portrait.png"
   },
   {
     "nikkeID": "020",
@@ -217,7 +236,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/SugarS.png"
+    "nikkeImage": "images/icons/SugarS.png",
+    "nikkePortrait": "images/portraits/sugar_portrait.png"
   },
   {
     "nikkeID": "021",
@@ -228,7 +248,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/MaryS.png"
+    "nikkeImage": "images/icons/MaryS.png",
+    "nikkePortrait": "images/portraits/mary_portrait.png"
   },
   {
     "nikkeID": "022",
@@ -239,7 +260,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/LudmillaS.png"
+    "nikkeImage": "images/icons/LudmillaS.png",
+    "nikkePortrait": "images/portraits/ludmilla_portrait.png"
   },
   {
     "nikkeID": "023",
@@ -250,7 +272,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/FrimaS.png"
+    "nikkeImage": "images/icons/FrimaS.png",
+    "nikkePortrait": "images/portraits/frima_portrait.png"
   },
   {
     "nikkeID": "024",
@@ -261,7 +284,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/AnisS.png"
+    "nikkeImage": "images/icons/AnisS.png",
+    "nikkePortrait": "images/portraits/anis_portrait.png"
   },
   {
     "nikkeID": "025",
@@ -272,7 +296,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/IDoll_OceanS.png"
+    "nikkeImage": "images/icons/IDoll_OceanS.png",
+    "nikkePortrait": "images/portraits/idoll_ocean_portrait.png"
   },
   {
     "nikkeID": "026",
@@ -283,7 +308,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/IDoll_SunS.png"
+    "nikkeImage": "images/icons/IDoll_SunS.png",
+    "nikkePortrait": "images/portraits/idoll_sun_portrait.png"
   },
   {
     "nikkeID": "027",
@@ -294,7 +320,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/IDoll_FlowerS.png"
+    "nikkeImage": "images/icons/IDoll_FlowerS.png",
+    "nikkePortrait": "images/portraits/idoll_flower_portrait.png"
   },
   {
     "nikkeID": "028",
@@ -305,7 +332,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/MaxwellS.png"
+    "nikkeImage": "images/icons/MaxwellS.png",
+    "nikkePortrait": "images/portraits/maxwell_portrait.png"
   },
   {
     "nikkeID": "029",
@@ -316,7 +344,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/YuniS.png"
+    "nikkeImage": "images/icons/YuniS.png",
+    "nikkePortrait": "images/portraits/yuni_portrait.png"
   },
   {
     "nikkeID": "030",
@@ -327,7 +356,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/JuliaS.png"
+    "nikkeImage": "images/icons/JuliaS.png",
+    "nikkePortrait": "images/portraits/julia_portrait.png"
   },
   {
     "nikkeID": "031",
@@ -338,7 +368,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/EpinelS.png"
+    "nikkeImage": "images/icons/EpinelS.png",
+    "nikkePortrait": "images/portraits/epinel_portrait.png"
   },
   {
     "nikkeID": "032",
@@ -349,7 +380,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/DrakeS.png"
+    "nikkeImage": "images/icons/DrakeS.png",
+    "nikkePortrait": "images/portraits/drake_portrait.png"
   },
   {
     "nikkeID": "033",
@@ -360,7 +392,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/N102S.png"
+    "nikkeImage": "images/icons/N102S.png",
+    "nikkePortrait": "images/portraits/n102_portrait.png"
   },
   {
     "nikkeID": "034",
@@ -371,7 +404,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/MiharaS.png"
+    "nikkeImage": "images/icons/MiharaS.png",
+    "nikkePortrait": "images/portraits/mihara_portrait.png"
   },
   {
     "nikkeID": "035",
@@ -382,7 +416,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/EtherS.png"
+    "nikkeImage": "images/icons/EtherS.png",
+    "nikkePortrait": "images/portraits/ether_portrait.png"
   },
   {
     "nikkeID": "036",
@@ -393,7 +428,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Product_12S.png"
+    "nikkeImage": "images/icons/Product_12S.png",
+    "nikkePortrait": "images/portraits/product_12_portrait.png"
   },
   {
     "nikkeID": "037",
@@ -404,7 +440,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Product_08S.png"
+    "nikkeImage": "images/icons/Product_08S.png",
+    "nikkePortrait": "images/portraits/product_08_portrait.png"
   },
   {
     "nikkeID": "038",
@@ -415,7 +452,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/Product_23S.png"
+    "nikkeImage": "images/icons/Product_23S.png",
+    "nikkePortrait": "images/portraits/product_23_portrait.png"
   },
   {
     "nikkeID": "039",
@@ -426,7 +464,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/HelmS.png"
+    "nikkeImage": "images/icons/HelmS.png",
+    "nikkePortrait": "images/portraits/helm_portrait.png"
   },
   {
     "nikkeID": "040",
@@ -437,7 +476,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/VolumeS.png"
+    "nikkeImage": "images/icons/VolumeS.png",
+    "nikkePortrait": "images/portraits/volume_portrait.png"
   },
   {
     "nikkeID": "041",
@@ -448,7 +488,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/PoliS.png"
+    "nikkeImage": "images/icons/PoliS.png",
+    "nikkePortrait": "images/portraits/poli_portrait.png"
   },
   {
     "nikkeID": "042",
@@ -459,7 +500,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/VestiS.png"
+    "nikkeImage": "images/icons/VestiS.png",
+    "nikkePortrait": "images/portraits/vesti_portrait.png"
   },
   {
     "nikkeID": "043",
@@ -470,7 +512,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/LaplaceS.png"
+    "nikkeImage": "images/icons/LaplaceS.png",
+    "nikkePortrait": "images/portraits/laplace_portrait.png"
   },
   {
     "nikkeID": "044",
@@ -481,7 +524,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/DollaS.png"
+    "nikkeImage": "images/icons/DollaS.png",
+    "nikkePortrait": "images/portraits/dolla_portrait.png"
   },
   {
     "nikkeID": "045",
@@ -492,7 +536,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/CentiS.png"
+    "nikkeImage": "images/icons/CentiS.png",
+    "nikkePortrait": "images/portraits/centi_portrait.png"
   },
   {
     "nikkeID": "046",
@@ -503,7 +548,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/CrowS.png"
+    "nikkeImage": "images/icons/CrowS.png",
+    "nikkePortrait": "images/portraits/crow_portrait.png"
   },
   {
     "nikkeID": "047",
@@ -514,7 +560,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/HarranS.png"
+    "nikkeImage": "images/icons/HarranS.png",
+    "nikkePortrait": "images/portraits/harran_portrait.png"
   },
   {
     "nikkeID": "048",
@@ -525,7 +572,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/NovelS.png"
+    "nikkeImage": "images/icons/NovelS.png",
+    "nikkePortrait": "images/portraits/novel_portrait.png"
   },
   {
     "nikkeID": "049",
@@ -536,7 +584,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/YulhaS.png"
+    "nikkeImage": "images/icons/YulhaS.png",
+    "nikkePortrait": "images/portraits/yulha_portrait.png"
   },
   {
     "nikkeID": "050",
@@ -547,7 +596,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/NeveS.png"
+    "nikkeImage": "images/icons/NeveS.png",
+    "nikkePortrait": "images/portraits/neve_portrait.png"
   },
   {
     "nikkeID": "051",
@@ -558,7 +608,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/FolkwangS.png"
+    "nikkeImage": "images/icons/FolkwangS.png",
+    "nikkePortrait": "images/portraits/folkwang_portrait.png"
   },
   {
     "nikkeID": "052",
@@ -569,7 +620,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/AdmiS.png"
+    "nikkeImage": "images/icons/AdmiS.png",
+    "nikkePortrait": "images/portraits/admi_portrait.png"
   },
   {
     "nikkeID": "053",
@@ -580,7 +632,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/MaidenS.png"
+    "nikkeImage": "images/icons/MaidenS.png",
+    "nikkePortrait": "images/portraits/maiden_portrait.png"
   },
   {
     "nikkeID": "054",
@@ -591,7 +644,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Anne_Miracle_FairyS.png"
+    "nikkeImage": "images/icons/Anne_Miracle_FairyS.png",
+    "nikkePortrait": "images/portraits/anne_miracle_fairy_portrait.png"
   },
   {
     "nikkeID": "055",
@@ -602,7 +656,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/RupeeS.png"
+    "nikkeImage": "images/icons/RupeeS.png",
+    "nikkePortrait": "images/portraits/rupee_portrait.png"
   },
   {
     "nikkeID": "056",
@@ -613,7 +668,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Rupee_Winter_ShopperS.png"
+    "nikkeImage": "images/icons/Rupee_Winter_ShopperS.png",
+    "nikkePortrait": "images/portraits/rupee_winter_shopper_portrait.png"
   },
   {
     "nikkeID": "057",
@@ -624,7 +680,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/RapunzelS.png"
+    "nikkeImage": "images/icons/RapunzelS.png",
+    "nikkePortrait": "images/portraits/rapunzel_portrait.png"
   },
   {
     "nikkeID": "058",
@@ -635,7 +692,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/MilkS.png"
+    "nikkeImage": "images/icons/MilkS.png",
+    "nikkePortrait": "images/portraits/milk_portrait.png"
   },
   {
     "nikkeID": "059",
@@ -646,7 +704,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/SolineS.png"
+    "nikkeImage": "images/icons/SolineS.png",
+    "nikkePortrait": "images/portraits/soline_portrait.png"
   },
   {
     "nikkeID": "060",
@@ -657,7 +716,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/ModerniaS.png"
+    "nikkeImage": "images/icons/ModerniaS.png",
+    "nikkePortrait": "images/portraits/modernia_portrait.png"
   },
   {
     "nikkeID": "061",
@@ -668,7 +728,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/BridS.png"
+    "nikkeImage": "images/icons/BridS.png",
+    "nikkePortrait": "images/portraits/brid_portrait.png"
   },
   {
     "nikkeID": "062",
@@ -679,7 +740,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/IsabelS.png"
+    "nikkeImage": "images/icons/IsabelS.png",
+    "nikkePortrait": "images/portraits/isabel_portrait.png"
   },
   {
     "nikkeID": "063",
@@ -690,7 +752,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/NoiseS.png"
+    "nikkeImage": "images/icons/NoiseS.png",
+    "nikkePortrait": "images/portraits/noise_portrait.png"
   },
   {
     "nikkeID": "064",
@@ -701,7 +764,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/JackalS.png"
+    "nikkeImage": "images/icons/JackalS.png",
+    "nikkePortrait": "images/portraits/jackal_portrait.png"
   },
   {
     "nikkeID": "065",
@@ -712,7 +776,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/ViperS.png"
+    "nikkeImage": "images/icons/ViperS.png",
+    "nikkePortrait": "images/portraits/viper_portrait.png"
   },
   {
     "nikkeID": "066",
@@ -723,7 +788,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/YanS.png"
+    "nikkeImage": "images/icons/YanS.png",
+    "nikkePortrait": "images/portraits/yan_portrait.png"
   },
   {
     "nikkeID": "067",
@@ -734,7 +800,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/LiterS.png"
+    "nikkeImage": "images/icons/LiterS.png",
+    "nikkePortrait": "images/portraits/liter_portrait.png"
   },
   {
     "nikkeID": "068",
@@ -745,7 +812,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/SinS.png"
+    "nikkeImage": "images/icons/SinS.png",
+    "nikkePortrait": "images/portraits/sin_portrait.png"
   },
   {
     "nikkeID": "069",
@@ -756,7 +824,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/GuiltyS.png"
+    "nikkeImage": "images/icons/GuiltyS.png",
+    "nikkePortrait": "images/portraits/guilty_portrait.png"
   },
   {
     "nikkeID": "070",
@@ -767,7 +836,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/QuencyS.png"
+    "nikkeImage": "images/icons/QuencyS.png",
+    "nikkePortrait": "images/portraits/quency_portrait.png"
   },
   {
     "nikkeID": "071",
@@ -778,7 +848,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/RumaniS.png"
+    "nikkeImage": "images/icons/RumaniS.png",
+    "nikkePortrait": "images/portraits/rumani_portrait.png"
   },
   {
     "nikkeID": "072",
@@ -789,7 +860,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/PepperS.png"
+    "nikkeImage": "images/icons/PepperS.png",
+    "nikkePortrait": "images/portraits/pepper_portrait.png"
   },
   {
     "nikkeID": "073",
@@ -800,7 +872,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/AriaS.png"
+    "nikkeImage": "images/icons/AriaS.png",
+    "nikkePortrait": "images/portraits/aria_portrait.png"
   },
   {
     "nikkeID": "074",
@@ -811,7 +884,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/CocoaS.png"
+    "nikkeImage": "images/icons/CocoaS.png",
+    "nikkePortrait": "images/portraits/cocoa_portrait.png"
   },
   {
     "nikkeID": "075",
@@ -822,7 +896,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/SodaS.png"
+    "nikkeImage": "images/icons/SodaS.png",
+    "nikkePortrait": "images/portraits/soda_portrait.png"
   },
   {
     "nikkeID": "076",
@@ -833,7 +908,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/PowerS.png"
+    "nikkeImage": "images/icons/PowerS.png",
+    "nikkePortrait": "images/portraits/power_portrait.png"
   },
   {
     "nikkeID": "077",
@@ -844,7 +920,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/MakimaS.png"
+    "nikkeImage": "images/icons/MakimaS.png",
+    "nikkePortrait": "images/portraits/makima_portrait.png"
   },
   {
     "nikkeID": "078",
@@ -855,7 +932,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/HimenoS.png"
+    "nikkeImage": "images/icons/HimenoS.png",
+    "nikkePortrait": "images/portraits/himeno_portrait.png"
   },
   {
     "nikkeID": "079",
@@ -866,7 +944,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/BiscuitS.png"
+    "nikkeImage": "images/icons/BiscuitS.png",
+    "nikkePortrait": "images/portraits/biscuit_portrait.png"
   },
   {
     "nikkeID": "080",
@@ -877,7 +956,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/ManaS.png"
+    "nikkeImage": "images/icons/ManaS.png",
+    "nikkePortrait": "images/portraits/mana_portrait.png"
   },
   {
     "nikkeID": "081",
@@ -888,7 +968,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/AdeS.png"
+    "nikkeImage": "images/icons/AdeS.png",
+    "nikkePortrait": "images/portraits/ade_portrait.png"
   },
   {
     "nikkeID": "082",
@@ -899,7 +980,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/NihilisterS.png"
+    "nikkeImage": "images/icons/NihilisterS.png",
+    "nikkePortrait": "images/portraits/nihilister_portrait.png"
   },
   {
     "nikkeID": "083",
@@ -910,7 +992,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/SakuraS.png"
+    "nikkeImage": "images/icons/SakuraS.png",
+    "nikkePortrait": "images/portraits/sakura_portrait.png"
   },
   {
     "nikkeID": "084",
@@ -921,7 +1004,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/DS.png"
+    "nikkeImage": "images/icons/DS.png",
+    "nikkePortrait": "images/portraits/d_portrait.png"
   },
   {
     "nikkeID": "085",
@@ -932,7 +1016,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/KS.png"
+    "nikkeImage": "images/icons/KS.png",
+    "nikkePortrait": "images/portraits/k_portrait.png"
   },
   {
     "nikkeID": "086",
@@ -943,7 +1028,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/DorothyS.png"
+    "nikkeImage": "images/icons/DorothyS.png",
+    "nikkePortrait": "images/portraits/dorothy_portrait.png"
   },
   {
     "nikkeID": "087",
@@ -954,7 +1040,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/ReiS.png"
+    "nikkeImage": "images/icons/ReiS.png",
+    "nikkePortrait": "images/portraits/rei_portrait.png"
   },
   {
     "nikkeID": "088",
@@ -965,7 +1052,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/BlancS.png"
+    "nikkeImage": "images/icons/BlancS.png",
+    "nikkePortrait": "images/portraits/blanc_portrait.png"
   },
   {
     "nikkeID": "089",
@@ -976,7 +1064,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/NoirS.png"
+    "nikkeImage": "images/icons/NoirS.png",
+    "nikkePortrait": "images/portraits/noir_portrait.png"
   },
   {
     "nikkeID": "090",
@@ -987,7 +1076,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/RosannaS.png"
+    "nikkeImage": "images/icons/RosannaS.png",
+    "nikkePortrait": "images/portraits/rosanna_portrait.png"
   },
   {
     "nikkeID": "091",
@@ -998,7 +1088,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Mary_Bay_GoddessS.png"
+    "nikkeImage": "images/icons/Mary_Bay_GoddessS.png",
+    "nikkePortrait": "images/portraits/mary_bay_goddess_portrait.png"
   },
   {
     "nikkeID": "092",
@@ -1009,7 +1100,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/RougeS.png"
+    "nikkeImage": "images/icons/RougeS.png",
+    "nikkePortrait": "images/portraits/rouge_portrait.png"
   },
   {
     "nikkeID": "093",
@@ -1020,7 +1112,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Neon_Blue_OceanS.png"
+    "nikkeImage": "images/icons/Neon_Blue_OceanS.png",
+    "nikkePortrait": "images/portraits/neon_blue_ocean_portrait.png"
   },
   {
     "nikkeID": "094",
@@ -1031,7 +1124,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/NeroS.png"
+    "nikkeImage": "images/icons/NeroS.png",
+    "nikkePortrait": "images/portraits/nero_portrait.png"
   },
   {
     "nikkeID": "095",
@@ -1042,7 +1136,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/LeonaS.png"
+    "nikkeImage": "images/icons/LeonaS.png",
+    "nikkePortrait": "images/portraits/leona_portrait.png"
   },
   {
     "nikkeID": "096",
@@ -1053,7 +1148,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/MastS.png"
+    "nikkeImage": "images/icons/MastS.png",
+    "nikkePortrait": "images/portraits/mast_portrait.png"
   },
   {
     "nikkeID": "097",
@@ -1064,7 +1160,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/Anis_Sparkling_SummerS.png"
+    "nikkeImage": "images/icons/Anis_Sparkling_SummerS.png",
+    "nikkePortrait": "images/portraits/anis_sparkling_summer_portrait.png"
   },
   {
     "nikkeID": "098",
@@ -1075,7 +1172,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Helm_AquamarineS.png"
+    "nikkeImage": "images/icons/Helm_AquamarineS.png",
+    "nikkePortrait": "images/portraits/helm_aquamarine_portrait.png"
   },
   {
     "nikkeID": "099",
@@ -1086,7 +1184,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/AnchorS.png"
+    "nikkeImage": "images/icons/AnchorS.png",
+    "nikkePortrait": "images/portraits/anchor_portrait.png"
   },
   {
     "nikkeID": 100,
@@ -1097,7 +1196,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/A2S.png"
+    "nikkeImage": "images/icons/A2S.png",
+    "nikkePortrait": "images/portraits/a2_portrait.png"
   },
   {
     "nikkeID": 101,
@@ -1108,7 +1208,8 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/PascalS.png"
+    "nikkeImage": "images/icons/PascalS.png",
+    "nikkePortrait": "images/portraits/pascal_portrait.png"
   },
   {
     "nikkeID": 102,
@@ -1119,7 +1220,8 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/2BS.png"
+    "nikkeImage": "images/icons/2BS.png",
+    "nikkePortrait": "images/portraits/2b_portrait.png"
   },
   {
     "nikkeID": 103,
@@ -1130,7 +1232,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/MarcianaS.png"
+    "nikkeImage": "images/icons/MarcianaS.png",
+    "nikkePortrait": "images/portraits/marciana_portrait.png"
   },
   {
     "nikkeID": 104,
@@ -1141,7 +1244,8 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/NagaS.png"
+    "nikkeImage": "images/icons/NagaS.png",
+    "nikkePortrait": "images/portraits/naga_portrait.png"
   },
   {
     "nikkeID": 105,
@@ -1152,10 +1256,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/MoranS.png"
+    "nikkeImage": "images/icons/MoranS.png",
+    "nikkePortrait": "images/portraits/moran_portrait.png"
   },
   {
-    "nikkeID": 105,
+    "nikkeID": 106,
     "nikkeName": "Tia",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1163,10 +1268,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/TiaS.png"
+    "nikkeImage": "images/icons/TiaS.png",
+    "nikkePortrait": "images/portraits/tia_portrait.png"
   },
   {
-    "nikkeID": 106,
+    "nikkeID": 107,
     "nikkeName": "Crown",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1174,10 +1280,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/CrownS.png"
+    "nikkeImage": "images/icons/CrownS.png",
+    "nikkePortrait": "images/portraits/crown_portrait.png"
   },
   {
-    "nikkeID": 106,
+    "nikkeID": 108,
     "nikkeName": "Red Hood",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1185,10 +1292,11 @@
     "nikkeBurst": "A",
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Red_HoodS.png"
+    "nikkeImage": "images/icons/Red_HoodS.png",
+    "nikkePortrait": "images/portraits/red_hood_portrait.png"
   },
   {
-    "nikkeID": 107,
+    "nikkeID": 109,
     "nikkeName": "Quiry",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1196,10 +1304,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/QuiryS.png"
+    "nikkeImage": "images/icons/QuiryS.png",
+    "nikkePortrait": "images/portraits/quiry_portrait.png"
   },
   {
-    "nikkeID": 108,
+    "nikkeID": 110,
     "nikkeName": "Privaty",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1207,10 +1316,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/PrivatyS.png"
+    "nikkeImage": "images/icons/PrivatyS.png",
+    "nikkePortrait": "images/portraits/privaty_portrait.png"
   },
   {
-    "nikkeID": 109,
+    "nikkeID": 111,
     "nikkeName": "Ein",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1218,10 +1328,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/EinS.png"
+    "nikkeImage": "images/icons/EinS.png",
+    "nikkePortrait": "images/portraits/ein_portrait.png"
   },
   {
-    "nikkeID": 110,
+    "nikkeID": 112,
     "nikkeName": "Zwei",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1229,10 +1340,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/ZweiS.png"
+    "nikkeImage": "images/icons/ZweiS.png",
+    "nikkePortrait": "images/portraits/zwei_portrait.png"
   },
   {
-    "nikkeID": 111,
+    "nikkeID": 113,
     "nikkeName": "Snow White: Innocent Days",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1240,10 +1352,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Snow_White_Innocent_DaysS.png"
+    "nikkeImage": "images/icons/Snow_White_Innocent_DaysS.png",
+    "nikkePortrait": "images/portraits/snow_white_innocent_days_portrait.png"
   },
   {
-    "nikkeID": 112,
+    "nikkeID": 114,
     "nikkeName": "Tove",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1251,10 +1364,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/ToveS.png"
+    "nikkeImage": "images/icons/ToveS.png",
+    "nikkePortrait": "images/portraits/tove_portrait.png"
   },
   {
-    "nikkeID": 113,
+    "nikkeID": 115,
     "nikkeName": "Ludmilla: Winter Owner",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1262,10 +1376,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Ludmilla_Winter_OwnerS.png"
+    "nikkeImage": "images/icons/Ludmilla_Winter_OwnerS.png",
+    "nikkePortrait": "images/portraits/ludmilla_winter_owner_portrait.png"
   },
   {
-    "nikkeID": 114,
+    "nikkeID": 116,
     "nikkeName": "Mica: Snow Buddy",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1273,10 +1388,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/Mica_Snow_BuddyS.png"
+    "nikkeImage": "images/icons/Mica_Snow_BuddyS.png",
+    "nikkePortrait": "images/portraits/mica_snow_buddy_portrait.png"
   },
   {
-    "nikkeID": 115,
+    "nikkeID": 117,
     "nikkeName": "Scarlet: Black Shadow",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1284,10 +1400,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Scarlet_Black_ShadowS.png"
+    "nikkeImage": "images/icons/Scarlet_Black_ShadowS.png",
+    "nikkePortrait": "images/portraits/scarlet_black_shadow_portrait.png"
   },
   {
-    "nikkeID": 116,
+    "nikkeID": 118,
     "nikkeName": "Privaty: Unkind Maid",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1295,10 +1412,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/Privaty_Unkind_MaidS.png"
+    "nikkeImage": "images/icons/Privaty_Unkind_MaidS.png",
+    "nikkePortrait": "images/portraits/privaty_unkind_maid_portrait.png"
   },
   {
-    "nikkeID": 117,
+    "nikkeID": 119,
     "nikkeName": "Elegg",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1306,10 +1424,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/EleggS.png"
+    "nikkeImage": "images/icons/EleggS.png",
+    "nikkePortrait": "images/portraits/elegg_portrait.png"
   },
   {
-    "nikkeID": 118,
+    "nikkeID": 120,
     "nikkeName": "D: Killer Wife",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1317,10 +1436,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/D_Killer_WifeS.png"
+    "nikkeImage": "images/icons/D_Killer_WifeS.png",
+    "nikkePortrait": "images/portraits/d_killer_wife_portrait.png"
   },
   {
-    "nikkeID": 119,
+    "nikkeID": 121,
     "nikkeName": "Emilia",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1328,10 +1448,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/EmiliaS.png"
+    "nikkeImage": "images/icons/EmiliaS.png",
+    "nikkePortrait": "images/portraits/emilia_portrait.png"
   },
   {
-    "nikkeID": 120,
+    "nikkeID": 122,
     "nikkeName": "Rem",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1339,10 +1460,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/RemS.png"
+    "nikkeImage": "images/icons/RemS.png",
+    "nikkePortrait": "images/portraits/rem_portrait.png"
   },
   {
-    "nikkeID": 121,
+    "nikkeID": 123,
     "nikkeName": "Ram",
     "nikkeRarity": "SR",
     "nikkeElement": "Wind",
@@ -1350,10 +1472,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/RamS.png"
+    "nikkeImage": "images/icons/RamS.png",
+    "nikkePortrait": "images/portraits/ram_portrait.png"
   },
   {
-    "nikkeID": 122,
+    "nikkeID": 124,
     "nikkeName": "Bay",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1361,10 +1484,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/BayS.png"
+    "nikkeImage": "images/icons/BayS.png",
+    "nikkePortrait": "images/portraits/bay_portrait.png"
   },
   {
-    "nikkeID": 123,
+    "nikkeID": 125,
     "nikkeName": "Kilo",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1372,10 +1496,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/KiloS.png"
+    "nikkeImage": "images/icons/KiloS.png",
+    "nikkePortrait": "images/portraits/kilo_portrait.png"
   },
   {
-    "nikkeID": 124,
+    "nikkeID": 126,
     "nikkeName": "Trony",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1383,10 +1508,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/TronyS.png"
+    "nikkeImage": "images/icons/TronyS.png",
+    "nikkePortrait": "images/portraits/trony_portrait.png"
   },
   {
-    "nikkeID": 125,
+    "nikkeID": 127,
     "nikkeName": "Soda: Twinkling Bunny",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1394,10 +1520,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/Soda_Twinkling_BunnyS.png"
+    "nikkeImage": "images/icons/Soda_Twinkling_BunnyS.png",
+    "nikkePortrait": "images/portraits/soda_twinkling_bunny_portrait.png"
   },
   {
-    "nikkeID": 126,
+    "nikkeID": 128,
     "nikkeName": "Alice: Wonderland Bunny",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1405,10 +1532,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/Alice_Wonderland_BunnyS.png"
+    "nikkeImage": "images/icons/Alice_Wonderland_BunnyS.png",
+    "nikkePortrait": "images/portraits/alice_wonderland_bunny_portrait.png"
   },
   {
-    "nikkeID": 127,
+    "nikkeID": 129,
     "nikkeName": "Clay",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1416,10 +1544,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/ClayS.png"
+    "nikkeImage": "images/icons/ClayS.png",
+    "nikkePortrait": "images/portraits/clay_portrait.png"
   },
   {
-    "nikkeID": 128,
+    "nikkeID": 130,
     "nikkeName": "Rosanna: Chic Ocean",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1427,10 +1556,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Rosanna_Chic_OceanS.png"
+    "nikkeImage": "images/icons/Rosanna_Chic_OceanS.png",
+    "nikkePortrait": "images/portraits/rosanna_chic_ocean_portrait.png"
   },
   {
-    "nikkeID": 129,
+    "nikkeID": 131,
     "nikkeName": "Sakura: Bloom in Summer",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1438,10 +1568,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Sakura_Bloom_in_SummerS.png"
+    "nikkeImage": "images/icons/Sakura_Bloom_in_SummerS.png",
+    "nikkePortrait": "images/portraits/sakura_bloom_in_summer_portrait.png"
   },
   {
-    "nikkeID": 130,
+    "nikkeID": 132,
     "nikkeName": "Asuka",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1449,10 +1580,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Asuka_Shikinami_LangleyS.png"
+    "nikkeImage": "images/icons/Asuka_Shikinami_LangleyS.png",
+    "nikkePortrait": "images/portraits/asuka_portrait.png"
   },
   {
-    "nikkeID": 131,
+    "nikkeID": 133,
     "nikkeName": "Rei Ayanami",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1460,10 +1592,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Rei_AyanamiS.png"
+    "nikkeImage": "images/icons/Rei_AyanamiS.png",
+    "nikkePortrait": "images/portraits/rei_ayanami_portrait.png"
   },
   {
-    "nikkeID": 132,
+    "nikkeID": 134,
     "nikkeName": "Mari",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1471,10 +1604,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Mari_Makinami_IllustriousS.png"
+    "nikkeImage": "images/icons/Mari_Makinami_IllustriousS.png",
+    "nikkePortrait": "images/portraits/mari_portrait.png"
   },
   {
-    "nikkeID": 133,
+    "nikkeID": 135,
     "nikkeName": "Misato",
     "nikkeRarity": "SR",
     "nikkeElement": "Iron",
@@ -1482,10 +1616,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/Misato_KatsuragiS.png"
+    "nikkeImage": "images/icons/Misato_KatsuragiS.png",
+    "nikkePortrait": "images/portraits/misato_portrait.png"
   },
   {
-    "nikkeID": 134,
+    "nikkeID": 136,
     "nikkeName": "Phantom",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1493,10 +1628,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/PhantomS.png"
+    "nikkeImage": "images/icons/PhantomS.png",
+    "nikkePortrait": "images/portraits/phantom_portrait.png"
   },
   {
-    "nikkeID": 135,
+    "nikkeID": 137,
     "nikkeName": "Quency: Escape Queen",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1504,10 +1640,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/Quency_Escape_QueenS.png"
+    "nikkeImage": "images/icons/Quency_Escape_QueenS.png",
+    "nikkePortrait": "images/portraits/quency_escape_queen_portrait.png"
   },
   {
-    "nikkeID": 136,
+    "nikkeID": 138,
     "nikkeName": "Grave",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1515,10 +1652,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/GraveS.png"
+    "nikkeImage": "images/icons/GraveS.png",
+    "nikkePortrait": "images/portraits/grave_portrait.png"
   },
   {
-    "nikkeID": 137,
+    "nikkeID": 139,
     "nikkeName": "Cinderella",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1526,10 +1664,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/CinderellaS.png"
+    "nikkeImage": "images/icons/CinderellaS.png",
+    "nikkePortrait": "images/portraits/cinderella_portrait.png"
   },
   {
-    "nikkeID": 138,
+    "nikkeID": 140,
     "nikkeName": "Rapunzel: Pure Grace",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1537,10 +1676,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Rapunzel_Pure_GraceS.png"
+    "nikkeImage": "images/icons/Rapunzel_Pure_GraceS.png",
+    "nikkePortrait": "images/portraits/rapunzel_pure_grace_portrait.png"
   },
   {
-    "nikkeID": 139,
+    "nikkeID": 141,
     "nikkeName": "Little Mermaid",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1548,10 +1688,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/Little_MermaidS.png"
+    "nikkeImage": "images/icons/Little_MermaidS.png",
+    "nikkePortrait": "images/portraits/little_mermaid_portrait.png"
   },
   {
-    "nikkeID": 140,
+    "nikkeID": 142,
     "nikkeName": "Flora",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1559,10 +1700,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/FloraS.png"
+    "nikkeImage": "images/icons/FloraS.png",
+    "nikkePortrait": "images/portraits/flora_portrait.png"
   },
   {
-    "nikkeID": 141,
+    "nikkeID": 143,
     "nikkeName": "Maiden: Ice Rose",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1570,10 +1712,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Maiden_Ice_RoseS.png"
+    "nikkeImage": "images/icons/Maiden_Ice_RoseS.png",
+    "nikkePortrait": "images/portraits/maiden_ice_rose_portrait.png"
   },
   {
-    "nikkeID": 142,
+    "nikkeID": 144,
     "nikkeName": "Guillotine: Winter Slayer",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1581,10 +1724,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Guillotine_Winter_SlayerS.png"
+    "nikkeImage": "images/icons/Guillotine_Winter_SlayerS.png",
+    "nikkePortrait": "images/portraits/guillotine_winter_slayer_portrait.png"
   },
   {
-    "nikkeID": 143,
+    "nikkeID": 145,
     "nikkeName": "Rapi: Red Hood",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1592,10 +1736,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Rapi_Red_HoodS.png"
+    "nikkeImage": "images/icons/Rapi_Red_HoodS.png",
+    "nikkePortrait": "images/portraits/rapi_red_hood_portrait.png"
   },
   {
-    "nikkeID": 144,
+    "nikkeID": 146,
     "nikkeName": "Mast: Romantic Maid",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1603,10 +1748,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Mast_Romantic_MaidS.png"
+    "nikkeImage": "images/icons/Mast_Romantic_MaidS.png",
+    "nikkePortrait": "images/portraits/mast_romantic_maid_portrait.png"
   },
   {
-    "nikkeID": 145,
+    "nikkeID": 147,
     "nikkeName": "Anchor: Innocent Maid",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1614,10 +1760,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Anchor_Innocent_MaidS.png"
+    "nikkeImage": "images/icons/Anchor_Innocent_MaidS.png",
+    "nikkePortrait": "images/portraits/anchor_innocent_maid_portrait.png"
   },
   {
-    "nikkeID": 146,
+    "nikkeID": 148,
     "nikkeName": "Asuka: WILLE",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1625,10 +1772,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Asuka_WILLES.png"
+    "nikkeImage": "images/icons/Asuka_WILLES.png",
+    "nikkePortrait": "images/portraits/asuka_wille_portrait.png"
   },
   {
-    "nikkeID": 147,
+    "nikkeID": 149,
     "nikkeName": "Rei Ayanami (Tentative Name)",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1636,10 +1784,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Rei_Tentative_NameS.png"
+    "nikkeImage": "images/icons/Rei_Tentative_NameS.png",
+    "nikkePortrait": "images/portraits/rei_ayanami_tentative_name_portrait.png"
   },
   {
-    "nikkeID": 148,
+    "nikkeID": 150,
     "nikkeName": "Sakura Suzuhara",
     "nikkeRarity": "SR",
     "nikkeElement": "Water",
@@ -1647,10 +1796,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/Sakura_SuzuharaS.png"
+    "nikkeImage": "images/icons/Sakura_SuzuharaS.png",
+    "nikkePortrait": "images/portraits/sakura_suzuhara_portrait.png"
   },
   {
-    "nikkeID": 149,
+    "nikkeID": 151,
     "nikkeName": "Trina",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1658,10 +1808,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/TrinaS.png"
+    "nikkeImage": "images/icons/TrinaS.png",
+    "nikkePortrait": "images/portraits/trina_portrait.png"
   },
   {
-    "nikkeID": 150,
+    "nikkeID": 152,
     "nikkeName": "Bready",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1669,10 +1820,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/BreadyS.png"
+    "nikkeImage": "images/icons/BreadyS.png",
+    "nikkePortrait": "images/portraits/bready_portrait.png"
   },
   {
-    "nikkeID": 151,
+    "nikkeID": 153,
     "nikkeName": "Crust",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1680,10 +1832,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/CrustS.png"
+    "nikkeImage": "images/icons/CrustS.png",
+    "nikkePortrait": "images/portraits/crust_portrait.png"
   },
   {
-    "nikkeID": 152,
+    "nikkeID": 154,
     "nikkeName": "Mihara: Bonding Chain",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1691,10 +1844,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Mihara_Bonding_ChainS.png"
+    "nikkeImage": "images/icons/Mihara_Bonding_ChainS.png",
+    "nikkePortrait": "images/portraits/mihara_bonding_chain_portrait.png"
   },
   {
-    "nikkeID": 153,
+    "nikkeID": 155,
     "nikkeName": "Mori",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1702,10 +1856,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/MoriS.png"
+    "nikkeImage": "images/icons/MoriS.png",
+    "nikkePortrait": "images/portraits/mori_portrait.png"
   },
   {
-    "nikkeID": 154,
+    "nikkeID": 156,
     "nikkeName": "Arcana",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1713,10 +1868,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/ArcanaS.png"
+    "nikkeImage": "images/icons/ArcanaS.png",
+    "nikkePortrait": "images/portraits/arcana_portrait.png"
   },
   {
-    "nikkeID": 155,
+    "nikkeID": 157,
     "nikkeName": "Eve",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1724,10 +1880,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/EVES.png"
+    "nikkeImage": "images/icons/EVES.png",
+    "nikkePortrait": "images/portraits/eve_portrait.png"
   },
   {
-    "nikkeID": 156,
+    "nikkeID": 158,
     "nikkeName": "Raven",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1735,10 +1892,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/RavenS.png"
+    "nikkeImage": "images/icons/RavenS.png",
+    "nikkePortrait": "images/portraits/raven_portrait.png"
   },
   {
-    "nikkeID": 157,
+    "nikkeID": 159,
     "nikkeName": "Lily",
     "nikkeRarity": "SR",
     "nikkeElement": "Wind",
@@ -1746,10 +1904,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/LilyS.png"
+    "nikkeImage": "images/icons/LilyS.png",
+    "nikkePortrait": "images/portraits/lily_portrait.png"
   },
   {
-    "nikkeID": 158,
+    "nikkeID": 160,
     "nikkeName": "Sora",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1757,10 +1916,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/SoraS.png"
+    "nikkeImage": "images/icons/SoraS.png",
+    "nikkePortrait": "images/portraits/sora_portrait.png"
   },
   {
-    "nikkeID": 159,
+    "nikkeID": 161,
     "nikkeName": "Elegg: Boom and Shock",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1768,10 +1928,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Elegg_Boom_and_ShockS.png"
+    "nikkeImage": "images/icons/Elegg_Boom_and_ShockS.png",
+    "nikkePortrait": "images/portraits/elegg_boom_and_shock_portrait.png"
   },
   {
-    "nikkeID": 160,
+    "nikkeID": 162,
     "nikkeName": "Dorothy: Serendipity",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1779,10 +1940,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/Dorothy_SerendipityS.png"
+    "nikkeImage": "images/icons/Dorothy_SerendipityS.png",
+    "nikkePortrait": "images/portraits/dorothy_serendipity_portrait.png"
   },
   {
-    "nikkeID": 161,
+    "nikkeID": 163,
     "nikkeName": "Emma: Tactical Upgrade",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1790,10 +1952,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Emma_Tactical_UpgradeS.png"
+    "nikkeImage": "images/icons/Emma_Tactical_UpgradeS.png",
+    "nikkePortrait": "images/portraits/emma_tactical_upgrade_portrait.png"
   },
   {
-    "nikkeID": 162,
+    "nikkeID": 164,
     "nikkeName": "Eunhwa: Tactical Upgrade",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1801,10 +1964,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Eunhwa_Tactical_UpgradeS.png"
+    "nikkeImage": "images/icons/Eunhwa_Tactical_UpgradeS.png",
+    "nikkePortrait": "images/portraits/eunhwa_tactical_upgrade_portrait.png"
   },
   {
-    "nikkeID": 163,
+    "nikkeID": 165,
     "nikkeName": "Vesti: Tactical Upgrade",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1812,10 +1976,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Vesti_Tactical_UpgradeS.png"
+    "nikkeImage": "images/icons/Vesti_Tactical_UpgradeS.png",
+    "nikkePortrait": "images/portraits/vesti_tactical_upgrade_portrait.png"
   },
   {
-    "nikkeID": 164,
+    "nikkeID": 166,
     "nikkeName": "Ade: Agent Bunny",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1823,10 +1988,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Ade_Agent_BunnyS.png"
+    "nikkeImage": "images/icons/Ade_Agent_BunnyS.png",
+    "nikkePortrait": "images/portraits/ade_agent_bunny_portrait.png"
   },
   {
-    "nikkeID": 165,
+    "nikkeID": 167,
     "nikkeName": "Milk: Blooming Bunny",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1834,10 +2000,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Milk_Blooming_BunnyS.png"
+    "nikkeImage": "images/icons/Milk_Blooming_BunnyS.png",
+    "nikkePortrait": "images/portraits/milk_blooming_bunny_portrait.png"
   },
   {
-    "nikkeID": 166,
+    "nikkeID": 168,
     "nikkeName": "Ada Wong",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1845,10 +2012,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Ada_WongS.png"
+    "nikkeImage": "images/icons/Ada_WongS.png",
+    "nikkePortrait": "images/portraits/ada_wong_portrait.png"
   },
   {
-    "nikkeID": 167,
+    "nikkeID": 169,
     "nikkeName": "Jill Valentine",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1856,10 +2024,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/Jill_ValentineS.png"
+    "nikkeImage": "images/icons/Jill_ValentineS.png",
+    "nikkePortrait": "images/portraits/jill_valentine_portrait.png"
   },
   {
-    "nikkeID": 168,
+    "nikkeID": 170,
     "nikkeName": "Claire Redfield",
     "nikkeRarity": "SR",
     "nikkeElement": "Electric",
@@ -1867,10 +2036,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Claire_RedfieldS.png"
+    "nikkeImage": "images/icons/Claire_RedfieldS.png",
+    "nikkePortrait": "images/portraits/claire_redfield_portrait.png"
   },
   {
-    "nikkeID": 169,
+    "nikkeID": 171,
     "nikkeName": "Delta: Ninja Thief",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1878,10 +2048,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/Delta_Ninja_ThiefS.png"
+    "nikkeImage": "images/icons/Delta_Ninja_ThiefS.png",
+    "nikkePortrait": "images/portraits/delta_ninja_thief_portrait.png"
   },
   {
-    "nikkeID": 170,
+    "nikkeID": 172,
     "nikkeName": "Chime",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1889,10 +2060,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/ChimeS.png"
+    "nikkeImage": "images/icons/ChimeS.png",
+    "nikkePortrait": "images/portraits/chime_portrait.png"
   },
   {
-    "nikkeID": 171,
+    "nikkeID": 173,
     "nikkeName": "Nayuta",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1900,10 +2072,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/NayutaS.png"
+    "nikkeImage": "images/icons/NayutaS.png",
+    "nikkePortrait": "images/portraits/nayuta_portrait.png"
   },
   {
-    "nikkeID": 172,
+    "nikkeID": 174,
     "nikkeName": "Liberalio",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1911,10 +2084,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/LiberalioS.png"
+    "nikkeImage": "images/icons/LiberalioS.png",
+    "nikkePortrait": "images/portraits/liberalio_portrait.png"
   },
   {
-    "nikkeID": 173,
+    "nikkeID": 175,
     "nikkeName": "Soline: Frost Ticket",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1922,10 +2096,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/Soline_Frost_TicketS.png"
+    "nikkeImage": "images/icons/Soline_Frost_TicketS.png",
+    "nikkePortrait": "images/portraits/soline_frost_ticket_portrait.png"
   },
   {
-    "nikkeID": 174,
+    "nikkeID": 176,
     "nikkeName": "Diesel: Winter Sweets",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1933,10 +2108,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Diesel_Winter_SweetsS.png"
+    "nikkeImage": "images/icons/Diesel_Winter_SweetsS.png",
+    "nikkePortrait": "images/portraits/diesel_winter_sweets_portrait.png"
   },
   {
-    "nikkeID": 175,
+    "nikkeID": 177,
     "nikkeName": "Brid: Silent Track",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1944,10 +2120,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/Brid_Silent_TrackS.png"
+    "nikkeImage": "images/icons/Brid_Silent_TrackS.png",
+    "nikkePortrait": "images/portraits/brid_silent_track_portrait.png"
   },
   {
-    "nikkeID": 176,
+    "nikkeID": 178,
     "nikkeName": "Snow White: Heavy Arms",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1955,10 +2132,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Pilgrim",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Snow_White_Heavy_ArmsS.png"
+    "nikkeImage": "images/icons/Snow_White_Heavy_ArmsS.png",
+    "nikkePortrait": "images/portraits/snow_white_heavy_arms_portrait.png"
   },
   {
-    "nikkeID": 177,
+    "nikkeID": 179,
     "nikkeName": "Label",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1966,10 +2144,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/LabelS.png"
+    "nikkeImage": "images/icons/LabelS.png",
+    "nikkePortrait": "images/portraits/label_portrait.png"
   },
   {
-    "nikkeID": 178,
+    "nikkeID": 180,
     "nikkeName": "Velvet",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1977,10 +2156,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/VelvetS.png"
+    "nikkeImage": "images/icons/VelvetS.png",
+    "nikkePortrait": "images/portraits/velvet_portrait.png"
   },
   {
-    "nikkeID": 179,
+    "nikkeID": 181,
     "nikkeName": "Chisato",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1988,10 +2168,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/Chisato_NishikigiS.png"
+    "nikkeImage": "images/icons/Chisato_NishikigiS.png",
+    "nikkePortrait": "images/portraits/chisato_portrait.png"
   },
   {
-    "nikkeID": 180,
+    "nikkeID": 182,
     "nikkeName": "Takina",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1999,10 +2180,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Takina_InoueS.png"
+    "nikkeImage": "images/icons/Takina_InoueS.png",
+    "nikkePortrait": "images/portraits/takina_portrait.png"
   },
   {
-    "nikkeID": 181,
+    "nikkeID": 183,
     "nikkeName": "Kurumi",
     "nikkeRarity": "SR",
     "nikkeElement": "Iron",
@@ -2010,10 +2192,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Abnormal",
     "nikkeWeapon": "Assault Rifle",
-    "nikkeImage": "images/icons/KurumiS.png"
+    "nikkeImage": "images/icons/KurumiS.png",
+    "nikkePortrait": "images/portraits/kurumi_portrait.png"
   },
   {
-    "nikkeID": 182,
+    "nikkeID": 184,
     "nikkeName": "E.H.",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -2021,10 +2204,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "SMG",
-    "nikkeImage": "images/icons/E.png"
+    "nikkeImage": "images/icons/E.png",
+    "nikkePortrait": "images/portraits/eh_portrait.png"
   },
   {
-    "nikkeID": 183,
+    "nikkeID": 185,
     "nikkeName": "Arcana: Fortune Mate",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -2032,10 +2216,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Shotgun",
-    "nikkeImage": "images/icons/Arcana_Fortune_MateS.png"
+    "nikkeImage": "images/icons/Arcana_Fortune_MateS.png",
+    "nikkePortrait": "images/portraits/arcana_fortune_mate_portrait.png"
   },
   {
-    "nikkeID": 184,
+    "nikkeID": 186,
     "nikkeName": "Snow Crane",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -2043,10 +2228,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/Snow_CraneS.png"
+    "nikkeImage": "images/icons/Snow_CraneS.png",
+    "nikkePortrait": "images/portraits/snow_crane_portrait.png"
   },
   {
-    "nikkeID": 185,
+    "nikkeID": 187,
     "nikkeName": "Anis: Star",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -2054,10 +2240,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Anis_StarS.png"
+    "nikkeImage": "images/icons/Anis_StarS.png",
+    "nikkePortrait": "images/portraits/anis_star_portrait.png"
   },
   {
-    "nikkeID": 186,
+    "nikkeID": 188,
     "nikkeName": "Avistar",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -2065,10 +2252,11 @@
     "nikkeBurst": 1,
     "nikkeManufacturer": "Elysion",
     "nikkeWeapon": "Minigun",
-    "nikkeImage": "images/icons/AvistarS.png"
+    "nikkeImage": "images/icons/AvistarS.png",
+    "nikkePortrait": "images/portraits/avistar_portrait.png"
   },
   {
-    "nikkeID": 187,
+    "nikkeID": 189,
     "nikkeName": "Neon: Vision Eye",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -2076,10 +2264,11 @@
     "nikkeBurst": 3,
     "nikkeManufacturer": "Missilis",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/Neon_Vision_EyeS.png"
+    "nikkeImage": "images/icons/Neon_Vision_EyeS.png",
+    "nikkePortrait": "images/portraits/neon_vision_eye_portrait.png"
   },
   {
-    "nikkeID": 188,
+    "nikkeID": 190,
     "nikkeName": "Mint",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -2087,10 +2276,11 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Rocket Launcher",
-    "nikkeImage": "images/icons/MintS.png"
+    "nikkeImage": "images/icons/MintS.png",
+    "nikkePortrait": "images/portraits/mint_portrait.png"
   },
   {
-    "nikkeID": 189,
+    "nikkeID": 191,
     "nikkeName": "Prika",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -2098,6 +2288,19 @@
     "nikkeBurst": 2,
     "nikkeManufacturer": "Tetra",
     "nikkeWeapon": "Sniper Rifle",
-    "nikkeImage": "images/icons/PrikaS.png"
+    "nikkeImage": "images/icons/PrikaS.png",
+    "nikkePortrait": "images/portraits/prika_portrait.png"
+  },
+  {
+    "nikkeID": 192,
+    "nikkeName": "Ark Ranger Black",
+    "nikkeRarity": "SSR",
+    "nikkeElement": "Wind",
+    "nikkeType": "Attacker",
+    "nikkeBurst": 3,
+    "nikkeManufacturer": "Tetra",
+    "nikkeWeapon": "Assault Rifle",
+    "nikkeImage": "images/icons/ArkRangerBlackS.png",
+    "nikkePortrait": "images/portraits/ark_ranger_black_portrait.png"
   }
 ]

@@ -381,19 +381,19 @@ function toggleFilters() {
 
 
 function toggleFilter(group, value) {
-        value = String(value);
+    value = String(value);
 
-        const list = activeFilters[group];
-        const index = list.indexOf(value);
+    const list = activeFilters[group];
+    const index = list.indexOf(value);
 
-        if (index >= 0) {
-            list.splice(index, 1);
-        } else {
-            list.push(value);
-        }
+    if (index >= 0) {
+        list.splice(index, 1);
+    } else {
+        list.push(value);
+    }
 
-        updateFilterUI();
-        renderUnits();
+    updateFilterUI();
+    renderUnits();
 }
 
 const weaponMap = {
