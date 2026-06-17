@@ -14,25 +14,25 @@
             }
             },
             {
-                "name": "Seven Dwarves: V&VI",
-                "skillType": "Active",
-                "cooldown": 15,
-                "description": "■ Affects enemies within the attack range.\nDeals {atkFinalUp}% of final ATK as damage.\n■ Activates when attacking during Full Burst Time. Affects self.\nCritical Rate ▲ {critRateUp}% for 10 sec.",
-                "values": {
-                    "atkFinalUp": [90.46, 96.49, 102.52, 108.55, 114.58, 120.61, 126.64, 132.67, 138.70, 144.73],
-                    "critRateUp": [16.31, 17.40, 18.48, 19.57, 20.66, 21.75, 22.83, 23.92, 25.01, 26.10]
+            "name": "Seven Dwarves: V&VI",
+            "skillType": "Active",
+            "cooldown": 15,
+            "description": "■ Affects enemies within the attack range.\nDeals {atkFinalUp}% of final ATK as damage.\n■ Activates when attacking during Full Burst Time. Affects self.\nCritical Rate ▲ {critRateUp}% for 10 sec.",
+            "values": {
+                "atkFinalUp": [90.46, 96.49, 102.52, 108.55, 114.58, 120.61, 126.64, 132.67, 138.70, 144.73],
+                "critRateUp": [16.31, 17.40, 18.48, 19.57, 20.66, 21.75, 22.83, 23.92, 25.01, 26.10]
                 }
             },
             {
-                "name": "Seven Dwarves: I",
-                "skillType": "Active",
-                "cooldown": 40,
-                "description": "■ Affects self.\nChange the Weapon in use:\nCharge Time: {chargeTime} sec\nDamage: {atkFinalUp}% of final ATK\nFull Charge Damage: {chargeDmg}% of damage\nMax Ammunition Capacity: {maxAmmo} round(s)\nAdditional Effect: Pierce",
-                "values": {
-                    "chargeTime": 5,
-                    "atkFinalUp": [124.87, 166.50, 208.12, 249.75, 291.37, 333.00, 374.62, 416.25, 457.87, 499.50],
-                    "chargeDmg": 1000,
-                    "maxAmmo": 1
+            "name": "Seven Dwarves: I",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects self.\nChange the Weapon in use:\nCharge Time: {chargeTime} sec\nDamage: {atkFinalUp}% of final ATK\nFull Charge Damage: {chargeDmg}% of damage\nMax Ammunition Capacity: {maxAmmo} round(s)\nAdditional Effect: Pierce",
+            "values": {
+                "chargeTime": 5,
+                "atkFinalUp": [124.87, 166.50, 208.12, 249.75, 291.37, 333.00, 374.62, 416.25, 457.87, 499.50],
+                "chargeDmg": 1000,
+                "maxAmmo": 1
                 }
             }
         ]
@@ -994,6 +994,39 @@
             "description": "■ Affects self.\nMax Ammunition Capacity ▲ {maxAmmoUp}% for 10 sec.",
             "values": {
                 "hpFinalHeal": [196.87, 262.50, 328.12, 393.75, 459.37, 525.00, 590.62, 656.25, 721.87, 787.50]
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "027",
+        "nikkeName": "iDoll Flower",
+        "skills": [
+            {
+            "name": "Perennial Leaf",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when the last bullet hits the target.\nAffects the target. ATK ▼ {atkDown}% for 5 sec.",
+            "values": {
+                "atkDown": [4.13, 5.50, 6.88, 8.26, 9.63, 11.01, 12.39, 13.77, 15.14, 16.52]
+                }
+            },
+            {
+            "name": "Hue of the Perennial",
+            "skillType": "Active",
+            "cooldown": 15,
+            "description": "■ Affects 1 enemy unit(s) with the highest ATK.\nATK ▼ {atkDown}% for 5 sec.",
+            "values": {
+                "atkDown": [9.84, 13.12, 16.40, 19.86, 22.96, 26.25, 29.53, 32.81, 36.09, 39.37]
+                }
+            },
+            {
+            "name": "Perennial Perfume",
+            "skillType": "Active",
+            "cooldown": 20,
+            "description": "■ Affects 1 enemy unit(s) with the highest ATK.\nDeals {atkFinalDmg}% of final ATK as damage.\nTaunt for 2 sec.",
+            "values": {
+                "atkFinalDmg": [110.20, 134.69, 159.18, 183.67, 208.16, 232.65, 257.14, 281.63, 306.12, 303.61]
                 }
             }
         ]

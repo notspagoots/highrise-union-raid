@@ -136,6 +136,67 @@
       cursor: pointer;
     }
 
+    .skill-card {
+      background: #222;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+
+    .skill-header {
+      font-weight: bold;
+      color: #ffcc00;
+      margin-bottom: 6px;
+    }
+
+    .skill-level {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .skill-desc {
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .level-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 5px;
+    }
+
+    .lvl-btn {
+      background: #2a2a2a;
+      color: #eee;
+      border: 1px solid #555;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 4px 10px;
+    }
+
+    .lvl-btn:hover {
+      background: #3a3a3a;
+    }
+
+    .lvl-btn.active {
+      background: #ffcc00;
+      color: black;
+      border-color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .lvl-display {
+      min-width: 70px;
+      text-align: center;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
   </style>
 </head>
 <body>
@@ -145,6 +206,79 @@
 <div id="unitCard"></div>
 
 <script>
+function formatSkillDescription(skill, level) {
+    let desc = skill.description;
+
+    Object.entries(skill.values).forEach(([key, value]) => {
+      let replacement;
+
+      if (Array.isArray(value)) {
+        replacement = value[level - 1];
+      } else {
+        replacement = value;
+      }
+
+      desc = desc.replaceAll(`{${key}}`, replacement);
+    });
+
+    return desc.replace(/\n/g, "<br>");
+}
+
+function renderSkills(skills) {
+  const container = document.getElementById("skillsContainer");
+
+  skills.forEach(skill => {
+    let level = 1;
+
+    const card = document.createElement("div");
+    card.className = "skill-card";
+
+// UPDATE FUNCTION
+
+    function update() {
+      const desc = formatSkillDescription(skill, level);
+
+      card.innerHTML = `
+        <div class="skill-header">
+          <strong>${skill.name}</strong> (${skill.skillType})
+          ${skill.cooldown > 0 ? ` - CD: ${skill.cooldown}s` : ""}
+        </div>
+
+        <div class="skill-level">
+          <button class="lvl-btn" data-action="decrease">−</button>
+          <span class="lvl-display">${level}</span>
+          <button class="lvl-btn" data-action="increase">+</button>
+        </div>
+
+        <div class="skill-desc">${desc}</div>
+      `;
+
+
+
+      const btns = card.querySelectorAll(".lvl-btn");
+
+      btns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const action = btn.dataset.action;
+
+          if (action === "increase" && level < 10) {
+            level++;
+          }
+
+          if (action === "decrease" && level > 1) {
+            level--;
+          }
+
+          update();
+        });
+      });
+    }
+
+    update();
+    container.appendChild(card);
+  });
+}
+
 fetch('nikke.json')
   .then(res => res.json())
   .then(data => {
@@ -158,6 +292,16 @@ fetch('nikke.json')
       document.getElementById("unitCard").innerHTML = "<h2>Unit not found</h2>";
       return;
     }
+
+fetch('nikke_skills.json')
+  .then(res => res.json())
+  .then(skillData => {
+    const skillUnit = skillData.find(s => s.nikkeName === unit.nikkeName);
+
+    if (!skillUnit) return;
+
+    renderSkills(skillUnit.skills);
+  });
 
     const rarityClass = unit.nikkeRarity.toLowerCase();
 
@@ -194,6 +338,11 @@ fetch('nikke.json')
       <div class="section">
         <div class="section-title">Notes</div>
         <div>Coming soon...</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Skills</div>
+        <div id="skillsContainer"></div>
       </div>
     `;
   });
