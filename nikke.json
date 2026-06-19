@@ -1188,7 +1188,7 @@
     "nikkePortrait": "images/portraits/anchor_portrait.png"
   },
   {
-    "nikkeID": 100,
+    "nikkeID": "100",
     "nikkeName": "A2",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1200,7 +1200,7 @@
     "nikkePortrait": "images/portraits/a2_portrait.png"
   },
   {
-    "nikkeID": 101,
+    "nikkeID": "101",
     "nikkeName": "Pascal",
     "nikkeRarity": "SR",
     "nikkeElement": "Iron",
@@ -1212,7 +1212,7 @@
     "nikkePortrait": "images/portraits/pascal_portrait.png"
   },
   {
-    "nikkeID": 102,
+    "nikkeID": "102",
     "nikkeName": "2B",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1224,7 +1224,7 @@
     "nikkePortrait": "images/portraits/2b_portrait.png"
   },
   {
-    "nikkeID": 103,
+    "nikkeID": "103",
     "nikkeName": "Marciana",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1236,7 +1236,7 @@
     "nikkePortrait": "images/portraits/marciana_portrait.png"
   },
   {
-    "nikkeID": 104,
+    "nikkeID": "104",
     "nikkeName": "Naga",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1248,7 +1248,7 @@
     "nikkePortrait": "images/portraits/naga_portrait.png"
   },
   {
-    "nikkeID": 105,
+    "nikkeID": "105",
     "nikkeName": "Moran",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1260,7 +1260,7 @@
     "nikkePortrait": "images/portraits/moran_portrait.png"
   },
   {
-    "nikkeID": 106,
+    "nikkeID": "106",
     "nikkeName": "Tia",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1272,7 +1272,7 @@
     "nikkePortrait": "images/portraits/tia_portrait.png"
   },
   {
-    "nikkeID": 107,
+    "nikkeID": "107",
     "nikkeName": "Crown",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1284,7 +1284,7 @@
     "nikkePortrait": "images/portraits/crown_portrait.png"
   },
   {
-    "nikkeID": 108,
+    "nikkeID": "108",
     "nikkeName": "Red Hood",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1296,7 +1296,7 @@
     "nikkePortrait": "images/portraits/red_hood_portrait.png"
   },
   {
-    "nikkeID": 109,
+    "nikkeID": "109",
     "nikkeName": "Quiry",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1308,7 +1308,7 @@
     "nikkePortrait": "images/portraits/quiry_portrait.png"
   },
   {
-    "nikkeID": 110,
+    "nikkeID": "110",
     "nikkeName": "Privaty",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1320,7 +1320,7 @@
     "nikkePortrait": "images/portraits/privaty_portrait.png"
   },
   {
-    "nikkeID": 111,
+    "nikkeID": "111",
     "nikkeName": "Ein",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1332,7 +1332,7 @@
     "nikkePortrait": "images/portraits/ein_portrait.png"
   },
   {
-    "nikkeID": 112,
+    "nikkeID": "112",
     "nikkeName": "Zwei",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1344,7 +1344,7 @@
     "nikkePortrait": "images/portraits/zwei_portrait.png"
   },
   {
-    "nikkeID": 113,
+    "nikkeID": "113",
     "nikkeName": "Snow White: Innocent Days",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1356,7 +1356,7 @@
     "nikkePortrait": "images/portraits/snow_white_innocent_days_portrait.png"
   },
   {
-    "nikkeID": 114,
+    "nikkeID": "114",
     "nikkeName": "Tove",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1368,7 +1368,7 @@
     "nikkePortrait": "images/portraits/tove_portrait.png"
   },
   {
-    "nikkeID": 115,
+    "nikkeID": "115",
     "nikkeName": "Ludmilla: Winter Owner",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1380,7 +1380,7 @@
     "nikkePortrait": "images/portraits/ludmilla_winter_owner_portrait.png"
   },
   {
-    "nikkeID": 116,
+    "nikkeID": "116",
     "nikkeName": "Mica: Snow Buddy",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1392,7 +1392,7 @@
     "nikkePortrait": "images/portraits/mica_snow_buddy_portrait.png"
   },
   {
-    "nikkeID": 117,
+    "nikkeID": "117",
     "nikkeName": "Scarlet: Black Shadow",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1404,7 +1404,7 @@
     "nikkePortrait": "images/portraits/scarlet_black_shadow_portrait.png"
   },
   {
-    "nikkeID": 118,
+    "nikkeID": "118",
     "nikkeName": "Privaty: Unkind Maid",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1416,7 +1416,7 @@
     "nikkePortrait": "images/portraits/privaty_unkind_maid_portrait.png"
   },
   {
-    "nikkeID": 119,
+    "nikkeID": "119",
     "nikkeName": "Elegg",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1428,7 +1428,7 @@
     "nikkePortrait": "images/portraits/elegg_portrait.png"
   },
   {
-    "nikkeID": 120,
+    "nikkeID": "120",
     "nikkeName": "D: Killer Wife",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1440,7 +1440,7 @@
     "nikkePortrait": "images/portraits/d_killer_wife_portrait.png"
   },
   {
-    "nikkeID": 121,
+    "nikkeID": "121",
     "nikkeName": "Emilia",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1452,7 +1452,7 @@
     "nikkePortrait": "images/portraits/emilia_portrait.png"
   },
   {
-    "nikkeID": 122,
+    "nikkeID": "122",
     "nikkeName": "Rem",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1464,7 +1464,7 @@
     "nikkePortrait": "images/portraits/rem_portrait.png"
   },
   {
-    "nikkeID": 123,
+    "nikkeID": "123",
     "nikkeName": "Ram",
     "nikkeRarity": "SR",
     "nikkeElement": "Wind",
@@ -1476,7 +1476,7 @@
     "nikkePortrait": "images/portraits/ram_portrait.png"
   },
   {
-    "nikkeID": 124,
+    "nikkeID": "124",
     "nikkeName": "Bay",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1488,7 +1488,7 @@
     "nikkePortrait": "images/portraits/bay_portrait.png"
   },
   {
-    "nikkeID": 125,
+    "nikkeID": "125",
     "nikkeName": "Kilo",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1500,7 +1500,7 @@
     "nikkePortrait": "images/portraits/kilo_portrait.png"
   },
   {
-    "nikkeID": 126,
+    "nikkeID": "126",
     "nikkeName": "Trony",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1512,7 +1512,7 @@
     "nikkePortrait": "images/portraits/trony_portrait.png"
   },
   {
-    "nikkeID": 127,
+    "nikkeID": "127",
     "nikkeName": "Soda: Twinkling Bunny",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1524,7 +1524,7 @@
     "nikkePortrait": "images/portraits/soda_twinkling_bunny_portrait.png"
   },
   {
-    "nikkeID": 128,
+    "nikkeID": "128",
     "nikkeName": "Alice: Wonderland Bunny",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1536,7 +1536,7 @@
     "nikkePortrait": "images/portraits/alice_wonderland_bunny_portrait.png"
   },
   {
-    "nikkeID": 129,
+    "nikkeID": "129",
     "nikkeName": "Clay",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1548,7 +1548,7 @@
     "nikkePortrait": "images/portraits/clay_portrait.png"
   },
   {
-    "nikkeID": 130,
+    "nikkeID": "130",
     "nikkeName": "Rosanna: Chic Ocean",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1560,7 +1560,7 @@
     "nikkePortrait": "images/portraits/rosanna_chic_ocean_portrait.png"
   },
   {
-    "nikkeID": 131,
+    "nikkeID": "131",
     "nikkeName": "Sakura: Bloom in Summer",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1572,7 +1572,7 @@
     "nikkePortrait": "images/portraits/sakura_bloom_in_summer_portrait.png"
   },
   {
-    "nikkeID": 132,
+    "nikkeID": "132",
     "nikkeName": "Asuka",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1584,7 +1584,7 @@
     "nikkePortrait": "images/portraits/asuka_portrait.png"
   },
   {
-    "nikkeID": 133,
+    "nikkeID": "133",
     "nikkeName": "Rei Ayanami",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1596,7 +1596,7 @@
     "nikkePortrait": "images/portraits/rei_ayanami_portrait.png"
   },
   {
-    "nikkeID": 134,
+    "nikkeID": "134",
     "nikkeName": "Mari",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1608,7 +1608,7 @@
     "nikkePortrait": "images/portraits/mari_portrait.png"
   },
   {
-    "nikkeID": 135,
+    "nikkeID": "135",
     "nikkeName": "Misato",
     "nikkeRarity": "SR",
     "nikkeElement": "Iron",
@@ -1620,7 +1620,7 @@
     "nikkePortrait": "images/portraits/misato_portrait.png"
   },
   {
-    "nikkeID": 136,
+    "nikkeID": "136",
     "nikkeName": "Phantom",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1632,7 +1632,7 @@
     "nikkePortrait": "images/portraits/phantom_portrait.png"
   },
   {
-    "nikkeID": 137,
+    "nikkeID": "137",
     "nikkeName": "Quency: Escape Queen",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1644,7 +1644,7 @@
     "nikkePortrait": "images/portraits/quency_escape_queen_portrait.png"
   },
   {
-    "nikkeID": 138,
+    "nikkeID": "138",
     "nikkeName": "Grave",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1656,7 +1656,7 @@
     "nikkePortrait": "images/portraits/grave_portrait.png"
   },
   {
-    "nikkeID": 139,
+    "nikkeID": "139",
     "nikkeName": "Cinderella",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1668,7 +1668,7 @@
     "nikkePortrait": "images/portraits/cinderella_portrait.png"
   },
   {
-    "nikkeID": 140,
+    "nikkeID": "140",
     "nikkeName": "Rapunzel: Pure Grace",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1680,7 +1680,7 @@
     "nikkePortrait": "images/portraits/rapunzel_pure_grace_portrait.png"
   },
   {
-    "nikkeID": 141,
+    "nikkeID": "141",
     "nikkeName": "Little Mermaid",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1692,7 +1692,7 @@
     "nikkePortrait": "images/portraits/little_mermaid_portrait.png"
   },
   {
-    "nikkeID": 142,
+    "nikkeID": "142",
     "nikkeName": "Flora",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1704,7 +1704,7 @@
     "nikkePortrait": "images/portraits/flora_portrait.png"
   },
   {
-    "nikkeID": 143,
+    "nikkeID": "143",
     "nikkeName": "Maiden: Ice Rose",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1716,7 +1716,7 @@
     "nikkePortrait": "images/portraits/maiden_ice_rose_portrait.png"
   },
   {
-    "nikkeID": 144,
+    "nikkeID": "144",
     "nikkeName": "Guillotine: Winter Slayer",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1728,7 +1728,7 @@
     "nikkePortrait": "images/portraits/guillotine_winter_slayer_portrait.png"
   },
   {
-    "nikkeID": 145,
+    "nikkeID": "145",
     "nikkeName": "Rapi: Red Hood",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1740,7 +1740,7 @@
     "nikkePortrait": "images/portraits/rapi_red_hood_portrait.png"
   },
   {
-    "nikkeID": 146,
+    "nikkeID": "146",
     "nikkeName": "Mast: Romantic Maid",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1752,7 +1752,7 @@
     "nikkePortrait": "images/portraits/mast_romantic_maid_portrait.png"
   },
   {
-    "nikkeID": 147,
+    "nikkeID": "147",
     "nikkeName": "Anchor: Innocent Maid",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1764,7 +1764,7 @@
     "nikkePortrait": "images/portraits/anchor_innocent_maid_portrait.png"
   },
   {
-    "nikkeID": 148,
+    "nikkeID": "148",
     "nikkeName": "Asuka: WILLE",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1776,7 +1776,7 @@
     "nikkePortrait": "images/portraits/asuka_wille_portrait.png"
   },
   {
-    "nikkeID": 149,
+    "nikkeID": "149",
     "nikkeName": "Rei Ayanami (Tentative Name)",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1788,7 +1788,7 @@
     "nikkePortrait": "images/portraits/rei_ayanami_tentative_name_portrait.png"
   },
   {
-    "nikkeID": 150,
+    "nikkeID": "150",
     "nikkeName": "Sakura Suzuhara",
     "nikkeRarity": "SR",
     "nikkeElement": "Water",
@@ -1800,7 +1800,7 @@
     "nikkePortrait": "images/portraits/sakura_suzuhara_portrait.png"
   },
   {
-    "nikkeID": 151,
+    "nikkeID": "151",
     "nikkeName": "Trina",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1812,7 +1812,7 @@
     "nikkePortrait": "images/portraits/trina_portrait.png"
   },
   {
-    "nikkeID": 152,
+    "nikkeID": "152",
     "nikkeName": "Bready",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1824,7 +1824,7 @@
     "nikkePortrait": "images/portraits/bready_portrait.png"
   },
   {
-    "nikkeID": 153,
+    "nikkeID": "153",
     "nikkeName": "Crust",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1836,7 +1836,7 @@
     "nikkePortrait": "images/portraits/crust_portrait.png"
   },
   {
-    "nikkeID": 154,
+    "nikkeID": "154",
     "nikkeName": "Mihara: Bonding Chain",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1848,7 +1848,7 @@
     "nikkePortrait": "images/portraits/mihara_bonding_chain_portrait.png"
   },
   {
-    "nikkeID": 155,
+    "nikkeID": "155",
     "nikkeName": "Mori",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1860,7 +1860,7 @@
     "nikkePortrait": "images/portraits/mori_portrait.png"
   },
   {
-    "nikkeID": 156,
+    "nikkeID": "156",
     "nikkeName": "Arcana",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -1872,7 +1872,7 @@
     "nikkePortrait": "images/portraits/arcana_portrait.png"
   },
   {
-    "nikkeID": 157,
+    "nikkeID": "157",
     "nikkeName": "Eve",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1884,7 +1884,7 @@
     "nikkePortrait": "images/portraits/eve_portrait.png"
   },
   {
-    "nikkeID": 158,
+    "nikkeID": "158",
     "nikkeName": "Raven",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1896,7 +1896,7 @@
     "nikkePortrait": "images/portraits/raven_portrait.png"
   },
   {
-    "nikkeID": 159,
+    "nikkeID": "159",
     "nikkeName": "Lily",
     "nikkeRarity": "SR",
     "nikkeElement": "Wind",
@@ -1908,7 +1908,7 @@
     "nikkePortrait": "images/portraits/lily_portrait.png"
   },
   {
-    "nikkeID": 160,
+    "nikkeID": "160",
     "nikkeName": "Sora",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -1920,7 +1920,7 @@
     "nikkePortrait": "images/portraits/sora_portrait.png"
   },
   {
-    "nikkeID": 161,
+    "nikkeID": "161",
     "nikkeName": "Elegg: Boom and Shock",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1932,7 +1932,7 @@
     "nikkePortrait": "images/portraits/elegg_boom_and_shock_portrait.png"
   },
   {
-    "nikkeID": 162,
+    "nikkeID": "162",
     "nikkeName": "Dorothy: Serendipity",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -1944,7 +1944,7 @@
     "nikkePortrait": "images/portraits/dorothy_serendipity_portrait.png"
   },
   {
-    "nikkeID": 163,
+    "nikkeID": "163",
     "nikkeName": "Emma: Tactical Upgrade",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1956,7 +1956,7 @@
     "nikkePortrait": "images/portraits/emma_tactical_upgrade_portrait.png"
   },
   {
-    "nikkeID": 164,
+    "nikkeID": "164",
     "nikkeName": "Eunhwa: Tactical Upgrade",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1968,7 +1968,7 @@
     "nikkePortrait": "images/portraits/eunhwa_tactical_upgrade_portrait.png"
   },
   {
-    "nikkeID": 165,
+    "nikkeID": "165",
     "nikkeName": "Vesti: Tactical Upgrade",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -1980,7 +1980,7 @@
     "nikkePortrait": "images/portraits/vesti_tactical_upgrade_portrait.png"
   },
   {
-    "nikkeID": 166,
+    "nikkeID": "166",
     "nikkeName": "Ade: Agent Bunny",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -1992,7 +1992,7 @@
     "nikkePortrait": "images/portraits/ade_agent_bunny_portrait.png"
   },
   {
-    "nikkeID": 167,
+    "nikkeID": "167",
     "nikkeName": "Milk: Blooming Bunny",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -2004,7 +2004,7 @@
     "nikkePortrait": "images/portraits/milk_blooming_bunny_portrait.png"
   },
   {
-    "nikkeID": 168,
+    "nikkeID": "168",
     "nikkeName": "Ada Wong",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -2016,7 +2016,7 @@
     "nikkePortrait": "images/portraits/ada_wong_portrait.png"
   },
   {
-    "nikkeID": 169,
+    "nikkeID": "169",
     "nikkeName": "Jill Valentine",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -2028,7 +2028,7 @@
     "nikkePortrait": "images/portraits/jill_valentine_portrait.png"
   },
   {
-    "nikkeID": 170,
+    "nikkeID": "170",
     "nikkeName": "Claire Redfield",
     "nikkeRarity": "SR",
     "nikkeElement": "Electric",
@@ -2040,7 +2040,7 @@
     "nikkePortrait": "images/portraits/claire_redfield_portrait.png"
   },
   {
-    "nikkeID": 171,
+    "nikkeID": "171",
     "nikkeName": "Delta: Ninja Thief",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -2052,7 +2052,7 @@
     "nikkePortrait": "images/portraits/delta_ninja_thief_portrait.png"
   },
   {
-    "nikkeID": 172,
+    "nikkeID": "172",
     "nikkeName": "Chime",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -2064,7 +2064,7 @@
     "nikkePortrait": "images/portraits/chime_portrait.png"
   },
   {
-    "nikkeID": 173,
+    "nikkeID": "173",
     "nikkeName": "Nayuta",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -2076,7 +2076,7 @@
     "nikkePortrait": "images/portraits/nayuta_portrait.png"
   },
   {
-    "nikkeID": 174,
+    "nikkeID": "174",
     "nikkeName": "Liberalio",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -2088,7 +2088,7 @@
     "nikkePortrait": "images/portraits/liberalio_portrait.png"
   },
   {
-    "nikkeID": 175,
+    "nikkeID": "175",
     "nikkeName": "Soline: Frost Ticket",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -2100,7 +2100,7 @@
     "nikkePortrait": "images/portraits/soline_frost_ticket_portrait.png"
   },
   {
-    "nikkeID": 176,
+    "nikkeID": "176",
     "nikkeName": "Diesel: Winter Sweets",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -2112,7 +2112,7 @@
     "nikkePortrait": "images/portraits/diesel_winter_sweets_portrait.png"
   },
   {
-    "nikkeID": 177,
+    "nikkeID": "177",
     "nikkeName": "Brid: Silent Track",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -2124,7 +2124,7 @@
     "nikkePortrait": "images/portraits/brid_silent_track_portrait.png"
   },
   {
-    "nikkeID": 178,
+    "nikkeID": "178",
     "nikkeName": "Snow White: Heavy Arms",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -2136,7 +2136,7 @@
     "nikkePortrait": "images/portraits/snow_white_heavy_arms_portrait.png"
   },
   {
-    "nikkeID": 179,
+    "nikkeID": "179",
     "nikkeName": "Label",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -2148,7 +2148,7 @@
     "nikkePortrait": "images/portraits/label_portrait.png"
   },
   {
-    "nikkeID": 180,
+    "nikkeID": "180",
     "nikkeName": "Velvet",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -2160,7 +2160,7 @@
     "nikkePortrait": "images/portraits/velvet_portrait.png"
   },
   {
-    "nikkeID": 181,
+    "nikkeID": "181",
     "nikkeName": "Chisato",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -2172,7 +2172,7 @@
     "nikkePortrait": "images/portraits/chisato_portrait.png"
   },
   {
-    "nikkeID": 182,
+    "nikkeID": "182",
     "nikkeName": "Takina",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -2184,7 +2184,7 @@
     "nikkePortrait": "images/portraits/takina_portrait.png"
   },
   {
-    "nikkeID": 183,
+    "nikkeID": "183",
     "nikkeName": "Kurumi",
     "nikkeRarity": "SR",
     "nikkeElement": "Iron",
@@ -2196,7 +2196,7 @@
     "nikkePortrait": "images/portraits/kurumi_portrait.png"
   },
   {
-    "nikkeID": 184,
+    "nikkeID": "184",
     "nikkeName": "E.H.",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",
@@ -2208,7 +2208,7 @@
     "nikkePortrait": "images/portraits/eh_portrait.png"
   },
   {
-    "nikkeID": 185,
+    "nikkeID": "185",
     "nikkeName": "Arcana: Fortune Mate",
     "nikkeRarity": "SSR",
     "nikkeElement": "Fire",
@@ -2220,7 +2220,7 @@
     "nikkePortrait": "images/portraits/arcana_fortune_mate_portrait.png"
   },
   {
-    "nikkeID": 186,
+    "nikkeID": "186",
     "nikkeName": "Snow Crane",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -2232,7 +2232,7 @@
     "nikkePortrait": "images/portraits/snow_crane_portrait.png"
   },
   {
-    "nikkeID": 187,
+    "nikkeID": "187",
     "nikkeName": "Anis: Star",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -2244,7 +2244,7 @@
     "nikkePortrait": "images/portraits/anis_star_portrait.png"
   },
   {
-    "nikkeID": 188,
+    "nikkeID": "188",
     "nikkeName": "Avistar",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -2256,7 +2256,7 @@
     "nikkePortrait": "images/portraits/avistar_portrait.png"
   },
   {
-    "nikkeID": 189,
+    "nikkeID": "189",
     "nikkeName": "Neon: Vision Eye",
     "nikkeRarity": "SSR",
     "nikkeElement": "Electric",
@@ -2268,7 +2268,7 @@
     "nikkePortrait": "images/portraits/neon_vision_eye_portrait.png"
   },
   {
-    "nikkeID": 190,
+    "nikkeID": "190",
     "nikkeName": "Mint",
     "nikkeRarity": "SSR",
     "nikkeElement": "Iron",
@@ -2280,7 +2280,7 @@
     "nikkePortrait": "images/portraits/mint_portrait.png"
   },
   {
-    "nikkeID": 191,
+    "nikkeID": "191",
     "nikkeName": "Prika",
     "nikkeRarity": "SSR",
     "nikkeElement": "Water",
@@ -2292,7 +2292,7 @@
     "nikkePortrait": "images/portraits/prika_portrait.png"
   },
   {
-    "nikkeID": 192,
+    "nikkeID": "192",
     "nikkeName": "Ark Ranger Black",
     "nikkeRarity": "SSR",
     "nikkeElement": "Wind",

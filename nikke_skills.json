@@ -1099,5 +1099,5390 @@
                 }
             }
         ]
+    },
+    {
+        "nikkeID": "030",
+        "nikkeName": "Julia",
+        "skills": [
+            {
+            "name": "Decrescendo",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects self.\nCritical Rate ▲ {critRateUp}% for 10 sec.",
+            "values": {
+                "critRateUp": [15.38, 16.57, 17.75, 18.93, 20.12, 21.30, 22.48, 23.67, 24.85, 26.04]
+                }
+            },
+            {
+            "name": "Crescendo",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when the last bullet hits the target. Affects self.\nCrescendo: Critical Damage ▲ {critDmgUp}%, stacks up to 5 times and lasts for 15 sec.",
+            "values": {
+                "critDmgUp": [14.65, 15.78, 16.90, 18.03, 19.16, 20.29, 21.41, 22.54, 23.67, 24.79]
+                }
+            },
+            {
+            "name": "Climax",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects 5 enemy unit(s) with the highest DEF.\nDeals {atkFinalDmg}% of final ATK as damage.\n■ Activates when Crescendo is fully stacked. Affects the same target(s).\nDeals {atkFinalDmg}% of final ATK as additional damage.",
+            "values": {
+                "atkFinalDmg": [321.75, 346.50, 371.25, 396.00, 420.75, 445.50, 470.25, 495.00, 519.75, 544.50]
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "031",
+        "nikkeName": "Epinel",
+        "skills": [
+            {
+            "name": "Total Noob",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when killing an enemy. Affects self.\nTotal Noob: ATK ▲ {atkUp}%, stacks up to 5 time(s) and lasts for 15 sec.",
+            "values": {
+                "atkUp": [8.18, 8.82, 9.44, 10.08, 10.71, 11.34, 11.97, 12.60, 13.32, 13.86]
+                }
+            },
+            {
+            "name": "Arachnid",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when the last bullet hits the target. Affects self.\nCritical Rate▲ {critRateUp}% for 5 sec.\nCritical Damage ▲ {critDmgUp}% for 5 sec.",
+            "values": {
+                "critRateUp": [2.98, 3.21, 3.44, 3.67, 3.90, 4.13, 4.36, 4.59, 4.82, 5.05],
+                "critDmgUp": [3.78, 4.07, 4.36, 4.65, 4.95, 5.24, 5.53, 5.82, 6.11, 6.40]
+                }
+            },
+            {
+            "name": "SAFE 50-50",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects all enemies.\nDeals {atkFinalDmg}% of final ATK as damage.\n■ Activates when Total Noob is fully stacked. Affects the same target(s).\nDeals {atkFinalDmg}% of final ATK as additional damage.",
+            "values": {
+                "atkFinalDmg": [270.56, 291.37, 312.18, 333.00, 353.81, 374.62, 395.43, 416.25, 437.06, 457.87]
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "032",
+        "nikkeName": "Drake",
+        "skills": [
+            {
+            "name": "Overcharge",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates at the beginning of Full Burst. Affects all allies.\nHit Rate ▲ {hitRateUp}% for 10 sec.\nATK ▲ {atkUp}% for 10 sec.",
+            "values": {
+                "hitRateUp": [7.00, 7.54, 8.08, 8.62, 9.15, 9.69, 10.23, 10.77, 11.31, 11.85],
+                "atkUp": [7.00, 7.54, 8.08, 8.62, 9.15, 9.69, 10.23, 10.77, 11.31, 11.85]
+                }
+            },
+            {
+            "name": "Thunderbolt",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates after landing 10 attack(s). Affects 3 enemy unit(s) with the lowest remaining HP.\nDeals {atkFinalDmg}% of final ATK as damage.",
+            "values": {
+                "atkFinalDmg": [58.24, 62.72, 67.19, 71.68, 76.16, 80.64, 85.11, 89.60, 94.07, 98.55]
+                }
+            },
+            {
+            "name": "Drake Special",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects enemies within the attack range.\nDeals {atkFinalDmg}% of final ATK as damage.\n■ Affects self.\nMax Ammunition Capacity ▲ {maxAmmoUp}% for 10 sec.",
+            "values": {
+                "atkFinalDmg": [741, 798, 855, 912, 969, 1026, 1083, 1140, 1197, 1254],
+                "maxAmmoUp": [42.65, 45.93, 49.21, 52.50, 55.78, 59.06, 62.34, 65.62, 68.90, 72.18]
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "033",
+        "nikkeName": "N102",
+        "skills": [
+            {
+            "name": "Written Memories",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Affects 1 allies with the highest ATK. Activates when attacking during Full Charge.\nMax Ammunition Capacity ▲ 3 shots for 10 sec.\nCritical Damage ▲ {critDmgUp}% for 10 sec.",
+            "values": {
+                "critDmgUp": [2.45, 3.33, 4.20, 5.08, 5.96, 6.83, 7.71, 8.59, 9.46, 10.34]
+                }
+            },
+            {
+            "name": "Impaired Memories",
+            "skillType": "Active",
+            "cooldown": 15,
+            "description": "■ Affects 1 ally unit(s) with the highest HP.\nCharge Damage ▲ {chrgDmgUp}% for 5 sec.",
+            "values": {
+                "chrgDmgUp": [11.30, 12.92, 14.53, 16.15, 17.76, 19.38, 21.00, 22.61, 24.23, 25.84]
+                }
+            },
+            {
+            "name": "Memories of Blue Butterflies",
+            "skillType": "Active",
+            "cooldown": 20,
+            "description": "■ Affects all allies.\nATK ▲ {atkUp}% for 10 sec.",
+            "values": {
+                "atkUp": [11.31, 12.93, 14.54, 16.16, 17.77, 19.39, 21.01, 22.62, 24.24, 25.86]
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "034",
+        "nikkeName": "Mihara",
+        "skills": [
+            {
+            "name": "Endure",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when the last bullet hits the target. Affects self.\nCritical Damage ▲ {critDmgUp}% for 10 sec.",
+            "values": {
+                "critDmgUp": [8.18, 9.35, 10.52, 11.69, 12.85, 14.02, 15.19, 16.36, 17.53, 18.70]
+                }
+            },
+            {
+            "name": "Highway to Hell",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when using Burst Skill. Affects self.\nAdditional effects triggered according to the number of activation time(s). Previous effects trigger repeatedly :\nOnce: Highway to Hell 1 - ATK ▲ {atkUp}% for 45 sec.\nTwice: Highway to Hell 2 - Critical Rate ▲ {critRateUp}% for 45 sec.",
+            "values": {
+                "atkUp": [6.81, 7.78, 8.75, 9.72, 10.70, 11.67, 12.64, 13.62, 14.59, 15.56],
+                "critRateUp": [4.93, 5.64, 6.34, 7.05, 7.75, 8.46, 9.17, 9.87, 10.58, 11.28]
+                }
+            },
+            {
+            "name": "Sense Sharing",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects all allies.\nFull Burst Time ▼ 5 sec.\n■ Affects all enemies.\nDeals {atkFinalDmg1}% of final ATK as damage.\n■ Activates during Highway to Hell 2. Affects all enemies.\nDeals {atkFinalDmg2}% of final ATK as additional damage.",
+            "values": {
+                "atkFinalDmg1": [174.82, 199.80, 224.77, 249.75, 274.74, 299.70, 324.67, 349.65, 374.62, 399.60],
+                "atkFinalDmg2": [116.55, 133.20, 149.85, 166.50, 183.15, 199.80, 216.45, 233.10, 249.75, 266.40]
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "035",
+        "nikkeName": "Ether",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "036",
+        "nikkeName": "Product 12",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "037",
+        "nikkeName": "Product 08",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "038",
+        "nikkeName": "Product 23",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "039",
+        "nikkeName": "Helm",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "040",
+        "nikkeName": "Volume",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "041",
+        "nikkeName": "Poli",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "042",
+        "nikkeName": "Vesti",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "043",
+        "nikkeName": "Laplace",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "044",
+        "nikkeName": "Dolla",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "045",
+        "nikkeName": "Centi",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "046",
+        "nikkeName": "Crow",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "047",
+        "nikkeName": "Harran",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "048",
+        "nikkeName": "Novel",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "049",
+        "nikkeName": "Yulha",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "050",
+        "nikkeName": "Neve",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "051",
+        "nikkeName": "Folkwang",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "052",
+        "nikkeName": "Admi",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "053",
+        "nikkeName": "Maiden",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "054",
+        "nikkeName": "Anne: Miracle Fairy",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "055",
+        "nikkeName": "Rupee",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "056",
+        "nikkeName": "Rupee: Winter Shopper",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "057",
+        "nikkeName": "Rapunzel",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "058",
+        "nikkeName": "Milk",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "059",
+        "nikkeName": "Soline",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "060",
+        "nikkeName": "Modernia",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "061",
+        "nikkeName": "Brid",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "062",
+        "nikkeName": "Isabel",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "063",
+        "nikkeName": "Noise",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "064",
+        "nikkeName": "Jackal",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "065",
+        "nikkeName": "Viper",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "066",
+        "nikkeName": "Yan",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "067",
+        "nikkeName": "Liter",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "068",
+        "nikkeName": "Sin",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "069",
+        "nikkeName": "Guilty",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "070",
+        "nikkeName": "Quency",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "071",
+        "nikkeName": "Rumani",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "072",
+        "nikkeName": "Pepper",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "073",
+        "nikkeName": "Aria",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "074",
+        "nikkeName": "Cocoa",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "075",
+        "nikkeName": "Soda",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "076",
+        "nikkeName": "Power",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "077",
+        "nikkeName": "Makima",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "078",
+        "nikkeName": "Himeno",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "079",
+        "nikkeName": "Biscuit",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "080",
+        "nikkeName": "Mana",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "081",
+        "nikkeName": "Ade",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "082",
+        "nikkeName": "Nihilister",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "083",
+        "nikkeName": "Sakura",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "084",
+        "nikkeName": "D",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "085",
+        "nikkeName": "K",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "086",
+        "nikkeName": "Dorothy",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "087",
+        "nikkeName": "Rei",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "088",
+        "nikkeName": "Blanc",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "089",
+        "nikkeName": "Noir",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "090",
+        "nikkeName": "Rosanna",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "091",
+        "nikkeName": "Mary: Bay Goddess",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "092",
+        "nikkeName": "Rouge",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "093",
+        "nikkeName": "Neon: Blue Ocean",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "094",
+        "nikkeName": "Nero",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "095",
+        "nikkeName": "Leona",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "096",
+        "nikkeName": "Mast",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "097",
+        "nikkeName": "Anis: Sparkling Summer",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "098",
+        "nikkeName": "Helm: Aquamarine",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "099",
+        "nikkeName": "Anchor",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "100",
+        "nikkeName": "A2",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "101",
+        "nikkeName": "Pascal",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "102",
+        "nikkeName": "2B",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "103",
+        "nikkeName": "Marciana",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "104",
+        "nikkeName": "Naga",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "105",
+        "nikkeName": "Moran",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "106",
+        "nikkeName": "Tia",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "107",
+        "nikkeName": "Crown",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "108",
+        "nikkeName": "Red Hood",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "109",
+        "nikkeName": "Quiry",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "110",
+        "nikkeName": "Privaty",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "111",
+        "nikkeName": "Ein",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "112",
+        "nikkeName": "Zwei",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "113",
+        "nikkeName": "Snow White: Innocent Days",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "114",
+        "nikkeName": "Tove",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "115",
+        "nikkeName": "Ludmilla: Winter Owner",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "116",
+        "nikkeName": "Mica: Snow Buddy",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "117",
+        "nikkeName": "Scarlet: Black Shadow",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "118",
+        "nikkeName": "Privaty: Unkind Maid",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "119",
+        "nikkeName": "Elegg",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "120",
+        "nikkeName": "D: Killer Wife",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "121",
+        "nikkeName": "Emilia",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "122",
+        "nikkeName": "Rem",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "123",
+        "nikkeName": "Ram",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "124",
+        "nikkeName": "Bay",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "125",
+        "nikkeName": "Kilo",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "126",
+        "nikkeName": "Trony",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "127",
+        "nikkeName": "Soda: Twinkling Bunny",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "128",
+        "nikkeName": "Alice: Wonderland Bunny",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "129",
+        "nikkeName": "Clay",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "130",
+        "nikkeName": "Rosanna: Chic Ocean",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "131",
+        "nikkeName": "Sakura: Bloom in Summer",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "132",
+        "nikkeName": "Asuka",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "133",
+        "nikkeName": "Rei Ayanami",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "134",
+        "nikkeName": "Mari",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "135",
+        "nikkeName": "Misato",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "136",
+        "nikkeName": "Phantom",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "137",
+        "nikkeName": "Quency: Escape Queen",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "138",
+        "nikkeName": "Grave",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "139",
+        "nikkeName": "Cinderella",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "140",
+        "nikkeName": "Rapunzel: Pure Grace",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "141",
+        "nikkeName": "Little Mermaid",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "142",
+        "nikkeName": "Flora",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "143",
+        "nikkeName": "Maiden: Ice Rose",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "144",
+        "nikkeName": "Guillotine: Winter Slayer",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "145",
+        "nikkeName": "Rapi: Red Hood",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "146",
+        "nikkeName": "Mast: Romantic Maid",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "147",
+        "nikkeName": "Anchor: Innocent Maid",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "148",
+        "nikkeName": "Asuka: WILLE",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "149",
+        "nikkeName": "Rei Ayanami (Tentative Name)",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "150",
+        "nikkeName": "Sakura Suzuhara",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    }
+    ,
+    {
+        "nikkeID": "151",
+        "nikkeName": "Trina",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "152",
+        "nikkeName": "Bready",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "153",
+        "nikkeName": "Crust",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "154",
+        "nikkeName": "Mihara: Bonding Chain",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "155",
+        "nikkeName": "Mori",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "156",
+        "nikkeName": "Arcana",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "157",
+        "nikkeName": "Eve",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "158",
+        "nikkeName": "Raven",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "159",
+        "nikkeName": "Lily",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "160",
+        "nikkeName": "Sora",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "161",
+        "nikkeName": "Elegg: Boom and Shock",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "162",
+        "nikkeName": "Dorothy: Serendipity",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "163",
+        "nikkeName": "Emma: Tactical Upgrade",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "164",
+        "nikkeName": "Eunhwa: Tactical Upgrade",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "165",
+        "nikkeName": "Vesti: Tactical Upgrade",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "166",
+        "nikkeName": "Ade: Agent Bunny",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "167",
+        "nikkeName": "Milk: Blooming Bunny",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "168",
+        "nikkeName": "Ada Wong",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "169",
+        "nikkeName": "Jill Valentine",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "170",
+        "nikkeName": "Claire Redfield",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "171",
+        "nikkeName": "Delta: Ninja Thief",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "172",
+        "nikkeName": "Chime",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "173",
+        "nikkeName": "Nayuta",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "174",
+        "nikkeName": "Liberalio",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "175",
+        "nikkeName": "Soline: Frost Ticket",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "176",
+        "nikkeName": "Diesel: Winter Sweets",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "177",
+        "nikkeName": "Brid: Silent Track",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "178",
+        "nikkeName": "Snow White: Heavy Arms",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "179",
+        "nikkeName": "Label",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "180",
+        "nikkeName": "Velvet",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "181",
+        "nikkeName": "Chisato",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "182",
+        "nikkeName": "Takina",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "183",
+        "nikkeName": "Kurumi",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "184",
+        "nikkeName": "E.H.",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "185",
+        "nikkeName": "Arcana: Fortune Mate",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "186",
+        "nikkeName": "Snow Crane",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "187",
+        "nikkeName": "Anis: Star",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "188",
+        "nikkeName": "Avistar",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "189",
+        "nikkeName": "Neon: Vision Eye",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "190",
+        "nikkeName": "Mint",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "191",
+        "nikkeName": "Prika",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "192",
+        "nikkeName": "Ark Ranger Black",
+        "skills": [
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "",
+            "values": {
+                "": []
+                }
+            },
+            {
+            "name": "",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "",
+            "values": {
+                "": []
+                }
+            }
+        ]
     }
 ]
