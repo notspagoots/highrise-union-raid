@@ -1175,7 +1175,7 @@
             "name": "Overcharge",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "■ Activates at the beginning of Full Burst. Affects all allies.\nHit Rate ▲ {hitRateUp}% for 10 sec.\nATK ▲ {atkUp}% for 10 sec.",
+            "description": "■ Activates when entering Full Burst. Affects all allies.\nHit Rate ▲ {hitRateUp}% for 10 sec.\nATK ▲ {atkUp}% for 10 sec.",
             "values": {
                 "hitRateUp": [7.00, 7.54, 8.08, 8.62, 9.15, 9.69, 10.23, 10.77, 11.31, 11.85],
                 "atkUp": [7.00, 7.54, 8.08, 8.62, 9.15, 9.69, 10.23, 10.77, 11.31, 11.85]
@@ -1198,6 +1198,41 @@
             "values": {
                 "atkFinalDmg": [741, 798, 855, 912, 969, 1026, 1083, 1140, 1197, 1254],
                 "maxAmmoUp": [42.65, 45.93, 49.21, 52.50, 55.78, 59.06, 62.34, 65.62, 68.90, 72.18]
+                }
+            }
+        ],
+        "treasureSkills": [
+            {
+            "name": "Overcharge",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when entering Full Burst. Affects all allies.\nHit Rate ▲ {hitRateUp}% for 10 sec.\nATK ▲ {atkUp1}% for 10 sec.\n■ Activates when entering Full Burst. Affects all allies with a Shotgun.\nATK ▲ {atkUp2}% for 10 sec.\nMax Ammunition Capacity ▲ {maxAmmoUp}% for 10 sec.",
+            "values": {
+                "hitRateUp": [11.87, 12.78, 13.70, 14.61, 15.52, 16.44, 17.35, 18.26, 19.18, 20.09],
+                "atkUp1": [7.00, 7.54, 8.08, 8.62, 9.15, 9.69, 10.23, 10.77, 11.31, 11.85],
+                "atkUp2": [37.75, 40.65, 43.56, 46.46, 49.36, 52.27, 55.17, 58.08, 60.98, 63.88],
+                "maxAmmoUp": [29.62, 31.90, 34.18, 36.46, 38.74, 41.02, 43.30, 45.58, 47.86, 50.14]
+                }
+            },
+            {
+            "name": "Thunderbolt",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates after landing 10 attack(s). Affects 3 enemy unit(s) with the lowest remaining HP.\nDeals {atkFinalDmg1}% of final ATK as damage.\n■ Activates after 5 normal attack(s). Affects 1 enemy unit(s) with the lowest remaining HP.\nDeals {atkFinalDmg2}% of final ATK as damage.",
+            "values": {
+                "atkFinalDmg1": [58.24, 62.72, 67.19, 71.68, 76.16, 80.64, 85.11, 89.60, 94.07, 98.55],
+                "atkFinalDmg2": [119.12, 128.29, 137.45, 146.61, 155.78, 164.94, 174.10, 183.27, 192.43, 201.60]
+                }
+            },
+            {
+            "name": "Drake Special",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects enemies within the attack range.\nDeals {atkFinalDmg}% of final ATK as damage.\n■ Affects self.\nMax Ammunition Capacity ▲ {maxAmmoUp}% for 10 sec.\nAttack Damage ▲ {atkUp}% for 10 sec.",
+            "values": {
+                "atkFinalDmg": [1778.40, 1915.20, 2052.00, 2188.80, 2325.60, 2462.40, 2599.20, 2736.00, 2872.80, 3009.60],
+                "maxAmmoUp": [42.65, 45.93, 49.21, 52.50, 55.78, 59.06, 62.34, 65.62, 68.90, 72.18],
+                "atkUp": [18.72, 20.16, 21.60, 23.04, 24.48, 25.92, 27.36, 28.80, 30.24, 31.68]
                 }
             }
         ]
@@ -1275,30 +1310,31 @@
         "nikkeName": "Ether",
         "skills": [
             {
-            "name": "",
-            "skillType": "Passive",
-            "cooldown": 0,
-            "description": "",
+            "name": "Corrosive Bullets",
+            "skillType": "Active",
+            "cooldown": 15,
+            "description": "■ Affects 1 allies with the lowest remaining HP.\nDamage Taken ▼ {dmgTakenDown}% for 5 sec.",
             "values": {
-                "": []
+                "dmgTakenDown": [22.96, 26.25, 29.53, 32.81, 36.09, 39.37, 42.65, 45.93, 49.21, 52.50]
                 }
             },
             {
-            "name": "",
-            "skillType": "Passive",
-            "cooldown": 0,
-            "description": "",
+            "name": " Prognostic Response Experiment",
+            "skillType": "Active",
+            "cooldown": 13,
+            "description": "■ Affects 3 enemy unit(s) with the highest DEF.\nDeals {atkFinalDmg}% of final ATK as damage.\n■ Affects the same enemy unit(s). Activates during Full Burst.\nDEF ▼ {defDown}% for 6 sec.",
             "values": {
-                "": []
+                "atkFinalDmg": [24.64, 28.16, 31.68, 35.20, 38.72, 42.24, 45.76, 49.28, 52.80, 56.32],
+                "defDown": [4.10, 4.69, 5.28, 5.86, 6.45, 7.04, 7.62, 8.21, 8.80, 9.38]
                 }
             },
             {
-            "name": "",
+            "name": "Colossal Single Cell",
             "skillType": "Active",
             "cooldown": 40,
-            "description": "",
+            "description": "■ Affects 3 ally unit(s) with the lowest remaining HP.\nCreates a Shield equal to {shieldFinalUp}% of the caster's final Max HP for 5 sec.",
             "values": {
-                "": []
+                "shieldFinalUp": [42, 48, 54, 60, 66, 72, 78, 84, 90, 96]
                 }
             }
         ]
@@ -1308,30 +1344,30 @@
         "nikkeName": "Product 12",
         "skills": [
             {
-            "name": "",
+            "name": "Action: Increase ATK",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Affects self. Activates after 200 normal attack(s).\nATK ▲ {atkUp}% for 5 sec.",
             "values": {
-                "": []
+                "atkUp": [2.07, 2.76, 3.45, 4.14, 4.83, 5.52, 6.21, 6.90, 7.59, 8.28]
                 }
             },
             {
-            "name": "",
-            "skillType": "Passive",
-            "cooldown": 0,
-            "description": "",
+            "name": "Action: Focus Fire",
+            "skillType": "Active",
+            "cooldown": 10,
+            "description": "■ Affects 1 enemy unit(s) with the lowest HP.\nDeals {atkFinalDmg}% of final ATK as damage.",
             "values": {
-                "": []
+                "atkFinalDmg": [27.27, 36.36, 45.45, 54.54, 63.63, 72.72, 81.81, 90.90, 100.00, 109.09]
                 }
             },
             {
-            "name": "",
+            "name": "Action: Precision Strike",
             "skillType": "Active",
             "cooldown": 40,
-            "description": "",
+            "description": "■ Affects enemies within attack range.\nDeals {atkFinalDmg}% of final ATK as damage.",
             "values": {
-                "": []
+                "atkFinalDmg": [180, 240, 300, 360, 420, 480, 540, 600, 660, 720]
                 }
             }
         ]
@@ -1341,30 +1377,30 @@
         "nikkeName": "Product 08",
         "skills": [
             {
-            "name": "",
+            "name": "Tactic: Enhance Armor",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ When a normal attack hits, there is a 20% chance of affecting 1 ally unit(s) with the lowest remaining HP.\nDEF ▲ {defUp}% for 5 sec.",
             "values": {
-                "": []
+                "defUp": [2.27, 3.03, 3.78, 4.54, 5.30, 6.06, 6.81, 7.57, 8.33, 9.09]
                 }
             },
             {
-            "name": "",
-            "skillType": "Passive",
-            "cooldown": 0,
-            "description": "",
-            "values": {
-                "": []
-                }
-            },
-            {
-            "name": "",
+            "name": "Tactic: Crack Shot",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 17,
+            "description": "■ Affects 1 ally unit(s) with the highest ATK.\nCritical Rate ▲ {critRateUp}% for 5 sec.",
             "values": {
-                "": []
+                "critRateUp": [5.74, 7.66, 9.58, 11.49, 13.41, 15.32, 17.24, 19.16, 21.07, 22.99]
+                }
+            },
+            {
+            "name": "Tactic: Power Boost",
+            "skillType": "Active",
+            "cooldown": 20,
+            "description": "■ Affects all allies.\nATK ▲ {atkUp}% for 10 sec.",
+            "values": {
+                "atkUp": [4.84, 6.46, 8.08, 9.69, 11.31, 12.93, 14.54, 16.16, 17.77, 19.39]
                 }
             }
         ]
@@ -1374,30 +1410,30 @@
         "nikkeName": "Product 23",
         "skills": [
             {
-            "name": "",
+            "name": "Order: Power Boost",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when the last bullet hits the target. Affects self.\nDEF ▲ {defUp}% for 10 sec.",
             "values": {
-                "": []
+                "defUp": [0.81, 1.62, 2.43, 3.24, 4.05, 4.86, 5.67, 6.48, 7.29, 8.10]
                 }
             },
             {
-            "name": "",
-            "skillType": "Passive",
-            "cooldown": 0,
-            "description": "",
-            "values": {
-                "": []
-                }
-            },
-            {
-            "name": "",
+            "name": "Order: Emergency Measures",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 15,
+            "description": "■ Affects self.\nRecover {hpHeal}% of attack damage as HP over 10 sec.",
             "values": {
-                "": []
+                "hpHeal": [1.61, 3.23, 4.84, 6.46, 8.07, 9.69, 11.30, 12.92, 14.53, 16.15]
+                }
+            },
+            {
+            "name": "Order: Special Bullets",
+            "skillType": "Active",
+            "cooldown": 20,
+            "description": "■ Affects 2 enemy unit(s) with the highest ATK.\nDEF ▼ {defDown}% for 5 sec.",
+            "values": {
+                "defDown": [4.87, 9.75, 16.62, 19.50, 24.37, 29.25, 34.12, 39.00, 43.87, 48.75]
                 }
             }
         ]
@@ -1407,32 +1443,69 @@
         "nikkeName": "Helm",
         "skills": [
             {
-            "name": "",
+            "name": "Frontline Command",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when the last bullet hits the target. Affects all allies.\nCritical Rate of normal attack ▲ {critRateUp}% for 5 sec.",
             "values": {
-                "": []
+                "critRateUp": [8.65, 9.31, 9.98, 10.64, 11.31, 11.98, 12.64, 13.31, 13.97, 14.64]
                 }
             },
             {
-            "name": "",
+            "name": "Fire Away",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Affects all allies.\nDamage to Interruption Parts ▲ {dmgPartsUp}% continuously.\n■ Activates when entering Full Burst. Affects all allies.\nAttack damage ▲ {atkUp}% for 10 sec.",
             "values": {
-                "": []
+                "dmgPartsUp": [1.82, 1.96, 2.10, 2.24, 2.38, 2.52, 2.66, 2.80, 2.94, 3.08],
+                "atkUp": [7.00, 7.54, 8.08, 8.62, 9.15, 9.69, 10.23, 10.77, 11.31, 11.85]
                 }
             },
             {
-            "name": "",
+            "name": "Aegis Cannon",
             "skillType": "Active",
             "cooldown": 40,
-            "description": "",
+            "description": "■ Affects the enemy with the highest ATK.\nDeals {atkFinalDmg}% of final ATK as damage.\n■ Affects all allies.\nRestores {atkHeal}% of attack damage as HP for 10 sec.",
             "values": {
-                "": []
+                "atkFinalDmg": [731.25, 787.50, 843.75, 900.00, 956.25, 1012.50, 1068.75, 1125.00, 1181.25, 1237.50],
+                "atkHeal": [32.17, 34.65, 37.12, 39.60, 42.07, 44.55, 47.02, 49.50, 51.97, 54.45]
                 }
-            }
+            }  
+        ],
+        "treasureSkills": [
+            {
+            "name": "Frontline Command",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when the last bullet hits the target. Affects all allies.\nCritical Rate of normal attack ▲ {critRateUp}% for 5 sec.\n■ Activates when attacking with Full Charge. Affects all allies.\nRecovers {hpFinalHeal}% of caster's final Max HP.\nFills Burst Gauge by {burstFill}%.",
+            "values": {
+                "critRateUp": [8.65, 9.31, 9.98, 10.64, 11.31, 11.98, 12.64, 13.31, 13.97, 14.64],
+                "hpFinalHeal": [0.34, 0.37, 0.40, 0.42, 0.45, 0.48, 0.51, 0.53, 0.56, 0.59],
+                "burstFill": [8.46, 9.11, 9.76, 10.41, 11.06, 11.71, 12.36, 13.01, 13.66, 14.31]
+                }
+            },
+            {
+            "name": "Fire Away",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Affects all allies.\nDamage to Interruption Parts ▲ {dmgPartsUp}% continuously.\n■ Activates when entering Full Burst. Affects all allies.\nAttack damage ▲ {atkUp}% for 10 sec.\n■ Activates when hitting a target with Full Charge. Affects the target.\nDeals {atkFinalDmg}% of final ATK as additional damage.",
+            "values": {
+                "dmgPartsUp": [1.82, 1.96, 2.10, 2.24, 2.38, 2.52, 2.66, 2.80, 2.94, 3.08],
+                "atkUp": [16.47, 17.74, 19.00, 20.27, 21.54, 22.80, 24.07, 25.34, 26.61, 27.87],
+                "atkFinalDmg": [105.76, 113.89, 122.03, 130.16, 138.30, 146.44, 154.57, 162.71, 170.84, 178.98]
+                }
+            },
+            {
+            "name": "Aegis Cannon",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects the enemy with the highest ATK.\nDeals {atkFinalDmg}% of final ATK as damage.\n■ Affects all allies.\nRestores {atkHeal}% of attack damage as HP for 10 sec.\n■ Affects self.\nCharge Damage Multiplier ▲ {chrgDmgUp}% for 10 round(s).",
+            "values": {
+                "atkFinalDmg": [4867.20, 5241.60, 5616.00, 5990.40, 6364.80, 6739.20, 7113.60, 7488.00, 7862.40, 8236.80],
+                "atkHeal": [32.17, 34.65, 37.12, 39.60, 42.07, 44.55, 47.02, 49.50, 51.97, 54.45],
+                "chrgDmgUp": [93.60, 100.80, 108.00, 115.20, 122.40, 129.60, 136.80, 144.00, 151.20, 158.40]
+                }
+            }  
         ]
     },
     {
@@ -1440,30 +1513,32 @@
         "nikkeName": "Volume",
         "skills": [
             {
-            "name": "",
+            "name": "Freestyle",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Affects self when killing an enemy.\nATK ▲ {atkUp}% for 5 sec.",
             "values": {
-                "": []
+                "atkUp": [6.93, 7.56, 8.18, 8.82, 9.44, 10.08, 10.71, 11.34, 11.97, 12.60]
                 }
             },
             {
-            "name": "",
+            "name": "Drop the Beat",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when entering Full Burst. Affects all allies.\nEffect changes according to the number of activation time(s). Previous effects trigger repeatedly:\nOnce: cooldown of Burst Skill ▼ 2.34 sec.\nTwice: cooldown of Burst Skill ▼ 2.7 sec.\nThree times: cooldown of Burst Skill ▼ 3.17 sec.\n■ Activates when using Burst Skill. Affects all allies.\nEffect changes according to the number of activation time(s). Previous effects trigger repeatedly:\nOnce: Critical Damage ▲ {critDmgUp1}% for 5 sec.\nTwice: Critical Damage ▲ {critDmgUp2}% for 5 sec.\nThree times: Critical Damage ▲ {critDmgUp3}% for 5 sec.",
             "values": {
-                "": []
+                "critDmgUp1": [1.68, 2.69, 3.70, 4.71, 5.72, 6.73, 7.74, 8.75, 9.76, 10.77],
+                "critDmgUp2": [3.36, 4.37, 5.38, 6.39, 7.40, 8.41, 9.42, 10.44, 11.45, 12.46],
+                "critDmgUp3": [5.05, 6.09, 7.13, 8.17, 9.21, 10.25, 11.29, 12.33, 13.37, 14.42]
                 }
             },
             {
-            "name": "",
+            "name": "Turn up the volume!",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 20,
+            "description": "■ Affects all allies.\nCritical Rate ▲ {critRateUp}% for 5 sec.",
             "values": {
-                "": []
+                "critRateUp": [17.54, 19.14, 20.73, 22.33, 23.92, 25.52, 27.11, 28.71, 30.30, 31.90]
                 }
             }
         ]
@@ -1473,30 +1548,63 @@
         "nikkeName": "Poli",
         "skills": [
             {
-            "name": "",
+            "name": "Brave Call",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates after 5 normal attacks. Affects all allies.\nATK ▲ {atkUp}% for 10 sec.",
             "values": {
-                "": []
+                "atkUp": [2.73, 3.03, 3.33, 3.64, 3.94, 4.25, 4.55, 4.85, 5.16, 5.46]
                 }
             },
             {
-            "name": "",
-            "skillType": "Passive",
-            "cooldown": 0,
-            "description": "",
+            "name": "That's a Good Boy",
+            "skillType": "Active",
+            "cooldown": 20,
+            "description": "■ Affects self and 2 ally unit(s) with the lowest HP (except caster).\nDEF ▲ {defUp}% for 10 sec.\nShares damage taken for 10 sec.",
             "values": {
-                "": []
+                "defUp": [11.75, 13.06, 14.36, 15.67, 16.97, 18.28, 19.59, 20.89, 22.20, 23.51]
                 }
             },
             {
-            "name": "",
+            "name": "Poli's Defense Line",
             "skillType": "Active",
             "cooldown": 40,
-            "description": "",
+            "description": "■ Affects self.\nCreates a Shield, equivalent to {shieldFinal}% of the caster's final Max HP, which protects all allies from damage. Lasts for 10 sec.\n■ Affects all allies.\nATK ▲ {atkUp}% for 10 sec.",
             "values": {
-                "": []
+                "shieldFinal": [11.13, 12.37, 13.61, 14.85, 16.08, 17.32, 18.56, 19.80, 21.03, 22.27],
+                "atkUp": [22.27, 24.75, 27.22, 29.70, 32.17, 34.65, 37.12, 39.60, 42.07, 44.55]
+                }
+            }
+        ],
+        "treasureSkills": [
+            {
+            "name": "Brave Call",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates after 5 normal attacks. Affects all allies.\nATK ▲ {atkUp}% for 10 sec.\n■ Activates when entering battle. Affects self.\nPolice Badge: Creates a Shield equal to {shieldFinal}% of the caster's final Max HP for 10 sec.",
+            "values": {
+                "atkUp": [2.73, 3.03, 3.33, 3.64, 3.94, 4.25, 4.55, 4.85, 5.16, 5.46],
+                "shieldFinal": [59.09, 63.64, 68.18, 72.73, 77.27, 81.82, 86.36, 90.91, 95.46, 100.00]
+                }
+            },
+            {
+            "name": "That's a Good Boy",
+            "skillType": "Active",
+            "cooldown": 20,
+            "description": "■ Affects self and 2 ally unit(s) with the lowest HP every 20 sec.\nDEF ▲ {defUp}% for 10 sec.\nEqually shares damage taken for 10 sec.\n■ Activates when Police Badge ends. Affects self.\nContinuously recovers {hpHeal}% of caster's final Max HP every 1 sec for 5 sec.",
+            "values": {
+                "defUp": [11.75, 13.06, 14.36, 15.67, 16.97, 18.28, 19.59, 20.89, 22.20, 23.51],
+                "hpHeal": [2.95, 3.18, 3.41, 3.64, 3.87, 4.09, 4.32, 4.55, 4.77, 5.00]
+                }
+            },
+            {
+            "name": "Poli's Defense Line",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects self if in Police Badge status.\nGains Indomitability for 5 sec. Removes Police Badge.\n■ Affects self.\nCreates a Shield equal to {shieldFinal}% of the caster's final Max HP, which protects all allies from damage. Lasts for 10 sec.\n■ Affects all allies.\nATK ▲ {atkUp}% for 10 sec.",
+            "values": {
+                "shieldFinal": [23.63, 25.45, 27.27, 29.09, 30.91, 32.73, 34.55, 36.36, 38.18, 40.00],
+                "atkUp": [22.27, 24.75, 27.22, 29.70, 32.17, 34.65, 37.12, 39.60, 42.07, 44.55]
                 }
             }
         ]
@@ -1506,30 +1614,35 @@
         "nikkeName": "Vesti",
         "skills": [
             {
-            "name": "",
+            "name": "Dreams Do Come True",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when hitting a target with Full Charge. Affects self.\nExplosion Radius ▲ {explRadUp}% for 10 sec.",
             "values": {
-                "": []
+                "explRadUp": [8.87, 9.55, 10.23, 10.92, 11.60, 12.28, 12.96, 13.65, 14.33, 15.01]
                 }
             },
             {
-            "name": "",
+            "name": "Survival Instinct",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when using Burst Skill. Affects self.\nAdditional effect(s) triggered according the number of activation time(s).phase. Previous effects trigger repeatedly :\nOnce: Survival Instinct 1 - ATK ▲ {atkUp}% for 45 sec.\nTwice: Survival Instinct 2 - Critical Damage ▲ {critDmgUp}% for 45 sec.\nThree times: Survival Instinct 3 - Critical Rate ▲ {critRateUp}% for 45 sec.",
             "values": {
-                "": []
+                "atkUp": [3.16, 3.40, 3.64, 3.89, 4.13, 4.37, 4.62, 4.86, 5.10, 5.35],
+                "critDmgUp": [13.20, 14.21, 15.23, 16.24, 17.26, 18.27, 19.29, 20.31, 21.32, 22.34],
+                "critRateUp": [9.17, 9.87, 10.58, 11.28, 11.99, 12.69, 13.40, 14.10, 14.81, 15.51]
                 }
             },
             {
-            "name": "",
+            "name": "Justifiable Defense",
             "skillType": "Active",
             "cooldown": 40,
-            "description": "",
+            "description": "■ Affects self.\nTakes out two Missile Containers, dealing {atkFinalDmg}% of final ATK as damage to the enemy with the lowest HP every 1 sec for 18 sec.\n■ Affects all enemies.\nAdditional effect(s) triggered according to the Survival Instinct's phase. Previous effects trigger repeatedly :\nSurvival Instinct 1: Deals {atkFinalDmg1}% of final ATK as damage.\nSurvival Instinct 2: Deals {atkFinalDmg2}% of final ATK as damage.\nSurvival Instinct 3: Deals {atkFinalDmg3}% of final ATK as damage.\n■ Affects all allies.\nFull Burst Time ▼ 5 sec.",
             "values": {
-                "": []
+                "atkFinalDmg": [9.19, 9.90, 10.61, 11.32, 12.02, 12.73, 13.44, 14.15, 14.86, 15.56],
+                "atkFinalDmg1": [124.45, 134.03, 143.60, 153.18, 162.75, 172.32, 181.90, 191.47, 201.04, 210.62],
+                "atkFinalDmg2": [146.10, 157.34, 168.58, 179.82, 191.05, 202.29, 213.53, 224.77, 236.01, 247.25],
+                "atkFinalDmg3": [178.57, 192.30, 206.04, 219.78, 233.51, 247.25, 260.98, 274.72, 288.46, 302.19] 
                 }
             }
         ]
@@ -1539,30 +1652,65 @@
         "nikkeName": "Laplace",
         "skills": [
             {
-            "name": "",
+            "name": "Hero Vision",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when attacking with Full Charge. Affects self.\nHero Vision: Explosion Radius ▲ {explRadUp}%, stacks up to 5 time(s) and lasts for 5 sec.",
             "values": {
-                "": []
+                "explRadUp": [2.11, 2.27, 2.43, 2.60, 2.76, 2.92, 3.08, 3.25, 3.41, 3.57]
                 }
             },
             {
-            "name": "",
+            "name": "Hero Bomber",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when the last bullet hits the target. Affects the target.\nDeals {atkFinalDmg1}% of final ATK as additional damage.\n■ Activates when hitting the target's Parts. Affects the target.\nDeals {atkFinalDmg2}% of final ATK as additional damage.",
             "values": {
-                "": []
+                "atkFinalDmg1": [48.25, 51.96, 55.68, 59.39, 63.10, 66.81, 70.52, 74.24, 77.95, 81.66],
+                "atkFinalDmg2": [8.73, 9.40, 10.08, 10.75, 11.42, 12.09, 12.76, 13.44, 14.11, 14.78]
                 }
             },
             {
-            "name": "",
+            "name": "Laplace Buster",
             "skillType": "Active",
             "cooldown": 40,
-            "description": "",
+            "description": "■ Affects self.\nChange the Weapon in use:\nMax Damage: {atkFinalMax}% of final ATK\nDamage Over Time: {atkFinalDot% of final ATK\nLast for: 5 sec\nAdditional Effect: Pierce\nAttention: Unable to take cover when using Burst Skill.\n■ Affects the same enemy unit(s) when Hero Vision is fully stacked.\nDeals {atkFinalTrue}% of final ATK as true damage.",
             "values": {
-                "": []
+                "atkFinalMax": [530.40, 571.20, 612.00, 652.80, 693.60, 734.40, 775.20, 816.00, 856.80, 897.60],
+                "atkFinalDot": [8.58, 9.24, 9.90, 10.56, 11.22, 11.88, 12.54, 13.20, 13.86, 14.52],
+                "atkFinalTrue": [7.03, 7.57, 8.11, 8.65, 9.19, 9.73, 10.27, 10.81, 11.36, 11.90]
+                }
+            }
+        ],
+        "treasureSkills": [
+            {
+            "name": "Hero Vision",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when attacking with Full Charge. Affects self.\nHero Vision: Explosion Radius ▲ {explRadUp}%, stacks up to 5 time(s) and lasts for 15 sec.",
+            "values": {
+                "explRadUp": [2.11, 2.27, 2.43, 2.60, 2.76, 2.92, 3.08, 3.25, 3.41, 3.57]
+                }
+            },
+            {
+            "name": "Hero Bomber",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when hitting a target with Full Charge. Affects the target.\nDeals {atkFinalDmg1}% of final ATK as additional damage.\n■ Activates when hitting the target's Parts. Affects the target's body.\nDeals [atkFinalDmg2]% of final ATK as additional damage.",
+            "values": {
+                "atkFinalDmg1": [78.26, 84.28, 90.30, 96.32, 102.34, 108.36, 114.38, 120.41, 126.43, 132.45],
+                "atkFinalDmg2": [8.73, 9.40, 10.08, 10.75, 11.42, 12.09, 12.76, 13.44, 14.11, 14.78]
+                }
+            },
+            {
+            "name": "Laplace Buster",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects self.\nChanges the weapon in use:\nFirst Damage: {atkFinalInitial}% of final ATK\nNormal Damage: {atkFinalUp}% of final ATK\nDuration: 10 sec\nAdditional Effect 1: Pierce\nAdditional Effect 2: Normal damage is applied as true damage when Hero Vision is fully stacked.\nNote: Unable to take cover while using Burst Skill.\n■ Affects the same enemy unit(s) when Hero Vision is fully stacked.\nDeals {atkFinalTrue}% of final ATK as true damage.",
+            "values": {
+                "atkFinalInitial": [860.20, 926.37, 992.54, 1058.71, 1124.88, 1191.04, 1257.21, 1323.38, 1389.55, 1455.72],
+                "atkFinalUp": [13.11, 14.12, 15.13, 16.14, 17.15, 18.16, 19.17, 20.18, 21.19, 22.20],
+                "atkFinalTrue": [7.03, 7.57, 8.11, 8.65, 9.19, 9.73, 10.27, 10.81, 11.36, 11.90]
                 }
             }
         ]
@@ -1572,30 +1720,32 @@
         "nikkeName": "Dolla",
         "skills": [
             {
-            "name": "",
-            "skillType": "Passive",
-            "cooldown": 0,
-            "description": "",
-            "values": {
-                "": []
-                }
-            },
-            {
-            "name": "",
-            "skillType": "Passive",
-            "cooldown": 0,
-            "description": "",
-            "values": {
-                "": []
-                }
-            },
-            {
-            "name": "",
+            "name": "Entrepreneurship",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 10,
+            "description": "■ Affects all allies.\nATK ▲ {atkUp}% for 5 sec.",
             "values": {
-                "": []
+                "atkUp": [8.88, 9.69, 10.50, 11.31, 12.12, 12.93, 13.73, 14.54, 15.35, 16.16]
+                }
+            },
+            {
+            "name": "Risk Sharing",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when entering Full Burst. Affects all allies.\nEffect changes according to the number of activation time(s). Previous effects trigger repeatedly:\nOnce: cooldown of Burst Skill ▼ 2.34 sec.\nTwice: cooldown of Burst Skill ▼ 2.7 sec.\nThree times: cooldown of Burst Skill ▼ 3.17 sec.\n■ Activates when using Burst Skill. Affects all allies.\nEffect changes according to the number of activation time(s). Previous effects trigger repeatedly:\nOnce: ATK ▲ {atkUp}% for 5 sec.\nTwice: Critical Rate ▲ {critRateUp}% for 5 sec.\nThree times: Critical Damage ▲ {critDmgUp}% for 5 sec.",
+            "values": {
+                "atkUp": [1.18, 1.91, 2.64, 3.36, 4.09, 4.81, 5.54, 6.27, 6.99, 7.72],
+                "critRateUp": [1.05, 1.40, 1.75, 2.10, 2.45, 2.80, 3.15, 3.50, 3.85, 4.21],
+                "critDmgUp": [3.85, 4.89, 5.93, 6.98, 8.02, 9.06, 10.10, 11.14, 12.18, 13.22]
+                }
+            },
+            {
+            "name": "R&D Shot",
+            "skillType": "Active",
+            "cooldown": 20,
+            "description": "■ Affects 1 enemy unit(s) with the highest DEF.\nDeals {atkFinalDmg}% of final ATK as damage.",
+            "values": {
+                "atkFinalDmg": [404.08, 440.81, 477.55, 514.28, 551.02, 587.75, 624.48, 661.22, 697.95, 734.69]
                 }
             }
         ]
@@ -6325,30 +6475,32 @@
         "nikkeName": "Avistar",
         "skills": [
             {
-            "name": "",
+            "name": "Aftershow",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when Full Burst ends. Affects her favorite pop star.\nAftershow: ATK ▲ {atkFinalUp}% of the caster's ATK. This effect is removed when entering Full Burst.\n■ Activates when Full Burst ends. Affects self.\nRecovers {hpFinalHeal}% of the caster's final max HP as HP every 1 sec for 10 sec.\nRemoves Stargazer.",
             "values": {
-                "": []
+                "atkFinalUp": [47.42, 51.07, 54.72, 58.38, 62.02, 65.66, 69.31, 72.96, 76.61, 80.26],
+                "hpFinalHeal": [2.08, 2.24, 2.40, 2.56, 2.72, 2.88, 3.04, 3.20, 3.36, 3.52]
                 }
             },
             {
-            "name": "",
+            "name": "Afterglow",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when entering Stargazer status with over 25% HP . Affects self.\nCurrent HP ▼ 20%\n■ Activates when entering Full Burst while in Stargazer status. Affects her favorite pop star.\nProjectile Explosion Damage ▲ {explDmgUp}% continuously.\nAttack Damage ▲ {atkUp}% continuously.",
             "values": {
-                "": []
+                "explDmgUp": [23.71, 25.54, 27.36, 29.18, 31.01, 32.83, 34.66, 36.48, 38.30, 40.13],
+                "atkUp": [23.71, 25.54, 27.36, 29.18, 31.01, 32.83, 34.66, 36.48, 38.30, 40.13]
                 }
             },
             {
-            "name": "",
+            "name": "Stargazer",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 20,
+            "description": "■ Affects all allies.\nRe-enters Burst Stage 1.\n■ Affects self.\nStargazer: Max HP ▲ {hpFinalUp}% of the caster's max HP continuously.",
             "values": {
-                "": []
+                "hpFinalUp": [15.60, 16.80, 18.00, 19.20, 20.40, 21.60, 22.80, 24.00, 25.20, 26.40]
                 }
             }
         ]
@@ -6358,30 +6510,35 @@
         "nikkeName": "Neon: Vision Eye",
         "skills": [
             {
-            "name": "",
+            "name": "Healthy Body",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when attacked while not in Healthy Body status. Affects self.\nInvulnerable for 3 sec. Activates 5 time(s) per battle.\nGains debuff immunity to ∞ debuffs for 3 sec. Activates 5 time(s) per battle.\nHealthy Body: Potency of HP restored ▲ {hpHeal}% for 20 sec.\n■ Activates when landing a Full Charge attack. Affects the enemy if the enemy is the stage target.\nFirepower Explosion:\nEffect: Deals {atkFinalDmg1}% of final ATK as additional damage.\nAdditional effect of Super Firepower status: Deals {atkFinalDmg2}% of final ATK as additional damage.",
             "values": {
-                "": []
+                "hpHeal": [6.06, 6.53, 7.00, 7.46, 7.93, 8.40, 8.86, 9.33, 9.80, 10.26],
+                "atkFinalDmg1": [258.81, 278.71, 298.62, 318.53, 338.44, 358.34, 378.25, 398.16, 418.07, 437.98],
+                "atkFinalDmg2": [155.28, 167.23, 179.17, 191.12, 203.06, 215.01, 226.95, 238.90, 250.84, 262.79]
                 }
             },
             {
-            "name": "",
+            "name": "Firepower Charge",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates at the start of battle. Affects self.\nIncreases the Firepower Gauge's charge by 100.\n■ Activates when performing a normal attack while in Firepower Charge status. Affects self.\nIncreases the Firepower Gauge's charge by 2.\n■ Activates when Firepower Charge ends. Affects self.\nIncreases the Firepower Gauge's charge by 45.\n■ Activates when Full Burst ends while Firepower Gauge is active. Affects self.\nBurst Gauge filling speed ▲ {burstUp}% x Firepower Gauge charge amount for 5 sec.\n■ Activates when entering Full Burst. Affects self.\nMaximum Firepower:\nEffect: ATK ▲ {atkUp1}% for 10 sec.\nAdditional effect for Super Firepower: ATK ▲ {atkUp2}% for 10 sec.",
             "values": {
-                "": []
+                "burstUp": [2.96, 3.19, 3.42, 3.65, 3.87, 4.10, 4.33, 4.56, 4.79, 5.00],
+                "atkUp1": [47.29, 50.93, 54.57, 58.21, 61.85, 65.49, 69.12, 72.76, 76.40, 80.04],
+                "atkUp2": [20.71, 22.31, 23.90, 25.49, 27.09, 28.68, 30.27, 31.87, 33.46, 35.05]
                 }
             },
             {
-            "name": "",
+            "name": "Super Firepower",
             "skillType": "Active",
             "cooldown": 40,
-            "description": "",
+            "description": "■ Activates when the Firepower Gauge's charge is lower than 100. Affects self.\nFirepower Charge: Charges the Firepower Gauge for 10 sec. This effect cannot be removed.\nIncreases the Firepower Gauge's charge by 1.\n■ Activates when the Firepower Gauge's charge is at 100. Affects self.\nSuper Firepower: Attack Damage ▲ {atkUp1}% for 10 sec.\nDecreases the Firepower Gauge's charge by 100.\n■ Affects self.\nExplosion Radius ▲ 200% for 10 sec.\nAttack Damage ▲ {atkUp2}% for 10 sec.",
             "values": {
-                "": []
+                "atkUp1": [34.56, 35.72, 36.89, 38.05, 39.22, 40.38, 41.54, 42.71, 43.87, 45.03],
+                "atkUp2": [22.94, 32.64, 42.33, 52.03, 61.73, 71.42, 81.12, 90.82, 100.51, 110.21]
                 }
             }
         ]
@@ -6391,30 +6548,35 @@
         "nikkeName": "Mint",
         "skills": [
             {
-            "name": "",
+            "name": "Here I Go!",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when attacking with Full Charge while in Assigned Part: Singing status. Affects all allies.\nSinging Effect: ATK ▲ {atkFinalUp}% of the caster's ATK for 3 sec.\n■ Activates when attacking with Full Charge while in Assigned Part: Dancing status. Affects all allies.\nDancing Effect: Constantly recovers {hpFinalHeal}% of the caster's final Max HP every 1 sec for 3 sec.",
             "values": {
-                "": []
+                "atkFinalUp": [25.01, 27.23, 29.45, 31.68, 33.90, 36.12, 38.35, 40.57, 42.79, 45.02],
+                "hpFinalHeal": [1.06, 1.14, 1.22, 1.30, 1.39, 1.47, 1.55, 1.63, 1.71, 1.80]
                 }
             },
             {
-            "name": "",
+            "name": "Fantastic Performance!",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when entering Burst Stage 3 while not in Sing Along status. Affects self.\nCancels Assigned Part: Singing.\nCancels Assigned Part: Dancing.\n■ Activates when entering Burst Stage 3 while in Assigned Part: Singing status. Affects all allies.\nCritical Rate ▲ {critRateUp}% for 10 sec.\nProjectile Explosion Damage ▲ {explDmgUp}% for 10 sec.\nPierce Damage ▲ {dmgPierceUp}% for 10 sec.",
             "values": {
-                "": []
+                "critRateUp": [11.39, 12.34, 13.29, 14.24, 15.19, 16.14, 17.09, 18.04, 18.99, 19.94],
+                "explDmgUp": [29.55, 31.82, 34.09, 36.36, 38.63, 40.91, 43.18, 45.45, 47.72, 50.00],
+                "dmgPierceUp": [19.34, 20.82, 22.31, 23.79, 25.28, 26.77, 28.26, 29.74, 31.23, 32.72]
                 }
             },
             {
-            "name": "",
+            "name": "Let's Sing Together!",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 20,
+            "description": "■ Affects self.\nOnly one Assigned Part is applied according to Mint's current status.\nStatus 1: If in the Assigned Part: Dancing status, Mint gains Assigned Part: Singing. This effect is continuous and cannot be removed.\nStatus 2: If not in the Assigned Part: Dancing status, Mint gains Assigned Part: Dancing. This effect is continuous and cannot be removed.\n■ Affects all allies.\nSing Along: Attack Damage ▲ {atkUp}% for 10 sec.\nMax Ammunition Capacity ▲ {maxAmmoUp}% for 10 sec.\nCritical Damage ▲ {critDmgUp}% for 10 sec.",
             "values": {
-                "": []
+                "atkUp": [16.67, 18.16, 19.54, 21.12, 22.60, 24.09, 25.67, 27.05, 28.53, 30.02],
+                "maxAmmoUp": [23.64, 25.45, 27.27, 29.09, 30.91, 32.72, 34.54, 36.36, 38.18, 40.00],
+                "critDmgUp": [25.02, 27.25, 29.47, 31.70, 33.92, 36.15, 38.37, 40.60, 42.82, 45.05]
                 }
             }
         ]
@@ -6424,30 +6586,35 @@
         "nikkeName": "Prika",
         "skills": [
             {
-            "name": "",
+            "name": "Let's Get the Show Started",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when attacking with Full Charge. Affects all allies.\nProjectile Explosion Damage ▲ {explDmgUp}% for 3 sec.\nPierce Damage ▲ {pierceDmgUp}% for 3 sec.\nATK ▲ {atkFinalUp}% of the caster's ATK for 3 sec.\n■ Activates only while in Performance status. Affects self.\nPotency of HP restored ▲ {hpHeal}% continuously.\nGains Pierce continuously.",
             "values": {
-                "": []
+                "explRadUp": [11.82, 12.72, 13.63, 14.54, 15.45, 16.36, 17.27, 18.18, 19.09, 20.00],
+                "pierceDmgUp": [7.73, 8.33, 8.92, 9.52, 10.11, 10.71, 11.30, 11.90, 12.49, 13.09],
+                "atkFinalUp": [11.11, 12.09, 13.08, 14.07, 15.06, 16.04, 17.03, 18.02, 19.01, 20.00],
+                "hpHeal": [29.50, 31.77, 34.03, 36.30, 38.57, 40.84, 43.11, 45.38, 47.65, 49.92]
                 }
             },
             {
-            "name": "",
+            "name": "One More Song!",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when entering Full Burst. Affects self.\nMax HP ▲ {hpUp}% for 10 sec.\n■ Activates when Sing Along takes effect while Prika is in Performance status.\nEncore:\nFunction: Extends the duration of Performance for Prika and strengthens allies.\nEffect 1: Affects the member who initiated Sing Along. Assigned Part: Singing. This effect is continuous and cannot be removed.\nEffect 2: Affects all allies. Performance duration ▲ 21 sec.\nEffect 3: Affects all allies. Attack Damage ▲ {atkUp}% for 10 sec.\nEffect 4: Affects self. Cooldown of Burst Skill ▲ 21 sec.",
             "values": {
-                "": []
+                "hpUp": [11.80, 12.71, 13.62, 14.53, 15.44, 16.34, 17.25, 18.16, 19.07, 19.98],
+                "atkUp": [14.29, 15.48, 16.67, 17.86, 19.05, 20.24, 21.43, 21.62, 23.81, 25.01]
                 }
             },
             {
-            "name": "",
+            "name": "Get Ready for an Amazing Show!",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 20,
+            "description": "■ Affects all allies.\nPerformance:\nFunction: Strengthens allies and restores HP.\nEffect 1: Restores {hpFinalHeal}% of the caster's final max HP as HP every 1 sec for 25 sec. This effect cannot be removed.\nEffect 2: Charge Damage ▲ {chrgDmgUp}% for 25 sec. This effect cannot be removed.",
             "values": {
-                "": []
+                "hpFinalHeal": [1.79, 1.93, 2.07, 2.21, 2.34, 2.48, 2.62, 2.76, 2.90, 3.04],
+                "chrgDmgUp": [13.88, 15.12, 16.35, 17.59, 18.82, 20.06, 21.29, 22.53, 23.76, 25.00]
                 }
             }
         ]
@@ -6457,30 +6624,34 @@
         "nikkeName": "Ark Ranger Black",
         "skills": [
             {
-            "name": "",
+            "name": "Transform! Ark Ranger Black!",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates at the start of the battle. Affects self.\nDamage to Parts ▲ {dmgPartsUp}% continuously.\n■ Activates when an ally or self destroys an enemy's part. Affects self.\nTransformation\nFunction: Transforms into an Ark Ranger and strengthens herself while depleting her battery.\nEffect 1: Battery ▼ 1% every 0.2 sec constinously. This effect cannot be removed.\nEffect 2: ATK ▲ {atkUp}% continuously. This effect cannot be removed.\nDeactivation condition: When the battery drops to 0%\n■ Activates after performing 30 normal attack(s). Affects self.\nSustained Damage ▲ {dmgSusUp}% for 5 sec.",
             "values": {
-                "": []
+                "dmgPartsUp": [11.81, 12.72, 13.63, 14.54, 15.45, 16.36, 17.27, 18.18, 19.09, 20.00],
+                "atkUp": [92.29, 99.39, 106.49, 113.59, 120.69, 127.79, 134.89, 141.99, 149.09, 156.19],
+                "dmgSusUp": [35.21, 37.92, 40.63, 43.34, 46.05, 48.76, 51.47, 54.18, 56.89, 59.60]
                 }
             },
             {
-            "name": "",
+            "name": "Tremble! Ark Black Collider!",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when Transformation takes effect and when the enemy appears while Transformation is in effect. Affects all enemies.\nArk Black Collider: Deals {atkFinalDmg}% of final ATK as sustained damage every 1 sec until Transformation is canceled.\n■ Activates when entering Full Burst. Affects all Wind Code allies with assault rifles.\nSustained Damage ▲ {dmgSusUp}% for 10 sec.",
             "values": {
-                "": []
+                "atkFinalDmg": [27.10, 29.19, 31.28, 33.36, 35.45, 37.53, 39.62, 41.70, 43.79, 45.87],
+                "dmgSusUp": [45.79, 49.32, 52.84, 56.36, 59.89, 63.41, 66.93, 70.45, 73.98, 77.50]
                 }
             },
             {
-            "name": "",
+            "name": "Ultimate Attack! Ark Black Meteor!",
             "skillType": "Active",
             "cooldown": 40,
-            "description": "",
+            "description": "■ Activates while in Transformation status. Affects self.\nBattery ▲ 50%\n■ Activates while not in Transformation status. Affects self.\nEmergency Charge Protocol\nFunction: Quickly charges the battery and transforms into an Ark Ranger.\nEffect 1: Battery ▲ 100%\nEffect 2: Battery ▼ 50% after transforming.\n■ Affects the 1 enemy unit(s) with the highest final max HP.\nDeals {atkFinalDmg}% of final ATK as sustained damage every 1 sec for 10 sec.\n■ Affects self.\nSustained Damage ▲ {dmgSusUp}% for 10 sec.",
             "values": {
-                "": []
+                "atkFinalDmg": [157.59, 169.71, 181.83, 193.95, 206.07, 218.20, 230.32, 242.44, 254.56, 266.69],
+                "dmgSusUp": [80.26, 86.43, 92.61, 98.78, 104.96, 111.13, 117.30, 123.48, 129.65, 135.83]
                 }
             }
         ]
