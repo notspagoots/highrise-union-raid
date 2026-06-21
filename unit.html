@@ -256,6 +256,35 @@
       gap: 12px;
     }
 
+    .txt-blue {
+      color: #2ba6f8;
+    }
+
+    .txt-orange {
+      color: #ff9933;
+      cursor: pointer;
+    }
+    
+    .txt-white {
+      color: #eee;
+    }
+
+    #tooltip {
+      position: fixed;
+      pointer-events: none;
+      background: #222;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      width: 300px;
+      max-width: 400px;
+      z-index: 1000;
+      line-height: 1.4;
+      display: none;
+    }
+
 
   </style>
 </head>
@@ -272,8 +301,10 @@ let skillMode = "normal"; // "normal" or "treasure"
 function renderSkillToggle(hasTreasure, skillUnit) {
   const toggleDiv = document.getElementById("skillToggle");
 
+  if (!skillUnit) return;
+
   if (!hasTreasure) {
-    toggleDiv.innerHTML = ""; // no toggle if not available
+    toggleDiv.innerHTML = "";
     renderSkills(skillUnit.skills);
     return;
   }
@@ -293,24 +324,109 @@ function renderSkillToggle(hasTreasure, skillUnit) {
 
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-      skillMode = btn.dataset.mode;
+      if (skillMode === btn.dataset.mode) return;
 
-      renderSkillToggle(true, skillUnit); // re-render buttons
-      renderSkills(
-        skillMode === "normal"
-          ? skillUnit.skills
-          : skillUnit.treasureSkills
-      );
+      skillMode = btn.dataset.mode;
+      renderSkillToggle(true, skillUnit);
     });
   });
 
-  // INITIAL RENDER
   renderSkills(
     skillMode === "normal"
       ? skillUnit.skills
       : skillUnit.treasureSkills
   );
 }
+
+/*
+function applyTooltips() {
+  const tooltip = document.getElementById("tooltip");
+  const targets = document.querySelectorAll(".txt-orange");
+
+  targets.forEach(el => {
+    
+    
+    const term = el.textContent.replace(/\s+/g, " ").trim();
+
+    const key = Object.keys(tooltipData).find(k =>
+      term === k.replace(/\s+/g, " ").trim()
+    );
+
+
+    if (!key) return;
+
+    let text = tooltipData[key].description;
+
+    let hoverTimer;
+
+    el.addEventListener("mouseenter", () => {
+      hoverTimer = setTimeout(() => {
+        
+        let text = tooltipData[key].description;
+
+        // apply colors
+        text = applyColorTags(text);
+
+        // apply line breaks
+        text = text.replace(/\n/g, "<br>");
+
+        tooltip.innerHTML = text;
+
+        tooltip.style.display = "block";
+      }, 150);
+    });
+
+    el.addEventListener("mouseleave", () => {
+      clearTimeout(hoverTimer);
+      tooltip.style.display = "none";
+    });
+
+    el.addEventListener("mousemove", (e) => {
+      const padding = 10;
+      const tooltipWidth = tooltip.offsetWidth;
+      const tooltipHeight = tooltip.offsetHeight;
+
+      let x = e.clientX + padding;
+      let y = e.clientY + padding;
+
+      if (x + tooltipWidth > window.innerWidth) {
+        x = e.clientX - tooltipWidth - padding;
+      }
+
+      if (y + tooltipHeight > window.innerHeight) {
+        y = e.clientY - tooltipHeight - padding;
+      }
+
+      tooltip.style.left = x + "px";
+      tooltip.style.top = y + "px";
+    });
+    
+  });
+}
+*/
+
+
+function applyColorTags(text) {
+  const colors = ["blue", "orange", "white"];
+
+  colors.forEach(color => {
+    const open = new RegExp(`\\{${color}(?:\\|([^}]+))?\\}`, "gi");
+    const close = new RegExp(`\\{\\/${color}\\}`, "gi");
+
+    text = text.replace(open, (match, term) => {
+      const dataTerm = term
+        ? ` data-term="${term.trim().toLowerCase()}"`
+        : "";
+
+      return `<span class="txt-${color}"${dataTerm}>`;
+    });
+
+    text = text.replace(close, `</span>`);
+  });
+
+  return text;
+}
+
 
 
 function formatSkillDescription(skill, level) {
@@ -328,7 +444,13 @@ function formatSkillDescription(skill, level) {
       desc = desc.replaceAll(`{${key}}`, replacement);
     });
 
-    return desc.replace(/\n/g, "<br>");
+    // applies colors to skill text
+    desc = applyColorTags(desc)
+
+    // adds line breaks where \n is placed
+    desc = desc.replace(/\n/g, "<br>")
+
+    return desc;
 }
 
 function renderSkills(skills) {
@@ -374,8 +496,6 @@ function renderSkills(skills) {
         <div class="skill-desc">${desc}</div>
       `;
 
-
-
       const btns = card.querySelectorAll(".lvl-btn");
 
       btns.forEach(btn => {
@@ -407,6 +527,121 @@ function renderSkills(skills) {
     container.appendChild(card);
   });
 }
+
+let tooltipData = {};
+let tooltipTimer = null;
+
+function getTooltipText(term) {
+  const entry = tooltipData[term];
+
+  if (!entry) return null;
+
+  if (typeof entry === "string") {
+    return entry;
+  }
+
+  return entry.description;
+}
+
+function formatTooltipText(text) {
+  text = applyColorTags(text);
+  text = text.replace(/\n/g, "<br>");
+  return text;
+}
+
+function positionTooltip(e) {
+    const tooltip = document.getElementById("tooltip");
+    const padding = 10;
+
+    const tooltipWidth = tooltip.offsetWidth;
+    const tooltipHeight = tooltip.offsetHeight;
+
+    let x = e.clientX + padding;
+    let y = e.clientY + padding;
+
+    if (x + tooltipWidth > window.innerWidth) {
+      x = e.clientX - tooltipWidth - padding;
+    }
+
+    if (y + tooltipHeight > window.innerHeight) {
+      y = e.clientY - tooltipHeight - padding;
+    }
+
+    tooltip.style.left = x + "px";
+    tooltip.style.top = y + "px";
+  }
+
+  document.addEventListener("mouseover", (e) => {
+  const target = e.target.closest(".txt-orange");
+
+  if (!target) return;
+
+  const tooltip = document.getElementById("tooltip");
+
+  const rawText = target.textContent;
+  const term = rawText.trim();
+
+  const hasKey = Object.prototype.hasOwnProperty.call(tooltipData, term);
+  const tooltipText = tooltipData[term]?.description;
+
+  clearTimeout(tooltipTimer);
+
+  tooltipTimer = setTimeout(() => {
+
+    /* DEBUG OUTPUT
+    console.log("---- TOOLTIP DEBUG ----");
+    console.log("RAW TEXT:", JSON.stringify(rawText));
+    console.log("TERM:", JSON.stringify(term));
+    console.log("MATCH FOUND:", hasKey);
+    console.log("AVAILABLE KEYS:", Object.keys(tooltipData));
+    */
+    if (!hasKey) {
+      tooltip.innerHTML = `
+        <div style="color:red;font-weight:bold;">NO MATCH</div>
+        <div><b>Seen:</b> ${rawText}</div>
+        <div><b>Trimmed:</b> ${term}</div>
+      `;
+      tooltip.style.display = "block";
+      positionTooltip(e);
+      return;
+    }
+
+    let text = tooltipText;
+
+    text = formatTooltipText(text);
+
+    tooltip.innerHTML = text;
+    tooltip.style.display = "block";
+    positionTooltip(e);
+
+  }, 150);
+});
+
+document.addEventListener("mousemove", (e) => {
+  const tooltip = document.getElementById("tooltip");
+
+  if (tooltip.style.display === "block") {
+    positionTooltip(e);
+  }
+});
+
+document.addEventListener("mouseout", (e) => {
+  const target = e.target.closest(".txt-orange");
+
+  if (!target) return;
+
+  clearTimeout(tooltipTimer);
+
+  const tooltip = document.getElementById("tooltip");
+  tooltip.style.display = "none";
+});
+
+
+fetch('nikke_tooltips.json')
+  .then(res => res.json())
+  .then(data => {
+    tooltipData = data;
+  });
 
 fetch('nikke.json')
   .then(res => res.json())
@@ -477,6 +712,8 @@ fetch('nikke_skills.json')
     `;
   });
 </script>
+
+<div id="tooltip"></div>
 
 </body>
 </html>

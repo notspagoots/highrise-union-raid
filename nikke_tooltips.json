@@ -1,0 +1,110 @@
+{
+    "final": {
+        "description": "■ Damage of skills with the word {orange}\"final\"{/orange} is calculated based on Nikke's stats, equipment stats, equipment modifications effects, and effects triggered during the battle.\n\n ■ Damage of skills without the word {orange}\"final\"{/orange} is calculated based on Nikke's stats and equipment stats."
+    },
+    "an enemy afflicted with Virus Transfer is neutralized": {
+        "description": "■ The effect will be triggered when the enemy dies.\n\n■ The effect will not be triggered in cases of spontaneous enemy deaths, such as self-destruction."
+    },
+    "enemies within the attack range": {
+        "description": "■ Indicates all enemies within the designated area when using skills manually.\n\n■ Indicates the random target enemy and any surrounding enemies when using skills automatically."
+    },
+    "enemies within attack range": {
+        "description": "■ Indicates all enemies within the designated area when using skills manually.\n\n■ Indicates the random target enemy and any surrounding enemies when using skills automatically."
+    },
+    "Stack count of buffs": {
+        "description": "■ If you find words like \"stack 10 time(s)\" in the skill description, that means this effect is stackable.\n\n■ Refers to the buff stack count.\n\n■ However, stack count of the debuff will be excluded."
+    },
+    "Pierce Damage": {
+        "description": "■ Refers to the damage dealt to enemies by Nikes with Pierce."
+    },
+    "Decoy": {
+        "description": "■ Installs a decoy next to the Nikke to serve as a substitute that takes on attacks.\n\n■ This skill cannot be removed by buff-removal skills."
+    },
+    "Damage to Interruption Parts": {
+        "description": "■ During battle, a Cancel Ring of enemy will sometimes appear.\n\n■ Firing at the ring and inflicting enough damage will interrupt the enemy's special attack.\n\n■ It indicates the damage dealt to the Cancel Ring of the enemy when fired upon."
+    },
+    "Burst Gauge filling speed": {
+        "description": "■ The filling speed of Burst Gauge, which must be filled in order to enter Burst Stage.\n\n■ The amount each Nikke contributes to filling the Burst Gauge varies depending on her weapon type and traits."
+    },
+    "Re-enters Burst": {
+        "description": "■ This effect allows you to re-enter the current Burst Stage without proceeding to the next stage.\n\n■ If another Nikke in the squad has a Burst Skill of the same stage, she can use it and push the Burst forward to the next stage."
+    },
+    "Previous effects trigger repeatedly": {
+        "description": "■ All lower-tier effects activate when conditions of higher tiers are met.\n\n■ Take Liter's Skill 1 as an example. Depending on the number of Burst Skill uses, max ammunition capacity increases after 1 use, critical damage increases after 2 uses, and ATK increases after 3 uses.\n\n■ When using the Burst Skill for the third time, the effects from the first and second uses activate simulatenously due to the stacking of lower-tier effects, increasing max ammunition capacity, critical damage, and ATK.\n\n■ The fulfilled conditions will be reset when the Nikke revives after being out of action."
+    },
+    "Elemental Advantage Attack Damage": {
+        "description": "■ Each elemental code has a corresponding weakness or \"counter-code\".\n\n■ When attacking an enemy with an element they are weak to, additional damage referred to as \"Elemental Advantage Attack Damage\" is dealt."
+    },
+    "Equally shares damage taken": {
+        "description": "■ Equally Shares Damage Taken: Every target acquiring this effect has the same damage rate.\n\n■ Proportionally Shares Damage Taken: Every target acquiring this effect has the different damage rate."
+    },
+    "Projectile Explosion Damage": {
+        "description": "■ This effect increases the projectile explosion damage.\n\n■ Projectile explosion damage applies to the explosions caused by Rocket Launchers and attachable projectiles."
+    },
+    "Burst 1 allies": {
+        "description": "■ Refers to Burst 1 allies that lead to Burst Stage 2 according to the Nikkepedia.\n\n■ Includes Burst 1 Nikkes who lead to Burst Stage 2, such as Liter, Pepper, and Jackal.\n\n■ Exludes Nikkes who allow re-entering Burst Stage 1, such as Tia and Alice: Wonderland Bunny.\n\nExcludes Red Hood whose Burst Skill can be used in all stages and Rapi: Red Hood whose Burst stage changes according to her skills."
+    },
+    "Cancels": {
+        "description": "■ Cancels the effect specified in the skill description.\n\nThis effect is immediately canceled regardless of its remaining duration.\n\nEffects that cannot be removed can still be canceled.\n\nCanceled effects may be reapplied if their activation conditions are met again."
+    },
+    "Re-enters Burst and changes to Stage 1": {
+        "description": "■ This effect changes the Nikke's Burst stage.\n\n■ For example, if the Burst Stage is changed to Stage 1, her Burst Skill will then transition to Burst Stage 2."
+    },
+    "Cooldown": {
+        "description": "■ Refers to the cooldown time of active Skills.\n\n■ If there is no duration, the remaining cooldown time of the active skill will increase or decrease according to the displayed value.\n\n■ If there is a duration, the actual cooldown time of the active skill will increase or decrease. After the duration ends, the current remaining cooldown time will not increaase. After the skill is used once, it will return to the initial cooldown time."
+    },
+    "her favorite pop star": {
+        "description": "■ Avistar's favorite pop star refer to Anis: Star."
+    },
+    "debuff immunity": {
+        "description": "■ The target of this effect gains immunity to the designated number of debuffs.\n\n■ When the effect is granted, it will remove debuffs the target is inflicted with at the time.\n\nIf the number of debuffs on the target exceeds the number that can be removed, the earliest debuffs will be removed first.\n\nWhenever a debuff is blocked or removed, the immunity count will be reduced."
+    },
+    "Assigned Part": {
+        "description": "■ Only one part can be assigned at a time: either \"Singing\" or \"Dancing\", depending on the skill used."
+    },
+    "duration ▲ 21 sec": {
+        "description": "■ The duration of the effect is extended only when it is inflicted on the target.\n\n■ The increased effect duration may exceed the maximum duration."
+    },
+    "canceled": {
+        "description": "■ Cancels the effect specified in the skill description.\n\nThis effect is immediately canceled regardless of its remaining duration.\n\nEffects that cannot be removed can still be canceled.\n\nCanceled effects may be reapplied if their activation conditions are met again."
+    }
+    ,
+    "Deactivation condition": {
+        "description": "■ Once a removal condition is met, all sub-effects of the corresponding function are removed, regardless of their remaining duration."
+    },
+    "destroys an enemy's part": {
+        "description": "■ A skill that activates when destroying enemy parts."
+    },
+    "Damage to Parts": {
+        "description": "■ Refers to damage dealt when attacking destroyable parts."
+    },
+    "Attacks sequentially": {
+        "description": "■ Attacks a designated number of times, switching between targets in a sequence.\n\n■ If the number of attacks is greater than the number of targets, the attack sequence will start again with the first target.\n\n■ Targets who use Taunt or Attract do not get attacked repeatedly; instead, they only change the attack order."
+    },
+    "specific timing": {
+        "description": "■ If there are any remaining Restraint Chains when the enemy appears, all of them will be used.\n\n■ If there are any remaining Restraint Chains when Full Burst ends, all of them will be used.\n\n■ If there are any remaining Restraint Chains when entering Burst Stage 3, all of them will be used."
+    },
+    "the enemy is neutralized": {
+        "description": "■ The effect will be triggered in all cases of enemy death.\n\n■ In the Arena, this effect is still active even when the enemy Nikke is out of action.\n\n■ The effect will also be triggered in all cases of spontaneous enemy deaths, such as self-destruction."
+    },
+    "Mirrors the stack count": {
+        "description": "■ This effect will apply the stack count of the designated effect.\n\n■ For instance, if that designated effect has been stacked 5 times, this effect will directly apply 5 stacks when activated.\n\n■ Even if the designated effect is not activated, 1 stack will still be guaranteed when mirroring the stack count."
+    },
+    "Shield": {
+        "description": "■ Creates a shield in front of the target.\n\n■ This effect cannot be removed by buff-removal skills.\n\n■ Shared shields span a wide area in front of the target, protecting both her and allies from attacks."
+    },
+    "Multiplier": {
+        "description": "■ The base stats is increased proportionately according to the skill multiplier."
+    },
+    "Fills Burst Gauge": {
+        "description": "■ This effect instantly fills the Burst Gauge by a certain amount.\n\n■ This allows you to enter Burst Stage and cast Burst Skills when the Gauge is fully filled."
+    },
+    "Indomitability": {
+        "description": "■ This effect protects Nikkes from being incapacitated when an attack deals damage that exceeds their HP. Instead, they will survive with the lowest HP possible.\n\n■ However, instant-kill attacks will still incapacitate them immediately, even while Indomitability is active.\n\n■ This is because instant-kill attacks take effect before Indomitability can trigger."
+    },
+    "recovery takes effect": {
+        "description": "■ These are skills that activate when Recovery takes effect.\n\n■ \"Recovery\" includes both any direct HP restoration and damage-proportional HP restoration.\n\n■ When this buff is applied, a constant recovery effect and a damage-proportional recovery effect will be triggered once.\n\n■ This skill will not be triggered by HP restoration effects gained from group healing."
+    }
+
+    
+}
