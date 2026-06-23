@@ -24,15 +24,7 @@
         border-radius: 10px;
 
         padding: 20px;
-        max-width: 700px;
-    }
-
-    .card img {
-        width: 200px;
-        height: auto;
-        object-fit: contain;
-        border: 2px solid #444444;
-        border-radius: 8px;
+        max-width: 900px;
     }
 
     .card-info {
@@ -43,6 +35,8 @@
         width: 200px;
         height: auto;
         object-fit: contain;
+        border: 2px solid #444444;
+        border-radius: 8px;
     }
 
     .unit-name {
@@ -51,6 +45,26 @@
         margin-bottom: 10px;
     }
     
+    .unit-name-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .unit-icon {
+      width: 45px;
+      height: auto;
+      align-items: center;
+      padding-bottom: 5px;
+    }
+
+    
+    .unit-icon-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .portrait {
         display: flex;
         align-items: center;
@@ -295,6 +309,15 @@
 <div id="unitCard"></div>
 
 <script>
+
+const weaponMap = {
+  "Assault Rifle": "weapon_ar.png",
+  "Minigun": "weapon_mg.png",
+  "Rocket Launcher": "weapon_rl.png",
+  "Shotgun": "weapon_sg.png",
+  "SMG": "weapon_smg.png",
+  "Sniper Rifle": "weapon_sr.png"
+};
 
 let skillMode = "normal"; // "normal" or "treasure"
 
@@ -677,7 +700,15 @@ fetch('nikke_skills.json')
 
         <div class="card-info">
 
-          <div class="unit-name">${unit.nikkeName}</div>
+          <div class="unit-name-row">
+            <div class="unit-name">${unit.nikkeName}</div>
+
+            <div class="unit-icon-group">
+              <img class="unit-icon" src="images/elements/ele_${unit.nikkeElement}.png" alt="${unit.nikkeElement}">
+              <img class="unit-icon" src="images/weapon/${weaponMap[unit.nikkeWeapon]}" alt="${unit.nikkeWeapon}">
+              <img class="unit-icon" src="images/burst/burst_${unit.nikkeBurst}.png" alt="Burst ${unit.nikkeBurst}">
+              </div>
+          </div>
 
           <div class="info-row">
             <span class="badge ${rarityClass}">${unit.nikkeRarity}</span>

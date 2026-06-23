@@ -104,7 +104,12 @@
     },
     "recovery takes effect": {
         "description": "■ These are skills that activate when Recovery takes effect.\n\n■ \"Recovery\" includes both any direct HP restoration and damage-proportional HP restoration.\n\n■ When this buff is applied, a constant recovery effect and a damage-proportional recovery effect will be triggered once.\n\n■ This skill will not be triggered by HP restoration effects gained from group healing."
+    },
+    "Convert excess value over 100% of Charge Speed to Charge Damage" : {
+        "description": "■ When Charge Speed exceeds 100%, the excess value will be applied to Charge Damage at a specific multiplier."
+    },
+    "the king": {
+        "description": "■ Chime's \"king\" refers to Crown."
     }
 
-    
 }

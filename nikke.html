@@ -75,6 +75,24 @@
         font-weight: bold;
     }
 
+    .icon-stack {
+        position: absolute;
+        top: -8px;
+        left: -4px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        z-index: 2;
+    }
+    
+    .icon-stack img {
+        width: 22px;
+        height: auto;
+        object-fit: contain;
+    }
+
     /* ===== UNIT GRID ===== */
     .unit-grid {
         display: grid;
@@ -83,6 +101,7 @@
     }
 
     .unit-card {
+        position: relative;
         height: 150px;
         display: flex;
         flex-direction: column;
@@ -94,12 +113,9 @@
         cursor: pointer;
     }
 
-    .unit-card:hover {
-        border-color: #ffcc00;
-        transform: translateY(-2px);
-    }
 
-    .unit-card img {
+
+    .unit-image img {
         width: 90px;
         height: 90px;
         object-fit: contain;
@@ -107,7 +123,7 @@
         transition: transform 0.5s ease;
     }
     
-    .unit-card:hover img {
+    .unit-card:hover .unit-image img {
         transform: scale(1.1);
     }
 
@@ -379,7 +395,6 @@ function toggleFilters() {
     }
 }
 
-
 function toggleFilter(group, value) {
     value = String(value);
 
@@ -644,6 +659,12 @@ function renderUnits() {
         html += `
             <div class="unit-card ${rarityClass}"
             onclick="openUnit('${unit.nikkeName}')">
+            
+            <div class="icon-stack">
+                <img class="unit-icon" src="images/elements/ele_${unit.nikkeElement}.png" alt="${unit.nikkeElement}">
+                <img class="unit-icon" src="images/classes/${unit.nikkeType}.png" alt="${unit.nikkeType}">
+                <img class="unit-icon" src="images/burst/burst_${unit.nikkeBurst}.png" alt="Burst ${unit.nikkeBurst}">
+            </div>
 
             <div class="unit-image">
                 <img src="${unit.nikkeImage}">
