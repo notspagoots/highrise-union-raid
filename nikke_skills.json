@@ -2508,30 +2508,31 @@
         "nikkeName": "Noise",
         "skills": [
             {
-            "name": "",
+            "name": "Chorus",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when attacked 20 time(s). Affects all allies.\n{blue}Damage Taken ▼ {dmgTakenDown}% for 20 sec.{/blue}",
             "values": {
-                "": []
+                "dmgTakenDown": [5.86, 6.40, 6.93, 7.46, 8.00, 8.53, 9.06, 9.59, 10.13, 10.66]
                 }
             },
             {
-            "name": "",
+            "name": "Sing Together",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when hitting a target with a Full Charge attack. Affects the target.\n{blue}Taunts for 2 sec.{/blue}\n■ Activates when attacking with Full Charge. Affects self.\n{blue}Max HP ▲ {hpUp}% for 1.8 sec.{/blue}",
             "values": {
-                "": []
+                "hpUp": [17.54, 18.35, 19.16, 19.98, 20.79, 21.60, 22.42, 23.23, 24.04, 24.86]
                 }
             },
             {
-            "name": "",
+            "name": "Energetic Noise",
             "skillType": "Active",
             "cooldown": 40,
-            "description": "",
+            "description": "■ Affects all allies.\n{blue}Constantly recovers {hpFinalHeal}% of caster's {orange}final{/orange} Max HP every 1 sec for 10 sec.\nMax HP ▲ {hpUp}% for 10 sec.{/blue}",
             "values": {
-                "": []
+                "hpFinalHeal": [1.36, 1.48, 1.60, 1.73, 1.85, 1.98, 2.10, 2.22, 2.35, 2.47],
+                "hpUp": [27.22, 29.70, 32.17, 34.65, 37.12, 39.60, 42.07, 44.55, 47.02, 49.50]
                 }
             }
         ]
@@ -2541,30 +2542,32 @@
         "nikkeName": "Jackal",
         "skills": [
             {
-            "name": "",
+            "name": "Happy Jackal",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when attacked 10 time(s). Affects 1 enemy unit(s) with the highest {orange}final{/orange} Max HP.\n{blue}Damage Taken ▲ {dmgTakenUp}% for 10 sec.\nATK ▼ {atkDown}% for 10 sec.{/blue}",
             "values": {
-                "": []
+                "dmgTakenUp": [5.00, 5.45, 5.90, 6.36, 6.81, 7.27, 7.72, 8.18, 8.63, 9.09],
+                "atkDown": [5.00, 5.45, 5.90, 6.36, 6.81, 7.27, 7.72, 8.18, 8.63, 9.09]
                 }
             },
             {
-            "name": "",
+            "name": "Jumpin' Jackal Flash",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates at the start of battle. Affects self and 2 ally unit(s) with the highest {orange}final{/orange} ATK.\n{blue}{orange}Equally shares damage taken{/orange} for 120 sec.\nDEF ▲ {defUp}% for 120 sec.{/blue}",
             "values": {
-                "": []
+                "defUp": [4.55, 4.96, 5.37, 5.79, 6.20, 6.61, 7.03, 7.44, 7.85, 8.27]
                 }
             },
             {
-            "name": "",
+            "name": "Crazy Jackal",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 20,
+            "description": "■ Affects all allies.\n{blue}{orange}Burst Skill damage of skills with \"Affects 1 enemy unit(s)\" in the description{/orange} ▲ {burstDmgUp}% for 15 sec.\nDEF ▲ {defUp}% for 10 sec.{/blue}",
             "values": {
-                "": []
+                "burstDmgUp": [21.40, 23.35, 25.29, 27.24, 29.18, 31.13, 33.08, 35.02, 36.97, 38.91],
+                "defUp": [8.08, 8.81, 9.55, 10.28, 11.02, 11.75, 12.48, 13.22, 13.95, 14.69]
                 }
             }
         ]
@@ -2574,30 +2577,66 @@
         "nikkeName": "Viper",
         "skills": [
             {
-            "name": "",
+            "name": "Snake Sense",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when the target appears. Affects all allies.\n{blue}ATK ▲ {atkUp}% for 10 sec.\nHit Rate ▲ {hitRateUp}% for 10 sec.{/blue}",
             "values": {
-                "": []
+                "atkUp": [12.99, 14.43, 15.88, 17.32, 18.76, 20.21, 21.65, 23.10, 24.54, 25.98],
+                "hitRateUp": [5.56, 6.18, 6.80, 7.42, 8.04, 8.66, 9.28, 9.90, 10.51, 11.13]
                 }
             },
             {
-            "name": "",
+            "name": "Snake Scale",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Affects self.\n{blue}Hit Rate ▲ {hitRateUp}% continuously.{/blue}\n■ Activates when entering Full Burst. Affects self.\n{blue}Vamp: {orange}Prevents self from being the target of single-target attacks{/orange} for 10 sec. This effect is removed upon taking a direct hit.\nInvulnerable for 1 sec.{/blue}",
             "values": {
-                "": []
+                "hitRateUp": [1.71, 1.90, 2.10, 2.29, 2.48, 2.67, 2.86, 3.05, 3.24, 3.43]
                 }
             },
             {
-            "name": "",
+            "name": "Snake Bite",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 20,
+            "description": "■ Affects designated 1 enemy unit(s).\n{blue}Deals {atkFinalDmg}% of {orange}final{/orange} ATK as damage.{/blue}\n■ Activates when the designated enemy unit(s) include the stage target. Affects the same enemy unit(s).\n{blue}DEF ▼ {defDown}% for 10 sec.{/blue}",
             "values": {
-                "": []
+                "atkFinalDmg": [231.42, 257.14, 282.85, 308.57, 334.28, 360.00, 385.71, 411.42, 437.14, 462.85],
+                "defDown": [9.91, 11.02, 12.12, 13.22, 1332, 14.42, 16.53, 17.63, 18.73, 19.83]
+                }
+            }
+        ],
+        "treasureSkills": [
+            {
+            "name": "Snake Sense",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when the target appears. Affects all allies.\n{blue}ATK ▲ {atkUp}% for 10 sec.\nHit Rate ▲ {hitRateUp1}% for 10 sec.{/blue}\n■ Only activates when attacking in Vamp status. Affects self.\n{blue}Sustained Damage ▲ {dmgSusUp}%, stacks up to 10 time(s) and lasts for 10 sec.\nHit Rate ▲ {hitRateUp2}%, stacks up to 10 time(s) and lasts for 10 sec.{/blue}",
+            "values": {
+                "atkUp": [12.99, 14.43, 15.88, 17.32, 18.76, 20.21, 21.65, 23.10, 24.54, 25.98],
+                "hitRateUp1": [5.56, 6.18, 6.80, 7.42, 8.04, 8.66, 9.28, 9.90, 10.51, 11.13],
+                "dmgSusUp": [2.60, 2.80, 3.00, 3.20, 3.40, 3.60, 3.80, 4.00, 4.20, 4.40],
+                "hitRateUp2": [1.09, 1.17, 1.26, 1.34, 1.42, 1.51, 1.59, 1.68, 1.76, 1.84]
+                }
+            },
+            {
+            "name": "Snake Scale",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Affects self.\n{blue}Hit Rate ▲ {hitRateUp}% continuously.{/blue}\n■ Activates when entering Full Burst. Affects self.\n{blue}Vamp: {orange}Prevents self from being the target of single-target attacks{/orange} continuously. This effect is removed upon taking a direct hit.\nInvulnerable for 1 sec.{/blue}\n■ Activates when using Burst Skill. Affects all allies.\n{blue}{orange}Re-enters Burst{/orange} Stage 2.{/blue}",
+            "values": {
+                "hitRateUp": [10.98, 12.20, 13.42, 14.64, 15.86, 17.08, 18.30, 19.52, 20.74, 21.96]
+                }
+            },
+            {
+            "name": "Snake Bite",
+            "skillType": "Active",
+            "cooldown": 20,
+            "description": "■ Affects designated 1 enemy unit(s).\n{blue}Deals {atkFinalDmg1}% of {orange}final{/orange} ATK as damage.{/blue}\n■ Activates when the designated enemy unit(s) include the stage target. Affects the same enemy unit(s).\n{blue}DEF ▼ {defDown}% for 10 sec.\nDeals {atkFinalDmg2}% of {orange}final{/orange} ATK as sustained damage every 1 sec for 10 sec.{/blue}",
+            "values": {
+                "atkFinalDmg1": [608.40, 655.20, 702.00, 748.80, 795.60, 842.20, 889.20, 936.00, 982.80, 1029.60],
+                "defDown": [9.91, 11.02, 12.12, 13.22, 13.32, 14.42, 16.53, 17.63, 18.73, 19.83],
+                "atkFinalDmg2": [62.24, 67.02, 71.81, 76.59, 81.38, 86.16, 90.95, 95.73, 100.51, 105.30]
                 }
             }
         ]
@@ -2607,30 +2646,31 @@
         "nikkeName": "Yan",
         "skills": [
             {
-            "name": "",
+            "name": "Struck Dumb",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates at the beginning of Full Burst. Affects all allies.\n{blue}Charge Damage ▲ {chrgDmgUp}% for 10 sec.{/blue}",
             "values": {
-                "": []
+                "chrgDmgUp": [11.85, 12.93, 14.00, 15.08, 16.16, 17.24, 18.31, 19.39, 20.47, 21.55]
                 }
             },
             {
-            "name": "",
+            "name": "The More, the Merrier",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when attacking with Full Charge. Affects all allies.\n{blue}ATK ▲ {atkUp}% for 5 sec.\nCritical Rate ▲ {critRateUp}% for 5 sec.{/blue}",
             "values": {
-                "": []
+                "atkUp": [1.52, 1.66, 1.80, 1.94, 2.07, 2.21, 2.35, 2.49, 2.63, 2.77],
+                "critRateUp": [0.73, 0.80, 0.87, 0.93, 1.00, 1.07, 1.13, 1.20, 1.27, 1.33]
                 }
             },
             {
-            "name": "",
+            "name": "Fat Cat",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 20,
+            "description": "■ Affects {orange}enemies within the attack range{/orange}.\n{blue}Deals {atkFinalDmg}% of {orange}final{/orange} ATK as damage.\nForced movement toward the center of attack range, lasts for 2 sec.{/blue}",
             "values": {
-                "": []
+                "atkFinalDmg": [172.40, 192.00, 211.59, 231.18, 250.77, 270.36, 289.95, 309.55, 329.14, 348.73]
                 }
             }
         ]
@@ -2640,30 +2680,32 @@
         "nikkeName": "Liter",
         "skills": [
             {
-            "name": "",
+            "name": "Liter Boost",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when entering Full Burst. Affects all allies.\n{blue}Effect changes according to the number of activation times. {orange}Previous effects trigger repeatedly{/orange}:\nOnce: {orange}Cooldown{/orange} of Burst Skill ▼ 2.34 sec.\nTwice: {orange}Cooldown{/orange} of Burst Skill ▼ 2.7 sec.\nThree times: {orange}Cooldown{/orange} of Burst Skill ▼ 3.17 sec.{/blue}\n■ Activates when using Burst Skill. Affects all allies.\n{blue}Effect changes according to the number of activation times. {orange}Previous effects trigger repeatedly{/orange}:\nOnce: Max Ammunition Capacity ▲ {maxAmmoUp}% for 5 sec.\nTwice: Critical Damage ▲ {critDmgUp}% for 5 sec.\nThree times: ATK ▲ {atkUp}% for 5 sec.{/blue}",
             "values": {
-                "": []
+                "maxAmmoUp": [7.05, 11.29, 15.52, 19.76, 23.99, 28.23, 32.46, 36.70, 40.93, 45.17],
+                "critDmgUp": [3.36, 4.37, 5.38, 6.39, 7.40, 8.41, 9.42, 10.44, 11.45, 12.46],
+                "atkUp": [5.05, 6.09, 7.13, 8.17, 9.21, 10.25, 11.29, 12.33, 13.37, 14.42]
                 }
             },
             {
-            "name": "",
-            "skillType": "Passive",
-            "cooldown": 0,
-            "description": "",
-            "values": {
-                "": []
-                }
-            },
-            {
-            "name": "",
+            "name": "Volt Boost",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 15,
+            "description": "■ Affects 2 ally unit(s) with the lowest remaining cover HP.\n{orange}Restores {hpCoverHeal}% of Cover HP{/orange}{blue}.{/blue}",
             "values": {
-                "": []
+                "hpCoverHeal": [28.87, 31.50, 34.12, 36.75, 39.37, 42.00, 44.62, 47.25, 49.87, 52.50]
+                }
+            },
+            {
+            "name": "Double Boost",
+            "skillType": "Active",
+            "cooldown": 20,
+            "description": "■ Affects all allies.\n{blue}ATK ▲ {atkUp}% for 5 sec.{/blue}",
+            "values": {
+                "atkUp": [36.30, 39.60, 42.90, 46.20, 49.50, 52.80, 56.10, 59.40, 62.70, 66.00]
                 }
             }
         ]

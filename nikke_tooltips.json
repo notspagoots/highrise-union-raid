@@ -110,6 +110,15 @@
     },
     "the king": {
         "description": "■ Chime's \"king\" refers to Crown."
+    },
+    "Burst Skill damage of skills with \"Affects 1 enemy unit(s)\" in the description": {
+        "description": "■ This refers to the {blue}\"Burst Skill damage\"{/blue} of Burst Skills with the phrase \"Affects 1 enemy unit(s)\" in the description.\n\n■ Examples include the Burst Skills of Brid, Guillotine, etc."
+    },
+    "Prevents self from being the target of single-target attacks": {
+        "description": "■ Prevents being targeted by enemies' single-target attacks for the duration of the effect.\n\n■ This effect is removed upon being hit by any attack that targets more than one unit, including area attacks.\n\n■ The effect will also be removed if all other allies become incapacitated."
+    },
+    "Restores {hpCoverHeal}% of Cover HP": {
+        "description": "■ This effect restores a certain amount of cover HP.\n\n■ It only affects Cover with HP still remaining, and has no effect on Cover that's been completely destroyed."
     }
 
 }
