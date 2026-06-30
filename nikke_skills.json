@@ -2715,30 +2715,34 @@
         "nikkeName": "Sin",
         "skills": [
             {
-            "name": "",
+            "name": "Full Stop",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates when the last bullet hits the target. Affects self.\n{blue}{orange}Duplicate {hpUp}% Max HP{/orange} of ally with the highest Max HP, lasts for 5 sec.\nAttract: Taunt all enemies for 5 sec.{/blue}",
             "values": {
-                "": []
+                "hpUp": [7.94, 8.72, 9.51, 10.30, 11.09, 11.88, 12.66, 13.45, 14.24, 15.03]
                 }
             },
             {
-            "name": "",
+            "name": "Hurry Up",
             "skillType": "Passive",
             "cooldown": 0,
-            "description": "",
+            "description": "■ Activates after Full Burst ends. Affects self.\n{blue}{orange}Burst Gauge filling speed{/orange} ▲ {burstChargeUp}% for 5 sec.{/blue}\n■ Activates when using Burst Skill. Affects self.\n{blue}Effect changes according to the number of activation time(s). {orange}Previous effects trigger repeatedly{/orange} :\nOnce: Recover {hpHeal}% of attack damage as HP, lasts for 5 sec.\nTwice: HP Potency ▲ {hpPotUp}% for 5 sec.\nThree times: DEF ▲ {defUp}% for 5 sec.{/blue}",
             "values": {
-                "": []
+                "burstChargeUp": [8.08, 8.98, 9.88, 10.78, 11.67, 12.57, 13.47, 14.37, 15.27, 16.17],
+                "hpHeal": [7.65, 8.50, 9.35, 10.20, 11.05, 11.90, 12.75, 13.60, 14.45, 15.30],
+                "hpPotUp": [25.50, 28.33, 31.16, 34.00, 36.83, 39.66, 42.50, 45.33, 48.16, 51.00],
+                "defUp": [21.60, 24.00, 26.40, 28.80, 31.20 ,33.60, 36.00, 38.40, 40.80, 43.20]
                 }
             },
             {
-            "name": "",
+            "name": "Words can Kill",
             "skillType": "Active",
-            "cooldown": 40,
-            "description": "",
+            "cooldown": 20,
+            "description": "■ Activates when enemy unit(s) (excluding Nikkes) are more than 4. Affects all enemies.\n{blue}Damage Taken ▲ {dmgTakenUp}% for 5 sec.{/blue}\n■ Affects {orange}enemies within the attack range{/orange}.\n{blue}Deals {atkFinalDmg}% of final ATK as damage.{/blue}",
             "values": {
-                "": []
+                "dmgTakenUp": [6.11, 6.79, 7.47, 8.15, 8.83, 9.51, 10.19, 10.87, 11.55, 12.23],
+                "atkFinalDmg": [88.16, 97.95, 107.75, 117.55, 127.34, 137.14, 146.93, 156.73, 166.53, 176.32]
                 }
             }
         ]
