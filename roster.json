@@ -359,7 +359,7 @@
   {
     "playerName": "Spagoots",
     "friendID": "03532863",
-    "roleActive": "FALSE",
+    "roleActive": "TRUE",
     "roleOfficer": "FALSE",
     "roleCaptain": "FALSE"
   },
@@ -443,6 +443,13 @@
   {
     "playerName": "Rammo",
     "friendID": "04932553",
+    "roleActive": "TRUE",
+    "roleOfficer": "FALSE",
+    "roleCaptain": "FALSE"
+  },
+  {
+    "playerName": "Maldoche",
+    "friendID": "01345879",
     "roleActive": "TRUE",
     "roleOfficer": "FALSE",
     "roleCaptain": "FALSE"

@@ -2302,5 +2302,29 @@
     "nikkeWeapon": "Assault Rifle",
     "nikkeImage": "images/icons/ArkRangerBlackS.png",
     "nikkePortrait": "images/portraits/ark_ranger_black_portrait.png"
+  },
+  {
+    "nikkeID": "193",
+    "nikkeName": "Cinderella: Glass Wave",
+    "nikkeRarity": "SSR",
+    "nikkeElement": "Iron",
+    "nikkeType": "Attacker",
+    "nikkeBurst": 3,
+    "nikkeManufacturer": "Pilgrim",
+    "nikkeWeapon": "Minigun",
+    "nikkeImage": "images/icons/Cinderella_Crystal_WaveS.png",
+    "nikkePortrait": "images/portraits/cinderella_crystal_wave_portrait.png"
+  },
+  {
+    "nikkeID": "194",
+    "nikkeName": "Marciana: Marine Study",
+    "nikkeRarity": "SSR",
+    "nikkeElement": "Iron",
+    "nikkeType": "Attacker",
+    "nikkeBurst": 3,
+    "nikkeManufacturer": "Elysion",
+    "nikkeWeapon": "Assault Rifle",
+    "nikkeImage": "images/icons/Marciana_Marine_StudyS.png",
+    "nikkePortrait": "images/portraits/marciana_marine_study_portrait.png"
   }
 ]
