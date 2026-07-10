@@ -6900,5 +6900,88 @@
                 }
             }
         ]
+    },
+    {
+        "nikkeID": "193",
+        "nikkeName": "Cinderella: Crystal Wave",
+        "skills": [
+            {
+            "name": "Beauty-Full",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates upon reloading to max ammunition while in the Preparation for Change state.\nAffects self.\n{blue}Changes the weapon in use: Snipe Mode\nCharge Time: 1 sec\nDamage: 62.13% of {orange}final{/orange} ATK\nFull Charge Damage: 250% of damage\nMax Ammunition Capacity: 15 rounds (max ammunition effect refreshes after reloading)\nAdditional Effect 1: Gains Pierce.\nAdditional Effect 2: Activates when performing a Full Charge attack. {orange}Expends ammo{/orange}. Amount: 40 round(s).\nAdditional Effect 3: Charge time is fixed at 1 sec.\nRemoval Condition: Reloading to max ammunition while in the Preparation for Change state.{/blue}\n■ Activates at the start of battle. Affects self.\n{blue}Beauty-Full: Attack Damage ▲ {atkUp}% continuously.{/blue}\n■ Activates upon reloading to max ammunition. Affects self.\n{blue}Preparation for Change: Reload time is fixed at 3 sec for 6 sec. Removed upon firing the last bullet.{/blue}\n■ Activates every 5 sec. Affects the enemy unit nearest to the crosshair.\n{blue}Deals {atkFinalDmg}% of {orange}final{/orange} ATK as damage.{/blue}\n■ Activates each time {orange}total ammo consumed by allies{/orange} reaches 200. Affects all allies.\n{blue}{orange}Fills Burst Gauge{/orange} by {burstGaugeUp}%.{/blue}",
+            "values": {
+                "atkUp": [13.20, 14.40, 15.60, 16.80, 18.00, 19.20, 20.40, 21.60, 22.80, 24.00],
+                "atkFinalDmg": [450, 500, 550, 600, 650, 700, 750, 800, 850, 900],
+                "burstGaugeUp": [7.09, 7.64, 8.19, 8.74, 9.29, 9.84, 10.39, 10.94, 11.49, 12.00]
+                }
+            },
+            {
+            "name": "Mode Swap",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates at the start of battle and when using Burst Skill. Affects self.\n{blue}{orange}Decoy{/orange}: Creates an avatar with {hpFinalDecoy}% of the skill user's {orange}final{/orange} Max HP. This effect is continuous.{/blue}\n■ Activates at the start of battle. Affects self.\n{blue}ATK ▲ {atkUp}% continuously.{/blue}\n■ Activates when Snipe Mode takes effect. Affects self.\n{blue}Destroy: {orange}Damage to Parts{/orange} ▲ {dmgPartsUp}% continuously.\nRemoves Pinpoint.{/blue}\n■ Activates at the start of battle and when Snipe Mode is removed. Affects self.\n{blue}Pinpoint: Damage dealt when attacking core ▲ {dmgCoreUp}% continuously.\nRemoves Destroy.{/blue}\n■ Activates when entering Full Burst after this unit uses her Burst Skill.\n{blue}Effect varies according to this unit's current mode. Only one effect is applied.{/blue}\nActivates while in Snipe Mode. Affects all enemies (including parts).\n{blue}Effect 1: Deals {atkFinalDmg}% of {orange}final{/orange} ATK as damage.{/blue}\nActivates while not in Snipe Mode. Affects all enemies with activated cores.\n{blue}Effect 1: Deals {atkFinalCore}% of {orange}final{/orange} ATK as {orange}core strike damage{/orange}.{/blue}",
+            "values": {
+                "hpFinalDecoy": [41.56, 44.76, 47.95, 51.15, 54.35, 57.55, 60.74, 63.94, 67.14, 70.34],
+                "atkUp": [15.95, 17.40, 18.85, 20.30, 21.75, 23.20, 24.65, 26.10, 27.55, 29.00],
+                "dmgPartsUp": [13.11, 14.57, 16.03, 17.49, 18.95, 20.41, 21.87, 23.33, 24.79, 26.21],
+                "dmgCoreUp": [13.00, 14.44, 15.88, 17.32, 18.76, 20.20, 21.64, 23.08, 24.52, 26.00],
+                "atkFinalDmg": [654.31, 713.79, 773.27, 832.75, 892.23, 951.71, 1011.19, 1070.67, 1130.15, 1189.66],
+                "atkFinalCore": [458.58, 500.27, 541.96, 583.65, 625.34, 667.03, 708.72, 750.41, 792.10, 833.79]
+                }
+            },
+            {
+            "name": "Glass Slippers Full Contact W",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects self.\n{blue}Attack Damage ▲ {atkDmgUp}% for 10 sec.\nATK ▲ {atkUp}% for 10 sec.{/blue}\n■ Affects the enemy with the highest {orange}final{/orange} ATK.\n{blue}Deals {atkFinalDmg}% of {orange}final{/orange} ATK as Burst Skill damage.{/blue}",
+            "values": {
+                "atkDmgUp": [46.00, 51.11, 56.22, 61.33, 66.44, 71.55, 76.66, 81.77, 86.88, 92.00],
+                "atkUp": [35.75, 39.00, 42.25, 45.50, 48.75, 52.00, 55.25, 58.50, 61.75, 65.00],
+                "atkFinalDmg": [3299.97, 3599.97, 3899.97, 4199.97, 4499.97, 4799.97, 5099.97, 5399.97, 5699.97, 6000.00]
+                }
+            }
+        ]
+    },
+    {
+        "nikkeID": "194",
+        "nikkeName": "Marciana: Marine Study",
+        "skills": [
+            {
+            "name": "Emergency Whistle",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates when entering Full Burst after this unit uses her Burst Skill. Affects the 1 enemy unit(s) with the highest {orange}final{/orange} Max HP.\n{blue}Flagged Target Designation\nEffect 1: Deals {atkFinalDmg1}% of {orange}final{/orange} ATK as additional damage.\nEffect 2: Activates when the target is alive.\nFlagged Target: ATK ▼ {atkDown1}% for 10 sec.{/blue}\n■ Activates {orange}when an enemy is neutralized{/orange} if the target is in the Flagged Target state. Affects 1 random enemy unit(s).\n{blue}Flagged Target Designation\nEffect 1: Deals {atkFinalDmg2}% of {orange}final{/orange} ATK as additional damage.\nEffect 2: Activates when the target is alive.\nFlagged Target: ATK ▼ {atkDown2}% for 10 sec.{/blue}\n■ Activates when landing 20 normal attacks against a target in the High-Risk Target state. Affects the target.\n{blue}Deals {atkFinalDmg3}% of {orange}final{/orange} ATK as additional damage.{/blue}",
+            "values": {
+                "atkFinalDmg1": [2239.10, 2411.34, 2583.57, 2755.81, 2928.05, 3100.29, 3272.53, 3444.77, 3617.01, 3789.25],
+                "atkDown1": [6.24, 6.72, 7.20, 7.68, 8.16, 8.64, 9.12, 9.59, 10.08, 10.56], 
+                "atkFinalDmg2": [2239.10, 2411.34, 2583.57, 2755.81, 2928.05, 3100.29, 3272.53, 3444.77, 3617.01, 3789.25],
+                "atkDown2": [6.24, 6.72, 7.20, 7.68, 8.16, 8.64, 9.12, 9.59, 10.08, 10.56],
+                "atkFinalDmg3": [96.82, 103.03, 109.24, 115.44, 121.65, 127.86, 134.06, 140.27, 146.48, 152.68]
+                }
+            },
+            {
+            "name": "Penguin Emergency Dispatch",
+            "skillType": "Passive",
+            "cooldown": 0,
+            "description": "■ Activates at the start of battle. Affects self.\n{blue}Whistle: ATK ▲ {atkUp}% continuously. Stacks up to 5 times.\nWhistle stacks ▲ 4.{/blue}\n■ Activates every time there are 3 or fewer Raptures present for a period of 5 sec. Affects self.\n{blue}Whistle: ATK ▲ {atkUp}% continuously. Stacks up to 5 times.{/blue}\n■ Activates every time there are 6 or more Raptures present for a period of 1 sec.\n{blue}Penguin Emergency Dispatch\nFunction: Expends Whistle stacks to attack Raptures when there are 6 or more present.\nEffect 1: Affects all enemies. Deals {atkFinalDmg}% of {orange}final{/orange} ATK as additional damage.\nEffect 2: Affects self. Whistle stacks ▼ 1.{/blue}\n■ Only activates when a Rapture appears or is neutralized while there are 5 or fewer Raptures. Affects self.\n{blue}{orange}Elemental Advantage Attack Damage{/orange} ▲ {atkEleUp}% continuously.{/blue}",
+            "values": {
+                "atkUp": [19.34, 20.83, 22.32, 23.80, 25.29, 26.78, 28.27, 29.76, 31.24, 32.73],
+                "atkFinalDmg": [126.67, 136.41, 146.16, 155.90, 165.64, 175.39, 185.13, 194.88, 204.62, 214.36],
+                "atkEleUp": [12.06, 12.99, 13.92, 14.84, 15.77, 16.70, 17.63, 18.56, 19.48, 20.41]
+                }
+            },
+            {
+            "name": "Penguin Spiral",
+            "skillType": "Active",
+            "cooldown": 40,
+            "description": "■ Affects self.\n{blue}{orange}Elemental Advantage Attack Damage{/orange} ▲ {atkEleUp}% for 10 sec.\nAttack Damage ▲ {atkUp}% for 10 sec.{/blue}\n■ Affects all Electric Code enemies.\n{blue}High-Risk Target: DEF ▼ {defDown}% for 20 sec.{/blue}",
+            "values": {
+                "atkEleUp": [18.30, 19.71, 21.12, 22.52, 23.93, 25.34, 26.75, 28.16, 29.56, 30.97],
+                "atkUp": [16.22, 17.47, 18.72, 19.96, 21.21, 22.46, 23.71, 24.96, 26.20, 27.45],
+                "defDown": [6.24, 6.72, 7.20, 7.68, 8.16, 8.64, 9.12, 9.59, 10.08, 10.56]
+                }
+            }
+        ]
     }
 ]

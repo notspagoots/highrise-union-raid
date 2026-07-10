@@ -119,6 +119,18 @@
     },
     "Restores {hpCoverHeal}% of Cover HP": {
         "description": "■ This effect restores a certain amount of cover HP.\n\n■ It only affects Cover with HP still remaining, and has no effect on Cover that's been completely destroyed."
+    },
+    "Expends ammo": {
+        "description": "■ Expends the displayed amount of virtual ammo. This counts toward the total {orange}ammo expended by allies{/orange}."
+    },
+    "total ammo consumed by allies": {
+        "description": "■ Refers to the total ammo expended by allies.\n\n■ This amount increases each time an ally's current ammo count decreases.\n\n■ If an ally's ammo is unlimited, her current ammo count will not decrease and therefore will not be included in the calculation."
+    },
+    "core strike damage": {
+        "description": "■ This damage is dealt to the target's body instead of its actual core.\n\n■ It is treated as core damage and is increased or decreased by core bonus multipliers and core damage effects.\n\n■ {orange}Core strike damage{/orange} does not trigger other effects or conditions such as \"when landing an attack on a target's core\"."
+    },
+    "when an enemy is neutralized": {
+        "description": "■ The effect will be triggered in all cases of enemy death.\n\n■ In the Arena, this effect is still active even when the enemy Nikke is out of action.\n\n■ The effect will also be triggered in all cases of spontaneous enemy deaths, such as self-destruction."
     }
 
 }
